@@ -1,0 +1,4856 @@
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"BLE_1_gatt.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.comm	cyBle_state,1,1
+  18              		.global	cyBle_gatts
+  19              		.section	.rodata
+  20              		.align	2
+  21              		.type	cyBle_gatts, %object
+  22              		.size	cyBle_gatts, 6
+  23              	cyBle_gatts:
+  24 0000 0800     		.short	8
+  25 0002 0A00     		.short	10
+  26 0004 0B00     		.short	11
+  27              		.data
+  28              		.align	2
+  29              		.type	cyBle_attValues, %object
+  30              		.size	cyBle_attValues, 24
+  31              	cyBle_attValues:
+  32 0000 42       		.byte	66
+  33 0001 4C       		.byte	76
+  34 0002 45       		.byte	69
+  35 0003 20       		.byte	32
+  36 0004 4D       		.byte	77
+  37 0005 6F       		.byte	111
+  38 0006 75       		.byte	117
+  39 0007 73       		.byte	115
+  40 0008 65       		.byte	101
+  41 0009 00       		.byte	0
+  42 000a 02       		.byte	2
+  43 000b 06       		.byte	6
+  44 000c 00       		.byte	0
+  45 000d 28       		.byte	40
+  46 000e 00       		.byte	0
+  47 000f 00       		.byte	0
+  48 0010 00       		.byte	0
+  49 0011 E8       		.byte	-24
+  50 0012 03       		.byte	3
+  51 0013 00       		.byte	0
+  52 0014 00       		.byte	0
+  53 0015 00       		.byte	0
+  54 0016 00       		.byte	0
+  55 0017 00       		.byte	0
+  56              		.global	cyBle_attValuesCCCDFlashMemory
+  57              		.section	.rodata
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 2
+
+
+  58 0006 00000000 		.align	7
+  58      00000000 
+  58      00000000 
+  58      00000000 
+  58      00000000 
+  59              		.type	cyBle_attValuesCCCDFlashMemory, %object
+  60              		.size	cyBle_attValuesCCCDFlashMemory, 10
+  61              	cyBle_attValuesCCCDFlashMemory:
+  62 0080 00000000 		.space	10
+  62      00000000 
+  62      0000
+  63              		.comm	cyBle_attValuesCCCD,2,4
+  64              		.global	cyBle_gattDB
+  65 008a 0000     		.align	2
+  66              		.type	cyBle_gattDB, %object
+  67              		.size	cyBle_gattDB, 280
+  68              	cyBle_gattDB:
+  69 008c 0100     		.short	1
+  70 008e 0028     		.short	10240
+  71 0090 01000000 		.word	1
+  72 0094 0700     		.short	7
+  73 0096 0000     		.space	2
+  74 0098 0018     		.short	6144
+  75 009a 0000     		.space	2
+  76 009c 00000000 		.word	0
+  77 00a0 0200     		.short	2
+  78 00a2 0328     		.short	10243
+  79 00a4 01020000 		.word	513
+  80 00a8 0300     		.short	3
+  81 00aa 0000     		.space	2
+  82 00ac 002A     		.short	10752
+  83 00ae 0000     		.space	2
+  84 00b0 00000000 		.word	0
+  85 00b4 0300     		.short	3
+  86 00b6 002A     		.short	10752
+  87 00b8 01020000 		.word	513
+  88 00bc 0300     		.short	3
+  89 00be 0000     		.space	2
+  90 00c0 0900     		.short	9
+  91 00c2 0000     		.space	2
+  92 00c4 00000000 		.word	cyBle_attValues
+  93 00c8 0400     		.short	4
+  94 00ca 0328     		.short	10243
+  95 00cc 01020000 		.word	513
+  96 00d0 0500     		.short	5
+  97 00d2 0000     		.space	2
+  98 00d4 012A     		.short	10753
+  99 00d6 0000     		.space	2
+ 100 00d8 00000000 		.word	0
+ 101 00dc 0500     		.short	5
+ 102 00de 012A     		.short	10753
+ 103 00e0 01020000 		.word	513
+ 104 00e4 0500     		.short	5
+ 105 00e6 0000     		.space	2
+ 106 00e8 0200     		.short	2
+ 107 00ea 0000     		.space	2
+ 108 00ec 09000000 		.word	cyBle_attValues+9
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 3
+
+
+ 109 00f0 0600     		.short	6
+ 110 00f2 0328     		.short	10243
+ 111 00f4 01020000 		.word	513
+ 112 00f8 0700     		.short	7
+ 113 00fa 0000     		.space	2
+ 114 00fc 042A     		.short	10756
+ 115 00fe 0000     		.space	2
+ 116 0100 00000000 		.word	0
+ 117 0104 0700     		.short	7
+ 118 0106 042A     		.short	10756
+ 119 0108 01020000 		.word	513
+ 120 010c 0700     		.short	7
+ 121 010e 0000     		.space	2
+ 122 0110 0800     		.short	8
+ 123 0112 0000     		.space	2
+ 124 0114 0B000000 		.word	cyBle_attValues+11
+ 125 0118 0800     		.short	8
+ 126 011a 0028     		.short	10240
+ 127 011c 01000000 		.word	1
+ 128 0120 0B00     		.short	11
+ 129 0122 0000     		.space	2
+ 130 0124 0118     		.short	6145
+ 131 0126 0000     		.space	2
+ 132 0128 00000000 		.word	0
+ 133 012c 0900     		.short	9
+ 134 012e 0328     		.short	10243
+ 135 0130 01220000 		.word	8705
+ 136 0134 0B00     		.short	11
+ 137 0136 0000     		.space	2
+ 138 0138 052A     		.short	10757
+ 139 013a 0000     		.space	2
+ 140 013c 00000000 		.word	0
+ 141 0140 0A00     		.short	10
+ 142 0142 052A     		.short	10757
+ 143 0144 01220000 		.word	8705
+ 144 0148 0B00     		.short	11
+ 145 014a 0000     		.space	2
+ 146 014c 0400     		.short	4
+ 147 014e 0000     		.space	2
+ 148 0150 13000000 		.word	cyBle_attValues+19
+ 149 0154 0B00     		.short	11
+ 150 0156 0229     		.short	10498
+ 151 0158 040A0000 		.word	2564
+ 152 015c 0B00     		.short	11
+ 153 015e 0000     		.space	2
+ 154 0160 0200     		.short	2
+ 155 0162 0000     		.space	2
+ 156 0164 00000000 		.word	cyBle_attValuesCCCD
+ 157 0168 0C00     		.short	12
+ 158 016a 0028     		.short	10240
+ 159 016c 01000000 		.word	1
+ 160 0170 0E00     		.short	14
+ 161 0172 0000     		.space	2
+ 162 0174 0218     		.short	6146
+ 163 0176 0000     		.space	2
+ 164 0178 00000000 		.word	0
+ 165 017c 0D00     		.short	13
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 4
+
+
+ 166 017e 0328     		.short	10243
+ 167 0180 01040000 		.word	1025
+ 168 0184 0E00     		.short	14
+ 169 0186 0000     		.space	2
+ 170 0188 062A     		.short	10758
+ 171 018a 0000     		.space	2
+ 172 018c 00000000 		.word	0
+ 173 0190 0E00     		.short	14
+ 174 0192 062A     		.short	10758
+ 175 0194 02040000 		.word	1026
+ 176 0198 0E00     		.short	14
+ 177 019a 0000     		.space	2
+ 178 019c 0100     		.short	1
+ 179 019e 0000     		.space	2
+ 180 01a0 17000000 		.word	cyBle_attValues+23
+ 181 01a4 00000000 		.section	.text.CyBle_GattsReInitGattDb,"ax",%progbits
+ 181      00000000 
+ 181      00000000 
+ 181      00000000 
+ 181      00000000 
+ 182              		.align	2
+ 183              		.global	CyBle_GattsReInitGattDb
+ 184              		.code	16
+ 185              		.thumb_func
+ 186              		.type	CyBle_GattsReInitGattDb, %function
+ 187              	CyBle_GattsReInitGattDb:
+ 188              	.LFB2:
+ 189              		.file 1 ".\\Generated_Source\\PSoC4\\BLE_1_gatt.c"
+   1:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/BLE_1_gatt.c **** File Name: CYBLE_gatt.c
+   3:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Version 1.20
+   4:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+   5:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Description:
+   6:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  This file contains the source code for the GATT API of the BLE Component.
+   7:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+   8:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ********************************************************************************
+   9:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Copyright 2014-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:.\Generated_Source\PSoC4/BLE_1_gatt.c **** You may use this file only in accordance with the license, terms, conditions,
+  11:.\Generated_Source\PSoC4/BLE_1_gatt.c **** disclaimers, and limitations in the end user license agreement accompanying
+  12:.\Generated_Source\PSoC4/BLE_1_gatt.c **** the software package with which this file was provided.
+  13:.\Generated_Source\PSoC4/BLE_1_gatt.c **** *******************************************************************************/
+  14:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  15:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  16:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #include "BLE_1_eventHandler.h"
+  17:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  18:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  19:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /***************************************
+  20:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ##Global variables
+  21:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ***************************************/
+  22:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  23:.\Generated_Source\PSoC4/BLE_1_gatt.c **** CYBLE_STATE_T cyBle_state;
+  24:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  25:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  26:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #if(CYBLE_GATT_ROLE_SERVER)
+  27:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+  28:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     const CYBLE_GATTS_T cyBle_gatts =
+  29:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 5
+
+
+  30:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     0x0008u,    /* Handle of the GATT service */
+  31:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     0x000Au,    /* Handle of the Service Changed characteristic */
+  32:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     0x000Bu,    /* Handle of the Client Characteristic Configuration descriptor */
+  33:.\Generated_Source\PSoC4/BLE_1_gatt.c **** };
+  34:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+  35:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     static uint8 cyBle_attValues[0x18u] = {
+  36:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Device Name */
+  37:.\Generated_Source\PSoC4/BLE_1_gatt.c **** (uint8)'B', (uint8)'L', (uint8)'E', (uint8)' ', (uint8)'M', (uint8)'o', (uint8)'u', (uint8)'s', (ui
+  38:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  39:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Appearance */
+  40:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x02u, 
+  41:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  42:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Peripheral Preferred Connection Parameters */
+  43:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x06u, 0x00u, 0x28u, 0x00u, 0x00u, 0x00u, 0xE8u, 0x03u, 
+  44:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  45:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Service Changed */
+  46:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 0x00u, 0x00u, 
+  47:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  48:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Alert Level */
+  49:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 
+  50:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  51:.\Generated_Source\PSoC4/BLE_1_gatt.c **** };
+  52:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  53:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
+  54:.\Generated_Source\PSoC4/BLE_1_gatt.c **** const uint8 cyBle_attValuesCCCDFlashMemory[CYBLE_GAP_MAX_BONDED_DEVICE + 1u][CYBLE_GATT_DB_CCCD_COU
+  55:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #elif defined(__ICCARM__)
+  56:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* The cyBle_attValuesCCCDFlashMemory[] should be aligned to the size of a Flash row */
+  57:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #pragma data_alignment=CY_FLASH_SIZEOF_ROW
+  58:.\Generated_Source\PSoC4/BLE_1_gatt.c **** const uint8 cyBle_attValuesCCCDFlashMemory[CYBLE_GAP_MAX_BONDED_DEVICE + 1u][CYBLE_GATT_DB_CCCD_COU
+  59:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #endif /* defined(__GNUC__) || defined(__ARMCC_VERSION) */
+  60:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+  61:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Client Characteristic Configuration */
+  62:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 
+  63:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  64:.\Generated_Source\PSoC4/BLE_1_gatt.c **** },
+  65:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+  66:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Client Characteristic Configuration */
+  67:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 
+  68:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  69:.\Generated_Source\PSoC4/BLE_1_gatt.c **** },
+  70:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+  71:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Client Characteristic Configuration */
+  72:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 
+  73:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  74:.\Generated_Source\PSoC4/BLE_1_gatt.c **** },
+  75:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+  76:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Client Characteristic Configuration */
+  77:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 
+  78:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  79:.\Generated_Source\PSoC4/BLE_1_gatt.c **** },
+  80:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+  81:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /* Client Characteristic Configuration */
+  82:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 0x00u, 0x00u, 
+  83:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  84:.\Generated_Source\PSoC4/BLE_1_gatt.c **** },
+  85:.\Generated_Source\PSoC4/BLE_1_gatt.c **** };
+  86:.\Generated_Source\PSoC4/BLE_1_gatt.c **** uint8 cyBle_attValuesCCCD[CYBLE_GATT_DB_CCCD_COUNT];
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 6
+
+
+  87:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+  88:.\Generated_Source\PSoC4/BLE_1_gatt.c **** const CYBLE_GATTS_DB_T cyBle_gattDB[0x0Eu] = {
+  89:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0001u, 0x2800u /* Primary service                     */, 0x00000001u /*        */, 0x0007u, {{
+  90:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0002u, 0x2803u /* Characteristic                      */, 0x00000201u /* rd     */, 0x0003u, {{
+  91:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0003u, 0x2A00u /* Device Name                         */, 0x00000201u /* rd     */, 0x0003u, {{
+  92:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0004u, 0x2803u /* Characteristic                      */, 0x00000201u /* rd     */, 0x0005u, {{
+  93:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0005u, 0x2A01u /* Appearance                          */, 0x00000201u /* rd     */, 0x0005u, {{
+  94:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0006u, 0x2803u /* Characteristic                      */, 0x00000201u /* rd     */, 0x0007u, {{
+  95:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0007u, 0x2A04u /* Peripheral Preferred Connection Par */, 0x00000201u /* rd     */, 0x0007u, {{
+  96:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0008u, 0x2800u /* Primary service                     */, 0x00000001u /*        */, 0x000Bu, {{
+  97:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x0009u, 0x2803u /* Characteristic                      */, 0x00002201u /* rd,ind */, 0x000Bu, {{
+  98:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x000Au, 0x2A05u /* Service Changed                     */, 0x00002201u /* rd,ind */, 0x000Bu, {{
+  99:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x000Bu, 0x2902u /* Client Characteristic Configuration */, 0x00000A04u /* rd,wr  */, 0x000Bu, {{
+ 100:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x000Cu, 0x2800u /* Primary service                     */, 0x00000001u /*        */, 0x000Eu, {{
+ 101:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x000Du, 0x2803u /* Characteristic                      */, 0x00000401u /* wwr    */, 0x000Eu, {{
+ 102:.\Generated_Source\PSoC4/BLE_1_gatt.c **** { 0x000Eu, 0x2A06u /* Alert Level                         */, 0x00000402u /* wwr    */, 0x000Eu, {{
+ 103:.\Generated_Source\PSoC4/BLE_1_gatt.c **** };
+ 104:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 105:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 106:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #endif /* (CYBLE_GATT_ROLE_SERVER) */
+ 107:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 108:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #if(CYBLE_GATT_ROLE_CLIENT)
+ 109:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+ 110:.\Generated_Source\PSoC4/BLE_1_gatt.c **** CYBLE_CLIENT_STATE_T cyBle_clientState;
+ 111:.\Generated_Source\PSoC4/BLE_1_gatt.c **** CYBLE_GATTC_T cyBle_gattc;
+ 112:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+ 113:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #endif /* (CYBLE_GATT_ROLE_CLIENT) */
+ 114:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 115:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 116:.\Generated_Source\PSoC4/BLE_1_gatt.c **** #if(CYBLE_GATT_ROLE_SERVER)
+ 117:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 118:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /****************************************************************************** 
+ 119:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ##Function Name: CyBle_GattsReInitGattDb
+ 120:.\Generated_Source\PSoC4/BLE_1_gatt.c **** *******************************************************************************
+ 121:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 122:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Summary:
+ 123:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  Reinitializes the GATT database.
+ 124:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 125:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Parameters:
+ 126:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  None
+ 127:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 128:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Return:
+ 129:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  CYBLE_API_RESULT_T: An API result states if the API succeeded or failed with
+ 130:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  error codes:
+ 131:.\Generated_Source\PSoC4/BLE_1_gatt.c ****   * CYBLE_ERROR_OK: GATT database was reinitialized successfully
+ 132:.\Generated_Source\PSoC4/BLE_1_gatt.c ****   * CYBLE_ERROR_INVALID_STATE: If the function is called in any state except
+ 133:.\Generated_Source\PSoC4/BLE_1_gatt.c ****                                 CYBLE_STATE_DISCONNECTED.
+ 134:.\Generated_Source\PSoC4/BLE_1_gatt.c ****   * Any of the CyBle_GattsDbRegister() stack API function return values.
+ 135:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 136:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ******************************************************************************/
+ 137:.\Generated_Source\PSoC4/BLE_1_gatt.c **** CYBLE_API_RESULT_T CyBle_GattsReInitGattDb(void)
+ 138:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+ 190              		.loc 1 138 0
+ 191              		.cfi_startproc
+ 192 0000 90B5     		push	{r4, r7, lr}
+ 193              		.cfi_def_cfa_offset 12
+ 194              		.cfi_offset 4, -12
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 7
+
+
+ 195              		.cfi_offset 7, -8
+ 196              		.cfi_offset 14, -4
+ 197 0002 83B0     		sub	sp, sp, #12
+ 198              		.cfi_def_cfa_offset 24
+ 199 0004 00AF     		add	r7, sp, #0
+ 200              		.cfi_def_cfa_register 7
+ 139:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     CYBLE_API_RESULT_T apiResult;
+ 140:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+ 141:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     if(CYBLE_STATE_DISCONNECTED == CyBle_GetState())
+ 201              		.loc 1 141 0
+ 202 0006 0C4B     		ldr	r3, .L5
+ 203 0008 1B78     		ldrb	r3, [r3]
+ 204 000a 042B     		cmp	r3, #4
+ 205 000c 09D1     		bne	.L2
+ 142:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     {
+ 143:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         apiResult = CyBle_GattsDbRegister(cyBle_gattDB, CYBLE_GATT_DB_INDEX_COUNT, CYBLE_GATT_DB_MA
+ 206              		.loc 1 143 0
+ 207 000e BC1D     		add	r4, r7, #6
+ 208 0010 0A4B     		ldr	r3, .L5+4
+ 209 0012 181C     		mov	r0, r3
+ 210 0014 0E21     		mov	r1, #14
+ 211 0016 0922     		mov	r2, #9
+ 212 0018 FFF7FEFF 		bl	CyBle_GattsDbRegister
+ 213 001c 031C     		mov	r3, r0
+ 214 001e 2380     		strh	r3, [r4]
+ 215 0020 03E0     		b	.L3
+ 216              	.L2:
+ 144:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     }
+ 145:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     else
+ 146:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     {
+ 147:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         apiResult = CYBLE_ERROR_INVALID_STATE;
+ 217              		.loc 1 147 0
+ 218 0022 BB1D     		add	r3, r7, #6
+ 219 0024 8322     		mov	r2, #131
+ 220 0026 5200     		lsl	r2, r2, #1
+ 221 0028 1A80     		strh	r2, [r3]
+ 222              	.L3:
+ 148:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     }
+ 149:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+ 150:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     return(apiResult);
+ 223              		.loc 1 150 0
+ 224 002a BB1D     		add	r3, r7, #6
+ 225 002c 1B88     		ldrh	r3, [r3]
+ 151:.\Generated_Source\PSoC4/BLE_1_gatt.c **** }
+ 226              		.loc 1 151 0
+ 227 002e 181C     		mov	r0, r3
+ 228 0030 BD46     		mov	sp, r7
+ 229 0032 03B0     		add	sp, sp, #12
+ 230              		@ sp needed
+ 231 0034 90BD     		pop	{r4, r7, pc}
+ 232              	.L6:
+ 233 0036 C046     		.align	2
+ 234              	.L5:
+ 235 0038 00000000 		.word	cyBle_state
+ 236 003c 00000000 		.word	cyBle_gattDB
+ 237              		.cfi_endproc
+ 238              	.LFE2:
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 8
+
+
+ 239              		.size	CyBle_GattsReInitGattDb, .-CyBle_GattsReInitGattDb
+ 240              		.section	.text.CyBle_GattsWriteEventHandler,"ax",%progbits
+ 241              		.align	2
+ 242              		.global	CyBle_GattsWriteEventHandler
+ 243              		.code	16
+ 244              		.thumb_func
+ 245              		.type	CyBle_GattsWriteEventHandler, %function
+ 246              	CyBle_GattsWriteEventHandler:
+ 247              	.LFB3:
+ 152:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 153:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 154:.\Generated_Source\PSoC4/BLE_1_gatt.c **** /****************************************************************************** 
+ 155:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ##Function Name: CyBle_GattsWriteEventHandler
+ 156:.\Generated_Source\PSoC4/BLE_1_gatt.c **** *******************************************************************************
+ 157:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 158:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Summary:
+ 159:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  Handles the Write Request Event for GATT service.
+ 160:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 161:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Parameters:
+ 162:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  *eventParam: The pointer to the data structure specified by the event.
+ 163:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 164:.\Generated_Source\PSoC4/BLE_1_gatt.c **** Return:
+ 165:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  * CYBLE_GATT_ERR_CODE_T: An API result returns one of the following status 
+ 166:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     values
+ 167:.\Generated_Source\PSoC4/BLE_1_gatt.c ****  * CYBLE_GATT_ERR_NONE - Write is successful.
+ 168:.\Generated_Source\PSoC4/BLE_1_gatt.c **** 
+ 169:.\Generated_Source\PSoC4/BLE_1_gatt.c **** ******************************************************************************/
+ 170:.\Generated_Source\PSoC4/BLE_1_gatt.c **** CYBLE_GATT_ERR_CODE_T CyBle_GattsWriteEventHandler(CYBLE_GATTS_WRITE_REQ_PARAM_T *eventParam)
+ 171:.\Generated_Source\PSoC4/BLE_1_gatt.c **** {
+ 248              		.loc 1 171 0
+ 249              		.cfi_startproc
+ 250 0000 90B5     		push	{r4, r7, lr}
+ 251              		.cfi_def_cfa_offset 12
+ 252              		.cfi_offset 4, -12
+ 253              		.cfi_offset 7, -8
+ 254              		.cfi_offset 14, -4
+ 255 0002 85B0     		sub	sp, sp, #20
+ 256              		.cfi_def_cfa_offset 32
+ 257 0004 00AF     		add	r7, sp, #0
+ 258              		.cfi_def_cfa_register 7
+ 259 0006 7860     		str	r0, [r7, #4]
+ 172:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     CYBLE_GATT_ERR_CODE_T gattErr = CYBLE_GATT_ERR_NONE;
+ 260              		.loc 1 172 0
+ 261 0008 3B1C     		mov	r3, r7
+ 262 000a 0F33     		add	r3, r3, #15
+ 263 000c 0022     		mov	r2, #0
+ 264 000e 1A70     		strb	r2, [r3]
+ 173:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     
+ 174:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     /* Client Characteristic Configuration descriptor write request */
+ 175:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     if(eventParam->handleValPair.attrHandle == cyBle_gatts.cccdHandle)
+ 265              		.loc 1 175 0
+ 266 0010 7B68     		ldr	r3, [r7, #4]
+ 267 0012 9A89     		ldrh	r2, [r3, #12]
+ 268 0014 0B23     		mov	r3, #11
+ 269 0016 9A42     		cmp	r2, r3
+ 270 0018 37D1     		bne	.L8
+ 176:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     {
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 9
+
+
+ 177:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         /* Store value to database */
+ 178:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         gattErr = CyBle_GattsWriteAttributeValue(&eventParam->handleValPair, 0u, 
+ 271              		.loc 1 178 0
+ 272 001a 7B68     		ldr	r3, [r7, #4]
+ 273 001c 1A1D     		add	r2, r3, #4
+ 274 001e 7B68     		ldr	r3, [r7, #4]
+ 275 0020 3C1C     		mov	r4, r7
+ 276 0022 0F34     		add	r4, r4, #15
+ 277 0024 101C     		mov	r0, r2
+ 278 0026 0021     		mov	r1, #0
+ 279 0028 1A1C     		mov	r2, r3
+ 280 002a 4023     		mov	r3, #64
+ 281 002c FFF7FEFF 		bl	CyBle_GattsWriteAttributeValue
+ 282 0030 031C     		mov	r3, r0
+ 283 0032 2370     		strb	r3, [r4]
+ 179:.\Generated_Source\PSoC4/BLE_1_gatt.c ****                         &eventParam->connHandle, CYBLE_GATT_DB_PEER_INITIATED);
+ 180:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         
+ 181:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         if(CYBLE_GATT_ERR_NONE == gattErr)
+ 284              		.loc 1 181 0
+ 285 0034 3B1C     		mov	r3, r7
+ 286 0036 0F33     		add	r3, r3, #15
+ 287 0038 1B78     		ldrb	r3, [r3]
+ 288 003a 002B     		cmp	r3, #0
+ 289 003c 1DD1     		bne	.L9
+ 182:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         {
+ 183:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             if(CYBLE_IS_INDICATION_ENABLED_IN_PTR(eventParam->handleValPair.value.val))
+ 290              		.loc 1 183 0
+ 291 003e 7B68     		ldr	r3, [r7, #4]
+ 292 0040 5B68     		ldr	r3, [r3, #4]
+ 293 0042 181C     		mov	r0, r3
+ 294 0044 FFF7FEFF 		bl	CyBle_Get16ByPtr
+ 295 0048 031C     		mov	r3, r0
+ 296 004a 1A1C     		mov	r2, r3
+ 297 004c 0223     		mov	r3, #2
+ 298 004e 1340     		and	r3, r2
+ 299 0050 9BB2     		uxth	r3, r3
+ 300 0052 002B     		cmp	r3, #0
+ 301 0054 08D0     		beq	.L10
+ 184:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             {
+ 185:.\Generated_Source\PSoC4/BLE_1_gatt.c ****                 CyBle_ApplCallback((uint32)CYBLE_EVT_GATTS_INDICATION_ENABLED, eventParam);
+ 302              		.loc 1 185 0
+ 303 0056 104B     		ldr	r3, .L12
+ 304 0058 1B68     		ldr	r3, [r3]
+ 305 005a 8222     		mov	r2, #130
+ 306 005c 5100     		lsl	r1, r2, #1
+ 307 005e 7A68     		ldr	r2, [r7, #4]
+ 308 0060 081C     		mov	r0, r1
+ 309 0062 111C     		mov	r1, r2
+ 310 0064 9847     		blx	r3
+ 311 0066 08E0     		b	.L9
+ 312              	.L10:
+ 186:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             }
+ 187:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             else
+ 188:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             {
+ 189:.\Generated_Source\PSoC4/BLE_1_gatt.c ****                 CyBle_ApplCallback((uint32)CYBLE_EVT_GATTS_INDICATION_DISABLED, eventParam);
+ 313              		.loc 1 189 0
+ 314 0068 0B4B     		ldr	r3, .L12
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 10
+
+
+ 315 006a 1B68     		ldr	r3, [r3]
+ 316 006c 0622     		mov	r2, #6
+ 317 006e 111C     		mov	r1, r2
+ 318 0070 FF31     		add	r1, r1, #255
+ 319 0072 7A68     		ldr	r2, [r7, #4]
+ 320 0074 081C     		mov	r0, r1
+ 321 0076 111C     		mov	r1, r2
+ 322 0078 9847     		blx	r3
+ 323              	.L9:
+ 190:.\Generated_Source\PSoC4/BLE_1_gatt.c ****             }
+ 191:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         }
+ 192:.\Generated_Source\PSoC4/BLE_1_gatt.c ****         cyBle_eventHandlerFlag &= (uint8)~CYBLE_CALLBACK;
+ 324              		.loc 1 192 0
+ 325 007a 084B     		ldr	r3, .L12+4
+ 326 007c 1B78     		ldrb	r3, [r3]
+ 327 007e DBB2     		uxtb	r3, r3
+ 328 0080 0122     		mov	r2, #1
+ 329 0082 9343     		bic	r3, r2
+ 330 0084 DAB2     		uxtb	r2, r3
+ 331 0086 054B     		ldr	r3, .L12+4
+ 332 0088 1A70     		strb	r2, [r3]
+ 333              	.L8:
+ 193:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     }
+ 194:.\Generated_Source\PSoC4/BLE_1_gatt.c ****     return (gattErr);
+ 334              		.loc 1 194 0
+ 335 008a 3B1C     		mov	r3, r7
+ 336 008c 0F33     		add	r3, r3, #15
+ 337 008e 1B78     		ldrb	r3, [r3]
+ 195:.\Generated_Source\PSoC4/BLE_1_gatt.c **** }
+ 338              		.loc 1 195 0
+ 339 0090 181C     		mov	r0, r3
+ 340 0092 BD46     		mov	sp, r7
+ 341 0094 05B0     		add	sp, sp, #20
+ 342              		@ sp needed
+ 343 0096 90BD     		pop	{r4, r7, pc}
+ 344              	.L13:
+ 345              		.align	2
+ 346              	.L12:
+ 347 0098 00000000 		.word	CyBle_ApplCallback
+ 348 009c 00000000 		.word	cyBle_eventHandlerFlag
+ 349              		.cfi_endproc
+ 350              	.LFE3:
+ 351              		.size	CyBle_GattsWriteEventHandler, .-CyBle_GattsWriteEventHandler
+ 352              		.text
+ 353              	.Letext0:
+ 354              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 355              		.file 3 ".\\Generated_Source\\PSoC4\\BLE_1_Stack.h"
+ 356              		.file 4 ".\\Generated_Source\\PSoC4\\BLE_1_StackGatt.h"
+ 357              		.file 5 ".\\Generated_Source\\PSoC4\\BLE_1_StackGattServer.h"
+ 358              		.file 6 ".\\Generated_Source\\PSoC4\\BLE_1_StackGattDb.h"
+ 359              		.file 7 ".\\Generated_Source\\PSoC4\\BLE_1.h"
+ 360              		.file 8 ".\\Generated_Source\\PSoC4\\BLE_1_gatt.h"
+ 361              		.file 9 ".\\Generated_Source\\PSoC4\\BLE_1_eventHandler.h"
+ 362              		.section	.debug_info,"",%progbits
+ 363              	.Ldebug_info0:
+ 364 0000 670C0000 		.4byte	0xc67
+ 365 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 11
+
+
+ 366 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 367 000a 04       		.byte	0x4
+ 368 000b 01       		.uleb128 0x1
+ 369 000c D8190000 		.4byte	.LASF374
+ 370 0010 01       		.byte	0x1
+ 371 0011 2D090000 		.4byte	.LASF375
+ 372 0015 EB1D0000 		.4byte	.LASF376
+ 373 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 374 001d 00000000 		.4byte	0
+ 375 0021 00000000 		.4byte	.Ldebug_line0
+ 376 0025 02       		.uleb128 0x2
+ 377 0026 01       		.byte	0x1
+ 378 0027 06       		.byte	0x6
+ 379 0028 F1090000 		.4byte	.LASF0
+ 380 002c 02       		.uleb128 0x2
+ 381 002d 01       		.byte	0x1
+ 382 002e 08       		.byte	0x8
+ 383 002f A60A0000 		.4byte	.LASF1
+ 384 0033 02       		.uleb128 0x2
+ 385 0034 02       		.byte	0x2
+ 386 0035 05       		.byte	0x5
+ 387 0036 9E240000 		.4byte	.LASF2
+ 388 003a 02       		.uleb128 0x2
+ 389 003b 02       		.byte	0x2
+ 390 003c 07       		.byte	0x7
+ 391 003d E6290000 		.4byte	.LASF3
+ 392 0041 02       		.uleb128 0x2
+ 393 0042 04       		.byte	0x4
+ 394 0043 05       		.byte	0x5
+ 395 0044 A6070000 		.4byte	.LASF4
+ 396 0048 02       		.uleb128 0x2
+ 397 0049 04       		.byte	0x4
+ 398 004a 07       		.byte	0x7
+ 399 004b CD120000 		.4byte	.LASF5
+ 400 004f 02       		.uleb128 0x2
+ 401 0050 08       		.byte	0x8
+ 402 0051 05       		.byte	0x5
+ 403 0052 9E150000 		.4byte	.LASF6
+ 404 0056 02       		.uleb128 0x2
+ 405 0057 08       		.byte	0x8
+ 406 0058 07       		.byte	0x7
+ 407 0059 641F0000 		.4byte	.LASF7
+ 408 005d 03       		.uleb128 0x3
+ 409 005e 04       		.byte	0x4
+ 410 005f 05       		.byte	0x5
+ 411 0060 696E7400 		.ascii	"int\000"
+ 412 0064 02       		.uleb128 0x2
+ 413 0065 04       		.byte	0x4
+ 414 0066 07       		.byte	0x7
+ 415 0067 06190000 		.4byte	.LASF8
+ 416 006b 04       		.uleb128 0x4
+ 417 006c 51240000 		.4byte	.LASF9
+ 418 0070 02       		.byte	0x2
+ 419 0071 A1       		.byte	0xa1
+ 420 0072 2C000000 		.4byte	0x2c
+ 421 0076 04       		.uleb128 0x4
+ 422 0077 342C0000 		.4byte	.LASF10
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 12
+
+
+ 423 007b 02       		.byte	0x2
+ 424 007c A2       		.byte	0xa2
+ 425 007d 3A000000 		.4byte	0x3a
+ 426 0081 04       		.uleb128 0x4
+ 427 0082 4C020000 		.4byte	.LASF11
+ 428 0086 02       		.byte	0x2
+ 429 0087 A3       		.byte	0xa3
+ 430 0088 48000000 		.4byte	0x48
+ 431 008c 02       		.uleb128 0x2
+ 432 008d 04       		.byte	0x4
+ 433 008e 04       		.byte	0x4
+ 434 008f FB170000 		.4byte	.LASF12
+ 435 0093 02       		.uleb128 0x2
+ 436 0094 08       		.byte	0x8
+ 437 0095 04       		.byte	0x4
+ 438 0096 A1160000 		.4byte	.LASF13
+ 439 009a 02       		.uleb128 0x2
+ 440 009b 01       		.byte	0x1
+ 441 009c 08       		.byte	0x8
+ 442 009d 100C0000 		.4byte	.LASF14
+ 443 00a1 05       		.uleb128 0x5
+ 444 00a2 6B000000 		.4byte	0x6b
+ 445 00a6 02       		.uleb128 0x2
+ 446 00a7 04       		.byte	0x4
+ 447 00a8 07       		.byte	0x7
+ 448 00a9 47000000 		.4byte	.LASF15
+ 449 00ad 06       		.uleb128 0x6
+ 450 00ae 04       		.byte	0x4
+ 451 00af 07       		.uleb128 0x7
+ 452 00b0 01       		.byte	0x1
+ 453 00b1 03       		.byte	0x3
+ 454 00b2 58       		.byte	0x58
+ 455 00b3 1F020000 		.4byte	0x21f
+ 456 00b7 08       		.uleb128 0x8
+ 457 00b8 780C0000 		.4byte	.LASF16
+ 458 00bc 00       		.sleb128 0
+ 459 00bd 08       		.uleb128 0x8
+ 460 00be 3D080000 		.4byte	.LASF17
+ 461 00c2 01       		.sleb128 1
+ 462 00c3 08       		.uleb128 0x8
+ 463 00c4 991F0000 		.4byte	.LASF18
+ 464 00c8 02       		.sleb128 2
+ 465 00c9 08       		.uleb128 0x8
+ 466 00ca 200A0000 		.4byte	.LASF19
+ 467 00ce 03       		.sleb128 3
+ 468 00cf 08       		.uleb128 0x8
+ 469 00d0 F22A0000 		.4byte	.LASF20
+ 470 00d4 04       		.sleb128 4
+ 471 00d5 08       		.uleb128 0x8
+ 472 00d6 D0280000 		.4byte	.LASF21
+ 473 00da 05       		.sleb128 5
+ 474 00db 08       		.uleb128 0x8
+ 475 00dc 1F260000 		.4byte	.LASF22
+ 476 00e0 20       		.sleb128 32
+ 477 00e1 08       		.uleb128 0x8
+ 478 00e2 DF050000 		.4byte	.LASF23
+ 479 00e6 21       		.sleb128 33
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 13
+
+
+ 480 00e7 08       		.uleb128 0x8
+ 481 00e8 F6140000 		.4byte	.LASF24
+ 482 00ec 22       		.sleb128 34
+ 483 00ed 08       		.uleb128 0x8
+ 484 00ee C31B0000 		.4byte	.LASF25
+ 485 00f2 23       		.sleb128 35
+ 486 00f3 08       		.uleb128 0x8
+ 487 00f4 AA110000 		.4byte	.LASF26
+ 488 00f8 24       		.sleb128 36
+ 489 00f9 08       		.uleb128 0x8
+ 490 00fa EA110000 		.4byte	.LASF27
+ 491 00fe 25       		.sleb128 37
+ 492 00ff 08       		.uleb128 0x8
+ 493 0100 D3230000 		.4byte	.LASF28
+ 494 0104 26       		.sleb128 38
+ 495 0105 08       		.uleb128 0x8
+ 496 0106 CC010000 		.4byte	.LASF29
+ 497 010a 27       		.sleb128 39
+ 498 010b 08       		.uleb128 0x8
+ 499 010c AD2B0000 		.4byte	.LASF30
+ 500 0110 28       		.sleb128 40
+ 501 0111 08       		.uleb128 0x8
+ 502 0112 CE1D0000 		.4byte	.LASF31
+ 503 0116 29       		.sleb128 41
+ 504 0117 08       		.uleb128 0x8
+ 505 0118 13140000 		.4byte	.LASF32
+ 506 011c 2A       		.sleb128 42
+ 507 011d 08       		.uleb128 0x8
+ 508 011e 431B0000 		.4byte	.LASF33
+ 509 0122 2B       		.sleb128 43
+ 510 0123 08       		.uleb128 0x8
+ 511 0124 10290000 		.4byte	.LASF34
+ 512 0128 2C       		.sleb128 44
+ 513 0129 08       		.uleb128 0x8
+ 514 012a 3E250000 		.4byte	.LASF35
+ 515 012e C000     		.sleb128 64
+ 516 0130 08       		.uleb128 0x8
+ 517 0131 0E020000 		.4byte	.LASF36
+ 518 0135 C100     		.sleb128 65
+ 519 0137 08       		.uleb128 0x8
+ 520 0138 072B0000 		.4byte	.LASF37
+ 521 013c C200     		.sleb128 66
+ 522 013e 08       		.uleb128 0x8
+ 523 013f 711E0000 		.4byte	.LASF38
+ 524 0143 C300     		.sleb128 67
+ 525 0145 08       		.uleb128 0x8
+ 526 0146 B40A0000 		.4byte	.LASF39
+ 527 014a C400     		.sleb128 68
+ 528 014c 08       		.uleb128 0x8
+ 529 014d 480A0000 		.4byte	.LASF40
+ 530 0151 C500     		.sleb128 69
+ 531 0153 08       		.uleb128 0x8
+ 532 0154 40220000 		.4byte	.LASF41
+ 533 0158 C600     		.sleb128 70
+ 534 015a 08       		.uleb128 0x8
+ 535 015b 22220000 		.4byte	.LASF42
+ 536 015f C700     		.sleb128 71
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 14
+
+
+ 537 0161 08       		.uleb128 0x8
+ 538 0162 C40B0000 		.4byte	.LASF43
+ 539 0166 C800     		.sleb128 72
+ 540 0168 08       		.uleb128 0x8
+ 541 0169 1B1C0000 		.4byte	.LASF44
+ 542 016d C900     		.sleb128 73
+ 543 016f 08       		.uleb128 0x8
+ 544 0170 ED0C0000 		.4byte	.LASF45
+ 545 0174 CA00     		.sleb128 74
+ 546 0176 08       		.uleb128 0x8
+ 547 0177 590C0000 		.4byte	.LASF46
+ 548 017b CB00     		.sleb128 75
+ 549 017d 08       		.uleb128 0x8
+ 550 017e 861B0000 		.4byte	.LASF47
+ 551 0182 CC00     		.sleb128 76
+ 552 0184 08       		.uleb128 0x8
+ 553 0185 6B230000 		.4byte	.LASF48
+ 554 0189 CD00     		.sleb128 77
+ 555 018b 08       		.uleb128 0x8
+ 556 018c 64070000 		.4byte	.LASF49
+ 557 0190 CE00     		.sleb128 78
+ 558 0192 08       		.uleb128 0x8
+ 559 0193 13190000 		.4byte	.LASF50
+ 560 0197 CF00     		.sleb128 79
+ 561 0199 08       		.uleb128 0x8
+ 562 019a 00260000 		.4byte	.LASF51
+ 563 019e D000     		.sleb128 80
+ 564 01a0 08       		.uleb128 0x8
+ 565 01a1 510D0000 		.4byte	.LASF52
+ 566 01a5 D100     		.sleb128 81
+ 567 01a7 08       		.uleb128 0x8
+ 568 01a8 BE050000 		.4byte	.LASF53
+ 569 01ac D200     		.sleb128 82
+ 570 01ae 08       		.uleb128 0x8
+ 571 01af 50280000 		.4byte	.LASF54
+ 572 01b3 D300     		.sleb128 83
+ 573 01b5 08       		.uleb128 0x8
+ 574 01b6 EF2B0000 		.4byte	.LASF55
+ 575 01ba D400     		.sleb128 84
+ 576 01bc 08       		.uleb128 0x8
+ 577 01bd 8F040000 		.4byte	.LASF56
+ 578 01c1 D500     		.sleb128 85
+ 579 01c3 08       		.uleb128 0x8
+ 580 01c4 34290000 		.4byte	.LASF57
+ 581 01c8 F000     		.sleb128 112
+ 582 01ca 08       		.uleb128 0x8
+ 583 01cb D0100000 		.4byte	.LASF58
+ 584 01cf F100     		.sleb128 113
+ 585 01d1 08       		.uleb128 0x8
+ 586 01d2 70090000 		.4byte	.LASF59
+ 587 01d6 F200     		.sleb128 114
+ 588 01d8 08       		.uleb128 0x8
+ 589 01d9 E2250000 		.4byte	.LASF60
+ 590 01dd F300     		.sleb128 115
+ 591 01df 08       		.uleb128 0x8
+ 592 01e0 8E1C0000 		.4byte	.LASF61
+ 593 01e4 F400     		.sleb128 116
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 15
+
+
+ 594 01e6 08       		.uleb128 0x8
+ 595 01e7 9C140000 		.4byte	.LASF62
+ 596 01eb F500     		.sleb128 117
+ 597 01ed 08       		.uleb128 0x8
+ 598 01ee A30B0000 		.4byte	.LASF63
+ 599 01f2 F600     		.sleb128 118
+ 600 01f4 08       		.uleb128 0x8
+ 601 01f5 0B200000 		.4byte	.LASF64
+ 602 01f9 F700     		.sleb128 119
+ 603 01fb 08       		.uleb128 0x8
+ 604 01fc B3040000 		.4byte	.LASF65
+ 605 0200 F800     		.sleb128 120
+ 606 0202 08       		.uleb128 0x8
+ 607 0203 360B0000 		.4byte	.LASF66
+ 608 0207 F900     		.sleb128 121
+ 609 0209 08       		.uleb128 0x8
+ 610 020a 4B2B0000 		.4byte	.LASF67
+ 611 020e FA00     		.sleb128 122
+ 612 0210 08       		.uleb128 0x8
+ 613 0211 CA160000 		.4byte	.LASF68
+ 614 0215 FA01     		.sleb128 250
+ 615 0217 08       		.uleb128 0x8
+ 616 0218 351B0000 		.4byte	.LASF69
+ 617 021c FF01     		.sleb128 255
+ 618 021e 00       		.byte	0
+ 619 021f 09       		.uleb128 0x9
+ 620 0220 02       		.byte	0x2
+ 621 0221 03       		.byte	0x3
+ 622 0222 9A01     		.2byte	0x19a
+ 623 0224 EB020000 		.4byte	0x2eb
+ 624 0228 08       		.uleb128 0x8
+ 625 0229 390A0000 		.4byte	.LASF70
+ 626 022d 00       		.sleb128 0
+ 627 022e 08       		.uleb128 0x8
+ 628 022f A40E0000 		.4byte	.LASF71
+ 629 0233 01       		.sleb128 1
+ 630 0234 08       		.uleb128 0x8
+ 631 0235 D42A0000 		.4byte	.LASF72
+ 632 0239 02       		.sleb128 2
+ 633 023a 08       		.uleb128 0x8
+ 634 023b C90F0000 		.4byte	.LASF73
+ 635 023f 03       		.sleb128 3
+ 636 0240 08       		.uleb128 0x8
+ 637 0241 60120000 		.4byte	.LASF74
+ 638 0245 04       		.sleb128 4
+ 639 0246 08       		.uleb128 0x8
+ 640 0247 60160000 		.4byte	.LASF75
+ 641 024b 05       		.sleb128 5
+ 642 024c 08       		.uleb128 0x8
+ 643 024d 89270000 		.4byte	.LASF76
+ 644 0251 06       		.sleb128 6
+ 645 0252 08       		.uleb128 0x8
+ 646 0253 D00C0000 		.4byte	.LASF77
+ 647 0257 07       		.sleb128 7
+ 648 0258 08       		.uleb128 0x8
+ 649 0259 DD170000 		.4byte	.LASF78
+ 650 025d 08       		.sleb128 8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 16
+
+
+ 651 025e 08       		.uleb128 0x8
+ 652 025f 65260000 		.4byte	.LASF79
+ 653 0263 09       		.sleb128 9
+ 654 0264 08       		.uleb128 0x8
+ 655 0265 3B2C0000 		.4byte	.LASF80
+ 656 0269 0A       		.sleb128 10
+ 657 026a 08       		.uleb128 0x8
+ 658 026b 55060000 		.4byte	.LASF81
+ 659 026f 0B       		.sleb128 11
+ 660 0270 08       		.uleb128 0x8
+ 661 0271 B9280000 		.4byte	.LASF82
+ 662 0275 0C       		.sleb128 12
+ 663 0276 08       		.uleb128 0x8
+ 664 0277 A51A0000 		.4byte	.LASF83
+ 665 027b 0D       		.sleb128 13
+ 666 027c 08       		.uleb128 0x8
+ 667 027d 61130000 		.4byte	.LASF84
+ 668 0281 0E       		.sleb128 14
+ 669 0282 08       		.uleb128 0x8
+ 670 0283 3B160000 		.4byte	.LASF85
+ 671 0287 0F       		.sleb128 15
+ 672 0288 08       		.uleb128 0x8
+ 673 0289 1F040000 		.4byte	.LASF86
+ 674 028d 10       		.sleb128 16
+ 675 028e 08       		.uleb128 0x8
+ 676 028f AC170000 		.4byte	.LASF87
+ 677 0293 11       		.sleb128 17
+ 678 0294 08       		.uleb128 0x8
+ 679 0295 50080000 		.4byte	.LASF88
+ 680 0299 12       		.sleb128 18
+ 681 029a 08       		.uleb128 0x8
+ 682 029b C9090000 		.4byte	.LASF89
+ 683 029f 13       		.sleb128 19
+ 684 02a0 08       		.uleb128 0x8
+ 685 02a1 A8160000 		.4byte	.LASF90
+ 686 02a5 27       		.sleb128 39
+ 687 02a6 08       		.uleb128 0x8
+ 688 02a7 40180000 		.4byte	.LASF91
+ 689 02ab 28       		.sleb128 40
+ 690 02ac 08       		.uleb128 0x8
+ 691 02ad 4D040000 		.4byte	.LASF92
+ 692 02b1 29       		.sleb128 41
+ 693 02b2 08       		.uleb128 0x8
+ 694 02b3 9D100000 		.4byte	.LASF93
+ 695 02b7 FF01     		.sleb128 255
+ 696 02b9 08       		.uleb128 0x8
+ 697 02ba 21120000 		.4byte	.LASF94
+ 698 02be 8002     		.sleb128 256
+ 699 02c0 08       		.uleb128 0x8
+ 700 02c1 88290000 		.4byte	.LASF95
+ 701 02c5 8102     		.sleb128 257
+ 702 02c7 08       		.uleb128 0x8
+ 703 02c8 780F0000 		.4byte	.LASF96
+ 704 02cc 8202     		.sleb128 258
+ 705 02ce 08       		.uleb128 0x8
+ 706 02cf 021C0000 		.4byte	.LASF97
+ 707 02d3 8302     		.sleb128 259
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 17
+
+
+ 708 02d5 08       		.uleb128 0x8
+ 709 02d6 E91B0000 		.4byte	.LASF98
+ 710 02da 8402     		.sleb128 260
+ 711 02dc 08       		.uleb128 0x8
+ 712 02dd E3080000 		.4byte	.LASF99
+ 713 02e1 8502     		.sleb128 261
+ 714 02e3 08       		.uleb128 0x8
+ 715 02e4 D51F0000 		.4byte	.LASF100
+ 716 02e8 8602     		.sleb128 262
+ 717 02ea 00       		.byte	0
+ 718 02eb 0A       		.uleb128 0xa
+ 719 02ec A3270000 		.4byte	.LASF101
+ 720 02f0 03       		.byte	0x3
+ 721 02f1 F401     		.2byte	0x1f4
+ 722 02f3 1F020000 		.4byte	0x21f
+ 723 02f7 0B       		.uleb128 0xb
+ 724 02f8 04       		.byte	0x4
+ 725 02f9 6B000000 		.4byte	0x6b
+ 726 02fd 07       		.uleb128 0x7
+ 727 02fe 01       		.byte	0x1
+ 728 02ff 04       		.byte	0x4
+ 729 0300 A4       		.byte	0xa4
+ 730 0301 B8030000 		.4byte	0x3b8
+ 731 0305 08       		.uleb128 0x8
+ 732 0306 2A200000 		.4byte	.LASF102
+ 733 030a 00       		.sleb128 0
+ 734 030b 08       		.uleb128 0x8
+ 735 030c 7B1F0000 		.4byte	.LASF103
+ 736 0310 01       		.sleb128 1
+ 737 0311 08       		.uleb128 0x8
+ 738 0312 B2030000 		.4byte	.LASF104
+ 739 0316 02       		.sleb128 2
+ 740 0317 08       		.uleb128 0x8
+ 741 0318 C3290000 		.4byte	.LASF105
+ 742 031c 03       		.sleb128 3
+ 743 031d 08       		.uleb128 0x8
+ 744 031e C8080000 		.4byte	.LASF106
+ 745 0322 04       		.sleb128 4
+ 746 0323 08       		.uleb128 0x8
+ 747 0324 3F190000 		.4byte	.LASF107
+ 748 0328 05       		.sleb128 5
+ 749 0329 08       		.uleb128 0x8
+ 750 032a 19250000 		.4byte	.LASF108
+ 751 032e 06       		.sleb128 6
+ 752 032f 08       		.uleb128 0x8
+ 753 0330 4E1C0000 		.4byte	.LASF109
+ 754 0334 07       		.sleb128 7
+ 755 0335 08       		.uleb128 0x8
+ 756 0336 97180000 		.4byte	.LASF110
+ 757 033a 08       		.sleb128 8
+ 758 033b 08       		.uleb128 0x8
+ 759 033c 13160000 		.4byte	.LASF111
+ 760 0340 09       		.sleb128 9
+ 761 0341 08       		.uleb128 0x8
+ 762 0342 EF1A0000 		.4byte	.LASF112
+ 763 0346 0A       		.sleb128 10
+ 764 0347 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 18
+
+
+ 765 0348 A60D0000 		.4byte	.LASF113
+ 766 034c 0B       		.sleb128 11
+ 767 034d 08       		.uleb128 0x8
+ 768 034e E8160000 		.4byte	.LASF114
+ 769 0352 0C       		.sleb128 12
+ 770 0353 08       		.uleb128 0x8
+ 771 0354 8C090000 		.4byte	.LASF115
+ 772 0358 0D       		.sleb128 13
+ 773 0359 08       		.uleb128 0x8
+ 774 035a 8F0C0000 		.4byte	.LASF116
+ 775 035e 0E       		.sleb128 14
+ 776 035f 08       		.uleb128 0x8
+ 777 0360 F9290000 		.4byte	.LASF117
+ 778 0364 0F       		.sleb128 15
+ 779 0365 08       		.uleb128 0x8
+ 780 0366 F9030000 		.4byte	.LASF118
+ 781 036a 10       		.sleb128 16
+ 782 036b 08       		.uleb128 0x8
+ 783 036c D4030000 		.4byte	.LASF119
+ 784 0370 11       		.sleb128 17
+ 785 0371 08       		.uleb128 0x8
+ 786 0372 700D0000 		.4byte	.LASF120
+ 787 0376 8001     		.sleb128 128
+ 788 0378 08       		.uleb128 0x8
+ 789 0379 7C110000 		.4byte	.LASF121
+ 790 037d 8001     		.sleb128 128
+ 791 037f 08       		.uleb128 0x8
+ 792 0380 C5240000 		.4byte	.LASF122
+ 793 0384 8001     		.sleb128 128
+ 794 0386 08       		.uleb128 0x8
+ 795 0387 11210000 		.4byte	.LASF123
+ 796 038b 8001     		.sleb128 128
+ 797 038d 08       		.uleb128 0x8
+ 798 038e 541A0000 		.4byte	.LASF124
+ 799 0392 8001     		.sleb128 128
+ 800 0394 08       		.uleb128 0x8
+ 801 0395 72100000 		.4byte	.LASF125
+ 802 0399 8101     		.sleb128 129
+ 803 039b 08       		.uleb128 0x8
+ 804 039c FD260000 		.4byte	.LASF126
+ 805 03a0 A001     		.sleb128 160
+ 806 03a2 08       		.uleb128 0x8
+ 807 03a3 36120000 		.4byte	.LASF127
+ 808 03a7 FD01     		.sleb128 253
+ 809 03a9 08       		.uleb128 0x8
+ 810 03aa 11170000 		.4byte	.LASF128
+ 811 03ae FE01     		.sleb128 254
+ 812 03b0 08       		.uleb128 0x8
+ 813 03b1 E91C0000 		.4byte	.LASF129
+ 814 03b5 FF01     		.sleb128 255
+ 815 03b7 00       		.byte	0
+ 816 03b8 0A       		.uleb128 0xa
+ 817 03b9 D8200000 		.4byte	.LASF130
+ 818 03bd 04       		.byte	0x4
+ 819 03be 3001     		.2byte	0x130
+ 820 03c0 FD020000 		.4byte	0x2fd
+ 821 03c4 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 19
+
+
+ 822 03c5 EF1F0000 		.4byte	.LASF131
+ 823 03c9 04       		.byte	0x4
+ 824 03ca 5201     		.2byte	0x152
+ 825 03cc 76000000 		.4byte	0x76
+ 826 03d0 0C       		.uleb128 0xc
+ 827 03d1 02       		.byte	0x2
+ 828 03d2 04       		.byte	0x4
+ 829 03d3 5501     		.2byte	0x155
+ 830 03d5 F4030000 		.4byte	0x3f4
+ 831 03d9 0D       		.uleb128 0xd
+ 832 03da AA060000 		.4byte	.LASF132
+ 833 03de 04       		.byte	0x4
+ 834 03df 5C01     		.2byte	0x15c
+ 835 03e1 6B000000 		.4byte	0x6b
+ 836 03e5 00       		.byte	0
+ 837 03e6 0D       		.uleb128 0xd
+ 838 03e7 CE2A0000 		.4byte	.LASF133
+ 839 03eb 04       		.byte	0x4
+ 840 03ec 6201     		.2byte	0x162
+ 841 03ee 6B000000 		.4byte	0x6b
+ 842 03f2 01       		.byte	0x1
+ 843 03f3 00       		.byte	0
+ 844 03f4 0A       		.uleb128 0xa
+ 845 03f5 1E060000 		.4byte	.LASF134
+ 846 03f9 04       		.byte	0x4
+ 847 03fa 6401     		.2byte	0x164
+ 848 03fc D0030000 		.4byte	0x3d0
+ 849 0400 0C       		.uleb128 0xc
+ 850 0401 08       		.byte	0x8
+ 851 0402 04       		.byte	0x4
+ 852 0403 7901     		.2byte	0x179
+ 853 0405 31040000 		.4byte	0x431
+ 854 0409 0E       		.uleb128 0xe
+ 855 040a 76616C00 		.ascii	"val\000"
+ 856 040e 04       		.byte	0x4
+ 857 040f 7C01     		.2byte	0x17c
+ 858 0411 F7020000 		.4byte	0x2f7
+ 859 0415 00       		.byte	0
+ 860 0416 0E       		.uleb128 0xe
+ 861 0417 6C656E00 		.ascii	"len\000"
+ 862 041b 04       		.byte	0x4
+ 863 041c 7F01     		.2byte	0x17f
+ 864 041e 76000000 		.4byte	0x76
+ 865 0422 04       		.byte	0x4
+ 866 0423 0D       		.uleb128 0xd
+ 867 0424 592A0000 		.4byte	.LASF135
+ 868 0428 04       		.byte	0x4
+ 869 0429 8601     		.2byte	0x186
+ 870 042b 76000000 		.4byte	0x76
+ 871 042f 06       		.byte	0x6
+ 872 0430 00       		.byte	0
+ 873 0431 0A       		.uleb128 0xa
+ 874 0432 D6040000 		.4byte	.LASF136
+ 875 0436 04       		.byte	0x4
+ 876 0437 8801     		.2byte	0x188
+ 877 0439 00040000 		.4byte	0x400
+ 878 043d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 20
+
+
+ 879 043e 0C       		.byte	0xc
+ 880 043f 04       		.byte	0x4
+ 881 0440 8B01     		.2byte	0x18b
+ 882 0442 61040000 		.4byte	0x461
+ 883 0446 0D       		.uleb128 0xd
+ 884 0447 3E200000 		.4byte	.LASF137
+ 885 044b 04       		.byte	0x4
+ 886 044c 8E01     		.2byte	0x18e
+ 887 044e 31040000 		.4byte	0x431
+ 888 0452 00       		.byte	0
+ 889 0453 0D       		.uleb128 0xd
+ 890 0454 C1180000 		.4byte	.LASF138
+ 891 0458 04       		.byte	0x4
+ 892 0459 9101     		.2byte	0x191
+ 893 045b C4030000 		.4byte	0x3c4
+ 894 045f 08       		.byte	0x8
+ 895 0460 00       		.byte	0
+ 896 0461 0A       		.uleb128 0xa
+ 897 0462 06090000 		.4byte	.LASF139
+ 898 0466 04       		.byte	0x4
+ 899 0467 9301     		.2byte	0x193
+ 900 0469 3D040000 		.4byte	0x43d
+ 901 046d 0F       		.uleb128 0xf
+ 902 046e 10       		.byte	0x10
+ 903 046f 05       		.byte	0x5
+ 904 0470 52       		.byte	0x52
+ 905 0471 8E040000 		.4byte	0x48e
+ 906 0475 10       		.uleb128 0x10
+ 907 0476 8D210000 		.4byte	.LASF140
+ 908 047a 05       		.byte	0x5
+ 909 047b 55       		.byte	0x55
+ 910 047c F4030000 		.4byte	0x3f4
+ 911 0480 00       		.byte	0
+ 912 0481 10       		.uleb128 0x10
+ 913 0482 A8240000 		.4byte	.LASF141
+ 914 0486 05       		.byte	0x5
+ 915 0487 58       		.byte	0x58
+ 916 0488 61040000 		.4byte	0x461
+ 917 048c 04       		.byte	0x4
+ 918 048d 00       		.byte	0
+ 919 048e 04       		.uleb128 0x4
+ 920 048f E8180000 		.4byte	.LASF142
+ 921 0493 05       		.byte	0x5
+ 922 0494 5A       		.byte	0x5a
+ 923 0495 6D040000 		.4byte	0x46d
+ 924 0499 0F       		.uleb128 0xf
+ 925 049a 08       		.byte	0x8
+ 926 049b 06       		.byte	0x6
+ 927 049c B8       		.byte	0xb8
+ 928 049d BA040000 		.4byte	0x4ba
+ 929 04a1 10       		.uleb128 0x10
+ 930 04a2 CE1F0000 		.4byte	.LASF143
+ 931 04a6 06       		.byte	0x6
+ 932 04a7 BB       		.byte	0xbb
+ 933 04a8 76000000 		.4byte	0x76
+ 934 04ac 00       		.byte	0
+ 935 04ad 10       		.uleb128 0x10
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 21
+
+
+ 936 04ae 1F240000 		.4byte	.LASF144
+ 937 04b2 06       		.byte	0x6
+ 938 04b3 C0       		.byte	0xc0
+ 939 04b4 AD000000 		.4byte	0xad
+ 940 04b8 04       		.byte	0x4
+ 941 04b9 00       		.byte	0
+ 942 04ba 04       		.uleb128 0x4
+ 943 04bb 04220000 		.4byte	.LASF145
+ 944 04bf 06       		.byte	0x6
+ 945 04c0 C2       		.byte	0xc2
+ 946 04c1 99040000 		.4byte	0x499
+ 947 04c5 11       		.uleb128 0x11
+ 948 04c6 08       		.byte	0x8
+ 949 04c7 06       		.byte	0x6
+ 950 04c8 C5       		.byte	0xc5
+ 951 04c9 E4040000 		.4byte	0x4e4
+ 952 04cd 12       		.uleb128 0x12
+ 953 04ce B6240000 		.4byte	.LASF146
+ 954 04d2 06       		.byte	0x6
+ 955 04d3 CC       		.byte	0xcc
+ 956 04d4 BA040000 		.4byte	0x4ba
+ 957 04d8 12       		.uleb128 0x12
+ 958 04d9 A4130000 		.4byte	.LASF147
+ 959 04dd 06       		.byte	0x6
+ 960 04de CF       		.byte	0xcf
+ 961 04df 76000000 		.4byte	0x76
+ 962 04e3 00       		.byte	0
+ 963 04e4 04       		.uleb128 0x4
+ 964 04e5 9E230000 		.4byte	.LASF148
+ 965 04e9 06       		.byte	0x6
+ 966 04ea D1       		.byte	0xd1
+ 967 04eb C5040000 		.4byte	0x4c5
+ 968 04ef 0F       		.uleb128 0xf
+ 969 04f0 14       		.byte	0x14
+ 970 04f1 06       		.byte	0x6
+ 971 04f2 D4       		.byte	0xd4
+ 972 04f3 34050000 		.4byte	0x534
+ 973 04f7 10       		.uleb128 0x10
+ 974 04f8 590B0000 		.4byte	.LASF149
+ 975 04fc 06       		.byte	0x6
+ 976 04fd D7       		.byte	0xd7
+ 977 04fe 76000000 		.4byte	0x76
+ 978 0502 00       		.byte	0
+ 979 0503 10       		.uleb128 0x10
+ 980 0504 25090000 		.4byte	.LASF150
+ 981 0508 06       		.byte	0x6
+ 982 0509 DD       		.byte	0xdd
+ 983 050a 76000000 		.4byte	0x76
+ 984 050e 02       		.byte	0x2
+ 985 050f 10       		.uleb128 0x10
+ 986 0510 0C050000 		.4byte	.LASF151
+ 987 0514 06       		.byte	0x6
+ 988 0515 E7       		.byte	0xe7
+ 989 0516 81000000 		.4byte	0x81
+ 990 051a 04       		.byte	0x4
+ 991 051b 10       		.uleb128 0x10
+ 992 051c 32190000 		.4byte	.LASF152
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 22
+
+
+ 993 0520 06       		.byte	0x6
+ 994 0521 EA       		.byte	0xea
+ 995 0522 76000000 		.4byte	0x76
+ 996 0526 08       		.byte	0x8
+ 997 0527 10       		.uleb128 0x10
+ 998 0528 84200000 		.4byte	.LASF153
+ 999 052c 06       		.byte	0x6
+ 1000 052d F3       		.byte	0xf3
+ 1001 052e E4040000 		.4byte	0x4e4
+ 1002 0532 0C       		.byte	0xc
+ 1003 0533 00       		.byte	0
+ 1004 0534 04       		.uleb128 0x4
+ 1005 0535 4E0E0000 		.4byte	.LASF154
+ 1006 0539 06       		.byte	0x6
+ 1007 053a F4       		.byte	0xf4
+ 1008 053b EF040000 		.4byte	0x4ef
+ 1009 053f 0A       		.uleb128 0xa
+ 1010 0540 92050000 		.4byte	.LASF155
+ 1011 0544 07       		.byte	0x7
+ 1012 0545 0101     		.2byte	0x101
+ 1013 0547 4B050000 		.4byte	0x54b
+ 1014 054b 0B       		.uleb128 0xb
+ 1015 054c 04       		.byte	0x4
+ 1016 054d 51050000 		.4byte	0x551
+ 1017 0551 13       		.uleb128 0x13
+ 1018 0552 61050000 		.4byte	0x561
+ 1019 0556 14       		.uleb128 0x14
+ 1020 0557 81000000 		.4byte	0x81
+ 1021 055b 14       		.uleb128 0x14
+ 1022 055c AD000000 		.4byte	0xad
+ 1023 0560 00       		.byte	0
+ 1024 0561 0F       		.uleb128 0xf
+ 1025 0562 06       		.byte	0x6
+ 1026 0563 08       		.byte	0x8
+ 1027 0564 6F       		.byte	0x6f
+ 1028 0565 8E050000 		.4byte	0x58e
+ 1029 0569 10       		.uleb128 0x10
+ 1030 056a 96080000 		.4byte	.LASF156
+ 1031 056e 08       		.byte	0x8
+ 1032 056f 71       		.byte	0x71
+ 1033 0570 C4030000 		.4byte	0x3c4
+ 1034 0574 00       		.byte	0
+ 1035 0575 10       		.uleb128 0x10
+ 1036 0576 31210000 		.4byte	.LASF157
+ 1037 057a 08       		.byte	0x8
+ 1038 057b 72       		.byte	0x72
+ 1039 057c C4030000 		.4byte	0x3c4
+ 1040 0580 02       		.byte	0x2
+ 1041 0581 10       		.uleb128 0x10
+ 1042 0582 632A0000 		.4byte	.LASF158
+ 1043 0586 08       		.byte	0x8
+ 1044 0587 73       		.byte	0x73
+ 1045 0588 C4030000 		.4byte	0x3c4
+ 1046 058c 04       		.byte	0x4
+ 1047 058d 00       		.byte	0
+ 1048 058e 04       		.uleb128 0x4
+ 1049 058f E8140000 		.4byte	.LASF159
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 23
+
+
+ 1050 0593 08       		.byte	0x8
+ 1051 0594 74       		.byte	0x74
+ 1052 0595 61050000 		.4byte	0x561
+ 1053 0599 07       		.uleb128 0x7
+ 1054 059a 02       		.byte	0x2
+ 1055 059b 09       		.byte	0x9
+ 1056 059c 80       		.byte	0x80
+ 1057 059d FF0A0000 		.4byte	0xaff
+ 1058 05a1 08       		.uleb128 0x8
+ 1059 05a2 821A0000 		.4byte	.LASF160
+ 1060 05a6 8002     		.sleb128 256
+ 1061 05a8 08       		.uleb128 0x8
+ 1062 05a9 6F2B0000 		.4byte	.LASF161
+ 1063 05ad 8102     		.sleb128 257
+ 1064 05af 08       		.uleb128 0x8
+ 1065 05b0 1B080000 		.4byte	.LASF162
+ 1066 05b4 8202     		.sleb128 258
+ 1067 05b6 08       		.uleb128 0x8
+ 1068 05b7 252B0000 		.4byte	.LASF163
+ 1069 05bb 8302     		.sleb128 259
+ 1070 05bd 08       		.uleb128 0x8
+ 1071 05be 411F0000 		.4byte	.LASF164
+ 1072 05c2 8402     		.sleb128 260
+ 1073 05c4 08       		.uleb128 0x8
+ 1074 05c5 65270000 		.4byte	.LASF165
+ 1075 05c9 8502     		.sleb128 261
+ 1076 05cb 08       		.uleb128 0x8
+ 1077 05cc 630B0000 		.4byte	.LASF166
+ 1078 05d0 8602     		.sleb128 262
+ 1079 05d2 08       		.uleb128 0x8
+ 1080 05d3 C7000000 		.4byte	.LASF167
+ 1081 05d7 8702     		.sleb128 263
+ 1082 05d9 08       		.uleb128 0x8
+ 1083 05da 9D290000 		.4byte	.LASF168
+ 1084 05de 8802     		.sleb128 264
+ 1085 05e0 08       		.uleb128 0x8
+ 1086 05e1 69040000 		.4byte	.LASF169
+ 1087 05e5 8902     		.sleb128 265
+ 1088 05e7 08       		.uleb128 0x8
+ 1089 05e8 53020000 		.4byte	.LASF170
+ 1090 05ec 8A02     		.sleb128 266
+ 1091 05ee 08       		.uleb128 0x8
+ 1092 05ef 830E0000 		.4byte	.LASF171
+ 1093 05f3 8B02     		.sleb128 267
+ 1094 05f5 08       		.uleb128 0x8
+ 1095 05f6 CE150000 		.4byte	.LASF172
+ 1096 05fa 8C02     		.sleb128 268
+ 1097 05fc 08       		.uleb128 0x8
+ 1098 05fd 371E0000 		.4byte	.LASF173
+ 1099 0601 8D02     		.sleb128 269
+ 1100 0603 08       		.uleb128 0x8
+ 1101 0604 E4020000 		.4byte	.LASF174
+ 1102 0608 8E02     		.sleb128 270
+ 1103 060a 08       		.uleb128 0x8
+ 1104 060b 310C0000 		.4byte	.LASF175
+ 1105 060f 8F02     		.sleb128 271
+ 1106 0611 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 24
+
+
+ 1107 0612 F6050000 		.4byte	.LASF176
+ 1108 0616 9002     		.sleb128 272
+ 1109 0618 08       		.uleb128 0x8
+ 1110 0619 EE270000 		.4byte	.LASF177
+ 1111 061d 9102     		.sleb128 273
+ 1112 061f 08       		.uleb128 0x8
+ 1113 0620 621B0000 		.4byte	.LASF178
+ 1114 0624 9202     		.sleb128 274
+ 1115 0626 08       		.uleb128 0x8
+ 1116 0627 7A2C0000 		.4byte	.LASF179
+ 1117 062b 9302     		.sleb128 275
+ 1118 062d 08       		.uleb128 0x8
+ 1119 062e C8250000 		.4byte	.LASF180
+ 1120 0632 9402     		.sleb128 276
+ 1121 0634 08       		.uleb128 0x8
+ 1122 0635 912B0000 		.4byte	.LASF181
+ 1123 0639 9502     		.sleb128 277
+ 1124 063b 08       		.uleb128 0x8
+ 1125 063c 3F130000 		.4byte	.LASF182
+ 1126 0640 9602     		.sleb128 278
+ 1127 0642 08       		.uleb128 0x8
+ 1128 0643 F6100000 		.4byte	.LASF183
+ 1129 0647 9702     		.sleb128 279
+ 1130 0649 08       		.uleb128 0x8
+ 1131 064a 8F030000 		.4byte	.LASF184
+ 1132 064e 9802     		.sleb128 280
+ 1133 0650 08       		.uleb128 0x8
+ 1134 0651 D71E0000 		.4byte	.LASF185
+ 1135 0655 9902     		.sleb128 281
+ 1136 0657 08       		.uleb128 0x8
+ 1137 0658 B1130000 		.4byte	.LASF186
+ 1138 065c 9A02     		.sleb128 282
+ 1139 065e 08       		.uleb128 0x8
+ 1140 065f 98210000 		.4byte	.LASF187
+ 1141 0663 9B02     		.sleb128 283
+ 1142 0665 08       		.uleb128 0x8
+ 1143 0666 66250000 		.4byte	.LASF188
+ 1144 066a 9C02     		.sleb128 284
+ 1145 066c 08       		.uleb128 0x8
+ 1146 066d BF260000 		.4byte	.LASF189
+ 1147 0671 9D02     		.sleb128 285
+ 1148 0673 08       		.uleb128 0x8
+ 1149 0674 FD090000 		.4byte	.LASF190
+ 1150 0678 9E02     		.sleb128 286
+ 1151 067a 08       		.uleb128 0x8
+ 1152 067b 82250000 		.4byte	.LASF191
+ 1153 067f 9F02     		.sleb128 287
+ 1154 0681 08       		.uleb128 0x8
+ 1155 0682 54050000 		.4byte	.LASF192
+ 1156 0686 A002     		.sleb128 288
+ 1157 0688 08       		.uleb128 0x8
+ 1158 0689 8F190000 		.4byte	.LASF193
+ 1159 068d A102     		.sleb128 289
+ 1160 068f 08       		.uleb128 0x8
+ 1161 0690 FB230000 		.4byte	.LASF194
+ 1162 0694 A202     		.sleb128 290
+ 1163 0696 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 25
+
+
+ 1164 0697 5F0E0000 		.4byte	.LASF195
+ 1165 069b A302     		.sleb128 291
+ 1166 069d 08       		.uleb128 0x8
+ 1167 069e CA1A0000 		.4byte	.LASF196
+ 1168 06a2 A402     		.sleb128 292
+ 1169 06a4 08       		.uleb128 0x8
+ 1170 06a5 36100000 		.4byte	.LASF197
+ 1171 06a9 A502     		.sleb128 293
+ 1172 06ab 08       		.uleb128 0x8
+ 1173 06ac 76050000 		.4byte	.LASF198
+ 1174 06b0 A602     		.sleb128 294
+ 1175 06b2 08       		.uleb128 0x8
+ 1176 06b3 AA010000 		.4byte	.LASF199
+ 1177 06b7 A702     		.sleb128 295
+ 1178 06b9 08       		.uleb128 0x8
+ 1179 06ba D8060000 		.4byte	.LASF200
+ 1180 06be A802     		.sleb128 296
+ 1181 06c0 08       		.uleb128 0x8
+ 1182 06c1 60200000 		.4byte	.LASF201
+ 1183 06c5 A902     		.sleb128 297
+ 1184 06c7 08       		.uleb128 0x8
+ 1185 06c8 7E160000 		.4byte	.LASF202
+ 1186 06cc AA02     		.sleb128 298
+ 1187 06ce 08       		.uleb128 0x8
+ 1188 06cf B6270000 		.4byte	.LASF203
+ 1189 06d3 AB02     		.sleb128 299
+ 1190 06d5 08       		.uleb128 0x8
+ 1191 06d6 B3060000 		.4byte	.LASF204
+ 1192 06da AC02     		.sleb128 300
+ 1193 06dc 08       		.uleb128 0x8
+ 1194 06dd 1F1D0000 		.4byte	.LASF205
+ 1195 06e1 AD02     		.sleb128 301
+ 1196 06e3 08       		.uleb128 0x8
+ 1197 06e4 5A290000 		.4byte	.LASF206
+ 1198 06e8 AE02     		.sleb128 302
+ 1199 06ea 08       		.uleb128 0x8
+ 1200 06eb 11280000 		.4byte	.LASF207
+ 1201 06ef AF02     		.sleb128 303
+ 1202 06f1 08       		.uleb128 0x8
+ 1203 06f2 6A000000 		.4byte	.LASF208
+ 1204 06f6 B002     		.sleb128 304
+ 1205 06f8 08       		.uleb128 0x8
+ 1206 06f9 FC240000 		.4byte	.LASF209
+ 1207 06fd B102     		.sleb128 305
+ 1208 06ff 08       		.uleb128 0x8
+ 1209 0700 3C140000 		.4byte	.LASF210
+ 1210 0704 B202     		.sleb128 306
+ 1211 0706 08       		.uleb128 0x8
+ 1212 0707 2D240000 		.4byte	.LASF211
+ 1213 070b B302     		.sleb128 307
+ 1214 070d 08       		.uleb128 0x8
+ 1215 070e 87220000 		.4byte	.LASF212
+ 1216 0712 B402     		.sleb128 308
+ 1217 0714 08       		.uleb128 0x8
+ 1218 0715 55010000 		.4byte	.LASF213
+ 1219 0719 B502     		.sleb128 309
+ 1220 071b 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 26
+
+
+ 1221 071c BD210000 		.4byte	.LASF214
+ 1222 0720 B602     		.sleb128 310
+ 1223 0722 08       		.uleb128 0x8
+ 1224 0723 F60A0000 		.4byte	.LASF215
+ 1225 0727 B702     		.sleb128 311
+ 1226 0729 08       		.uleb128 0x8
+ 1227 072a 1E070000 		.4byte	.LASF216
+ 1228 072e B802     		.sleb128 312
+ 1229 0730 08       		.uleb128 0x8
+ 1230 0731 FB060000 		.4byte	.LASF217
+ 1231 0735 B902     		.sleb128 313
+ 1232 0737 08       		.uleb128 0x8
+ 1233 0738 D20A0000 		.4byte	.LASF218
+ 1234 073c BA02     		.sleb128 314
+ 1235 073e 08       		.uleb128 0x8
+ 1236 073f 3F150000 		.4byte	.LASF219
+ 1237 0743 BB02     		.sleb128 315
+ 1238 0745 08       		.uleb128 0x8
+ 1239 0746 AC2A0000 		.4byte	.LASF220
+ 1240 074a BC02     		.sleb128 316
+ 1241 074c 08       		.uleb128 0x8
+ 1242 074d 0F0E0000 		.4byte	.LASF221
+ 1243 0751 BD02     		.sleb128 317
+ 1244 0753 08       		.uleb128 0x8
+ 1245 0754 44200000 		.4byte	.LASF222
+ 1246 0758 BE02     		.sleb128 318
+ 1247 075a 08       		.uleb128 0x8
+ 1248 075b 341C0000 		.4byte	.LASF223
+ 1249 075f BF02     		.sleb128 319
+ 1250 0761 08       		.uleb128 0x8
+ 1251 0762 10010000 		.4byte	.LASF224
+ 1252 0766 C002     		.sleb128 320
+ 1253 0768 08       		.uleb128 0x8
+ 1254 0769 F0130000 		.4byte	.LASF225
+ 1255 076d C102     		.sleb128 321
+ 1256 076f 08       		.uleb128 0x8
+ 1257 0770 85000000 		.4byte	.LASF226
+ 1258 0774 C202     		.sleb128 322
+ 1259 0776 08       		.uleb128 0x8
+ 1260 0777 82070000 		.4byte	.LASF227
+ 1261 077b C302     		.sleb128 323
+ 1262 077d 08       		.uleb128 0x8
+ 1263 077e 71280000 		.4byte	.LASF228
+ 1264 0782 C402     		.sleb128 324
+ 1265 0784 08       		.uleb128 0x8
+ 1266 0785 11100000 		.4byte	.LASF229
+ 1267 0789 C502     		.sleb128 325
+ 1268 078b 08       		.uleb128 0x8
+ 1269 078c 0A0F0000 		.4byte	.LASF230
+ 1270 0790 C602     		.sleb128 326
+ 1271 0792 08       		.uleb128 0x8
+ 1272 0793 E9040000 		.4byte	.LASF231
+ 1273 0797 C702     		.sleb128 327
+ 1274 0799 08       		.uleb128 0x8
+ 1275 079a AF070000 		.4byte	.LASF232
+ 1276 079e C802     		.sleb128 328
+ 1277 07a0 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 27
+
+
+ 1278 07a1 84170000 		.4byte	.LASF233
+ 1279 07a5 C902     		.sleb128 329
+ 1280 07a7 08       		.uleb128 0x8
+ 1281 07a8 CD140000 		.4byte	.LASF234
+ 1282 07ac CA02     		.sleb128 330
+ 1283 07ae 08       		.uleb128 0x8
+ 1284 07af 75060000 		.4byte	.LASF235
+ 1285 07b3 CB02     		.sleb128 331
+ 1286 07b5 08       		.uleb128 0x8
+ 1287 07b6 A3050000 		.4byte	.LASF236
+ 1288 07ba CC02     		.sleb128 332
+ 1289 07bc 08       		.uleb128 0x8
+ 1290 07bd 32010000 		.4byte	.LASF237
+ 1291 07c1 CD02     		.sleb128 333
+ 1292 07c3 08       		.uleb128 0x8
+ 1293 07c4 78140000 		.4byte	.LASF238
+ 1294 07c8 CE02     		.sleb128 334
+ 1295 07ca 08       		.uleb128 0x8
+ 1296 07cb 102C0000 		.4byte	.LASF239
+ 1297 07cf CF02     		.sleb128 335
+ 1298 07d1 08       		.uleb128 0x8
+ 1299 07d2 68210000 		.4byte	.LASF240
+ 1300 07d6 D002     		.sleb128 336
+ 1301 07d8 08       		.uleb128 0x8
+ 1302 07d9 300F0000 		.4byte	.LASF241
+ 1303 07dd D102     		.sleb128 337
+ 1304 07df 08       		.uleb128 0x8
+ 1305 07e0 6A190000 		.4byte	.LASF242
+ 1306 07e4 D202     		.sleb128 338
+ 1307 07e6 08       		.uleb128 0x8
+ 1308 07e7 BC200000 		.4byte	.LASF243
+ 1309 07eb D302     		.sleb128 339
+ 1310 07ed 08       		.uleb128 0x8
+ 1311 07ee C2020000 		.4byte	.LASF244
+ 1312 07f2 D402     		.sleb128 340
+ 1313 07f4 08       		.uleb128 0x8
+ 1314 07f5 AB1F0000 		.4byte	.LASF245
+ 1315 07f9 D502     		.sleb128 341
+ 1316 07fb 08       		.uleb128 0x8
+ 1317 07fc C80D0000 		.4byte	.LASF246
+ 1318 0800 D602     		.sleb128 342
+ 1319 0802 08       		.uleb128 0x8
+ 1320 0803 6C1C0000 		.4byte	.LASF247
+ 1321 0807 D702     		.sleb128 343
+ 1322 0809 08       		.uleb128 0x8
+ 1323 080a A6250000 		.4byte	.LASF248
+ 1324 080e D802     		.sleb128 344
+ 1325 0810 08       		.uleb128 0x8
+ 1326 0811 EE200000 		.4byte	.LASF249
+ 1327 0815 D902     		.sleb128 345
+ 1328 0817 08       		.uleb128 0x8
+ 1329 0818 1D1F0000 		.4byte	.LASF250
+ 1330 081c DA02     		.sleb128 346
+ 1331 081e 08       		.uleb128 0x8
+ 1332 081f EF150000 		.4byte	.LASF251
+ 1333 0823 DB02     		.sleb128 347
+ 1334 0825 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 28
+
+
+ 1335 0826 7A010000 		.4byte	.LASF252
+ 1336 082a DC02     		.sleb128 348
+ 1337 082c 08       		.uleb128 0x8
+ 1338 082d 051D0000 		.4byte	.LASF253
+ 1339 0831 DD02     		.sleb128 349
+ 1340 0833 08       		.uleb128 0x8
+ 1341 0834 922A0000 		.4byte	.LASF254
+ 1342 0838 DE02     		.sleb128 350
+ 1343 083a 08       		.uleb128 0x8
+ 1344 083b E1260000 		.4byte	.LASF255
+ 1345 083f DF02     		.sleb128 351
+ 1346 0841 08       		.uleb128 0x8
+ 1347 0842 60150000 		.4byte	.LASF256
+ 1348 0846 E002     		.sleb128 352
+ 1349 0848 08       		.uleb128 0x8
+ 1350 0849 29020000 		.4byte	.LASF257
+ 1351 084d E102     		.sleb128 353
+ 1352 084f 08       		.uleb128 0x8
+ 1353 0850 AD0C0000 		.4byte	.LASF258
+ 1354 0854 E202     		.sleb128 354
+ 1355 0856 08       		.uleb128 0x8
+ 1356 0857 2C280000 		.4byte	.LASF259
+ 1357 085b E302     		.sleb128 355
+ 1358 085d 08       		.uleb128 0x8
+ 1359 085e B92C0000 		.4byte	.LASF260
+ 1360 0862 E402     		.sleb128 356
+ 1361 0864 08       		.uleb128 0x8
+ 1362 0865 65180000 		.4byte	.LASF261
+ 1363 0869 E502     		.sleb128 357
+ 1364 086b 08       		.uleb128 0x8
+ 1365 086c CF2B0000 		.4byte	.LASF262
+ 1366 0870 E602     		.sleb128 358
+ 1367 0872 08       		.uleb128 0x8
+ 1368 0873 1E180000 		.4byte	.LASF263
+ 1369 0877 E702     		.sleb128 359
+ 1370 0879 08       		.uleb128 0x8
+ 1371 087a B1090000 		.4byte	.LASF264
+ 1372 087e E802     		.sleb128 360
+ 1373 0880 08       		.uleb128 0x8
+ 1374 0881 04120000 		.4byte	.LASF265
+ 1375 0885 E902     		.sleb128 361
+ 1376 0887 08       		.uleb128 0x8
+ 1377 0888 50100000 		.4byte	.LASF266
+ 1378 088c EA02     		.sleb128 362
+ 1379 088e 08       		.uleb128 0x8
+ 1380 088f 53090000 		.4byte	.LASF267
+ 1381 0893 EB02     		.sleb128 363
+ 1382 0895 08       		.uleb128 0x8
+ 1383 0896 AB220000 		.4byte	.LASF268
+ 1384 089a EC02     		.sleb128 364
+ 1385 089c 08       		.uleb128 0x8
+ 1386 089d A9120000 		.4byte	.LASF269
+ 1387 08a1 ED02     		.sleb128 365
+ 1388 08a3 08       		.uleb128 0x8
+ 1389 08a4 881D0000 		.4byte	.LASF270
+ 1390 08a8 EE02     		.sleb128 366
+ 1391 08aa 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 29
+
+
+ 1392 08ab 4B030000 		.4byte	.LASF271
+ 1393 08af EF02     		.sleb128 367
+ 1394 08b1 08       		.uleb128 0x8
+ 1395 08b2 290E0000 		.4byte	.LASF272
+ 1396 08b6 F002     		.sleb128 368
+ 1397 08b8 08       		.uleb128 0x8
+ 1398 08b9 58110000 		.4byte	.LASF273
+ 1399 08bd F102     		.sleb128 369
+ 1400 08bf 08       		.uleb128 0x8
+ 1401 08c0 022D0000 		.4byte	.LASF274
+ 1402 08c4 F202     		.sleb128 370
+ 1403 08c6 08       		.uleb128 0x8
+ 1404 08c7 441D0000 		.4byte	.LASF275
+ 1405 08cb F302     		.sleb128 371
+ 1406 08cd 08       		.uleb128 0x8
+ 1407 08ce AC1D0000 		.4byte	.LASF276
+ 1408 08d2 F402     		.sleb128 372
+ 1409 08d4 08       		.uleb128 0x8
+ 1410 08d5 32060000 		.4byte	.LASF277
+ 1411 08d9 F502     		.sleb128 373
+ 1412 08db 08       		.uleb128 0x8
+ 1413 08dc EE0F0000 		.4byte	.LASF278
+ 1414 08e0 F602     		.sleb128 374
+ 1415 08e2 08       		.uleb128 0x8
+ 1416 08e3 2D230000 		.4byte	.LASF279
+ 1417 08e7 F702     		.sleb128 375
+ 1418 08e9 08       		.uleb128 0x8
+ 1419 08ea A4080000 		.4byte	.LASF280
+ 1420 08ee F802     		.sleb128 376
+ 1421 08f0 08       		.uleb128 0x8
+ 1422 08f1 22000000 		.4byte	.LASF281
+ 1423 08f5 F902     		.sleb128 377
+ 1424 08f7 08       		.uleb128 0x8
+ 1425 08f8 7A260000 		.4byte	.LASF282
+ 1426 08fc FA02     		.sleb128 378
+ 1427 08fe 08       		.uleb128 0x8
+ 1428 08ff 0B0D0000 		.4byte	.LASF283
+ 1429 0903 FB02     		.sleb128 379
+ 1430 0905 08       		.uleb128 0x8
+ 1431 0906 DE2C0000 		.4byte	.LASF284
+ 1432 090a FC02     		.sleb128 380
+ 1433 090c 08       		.uleb128 0x8
+ 1434 090d 8A130000 		.4byte	.LASF285
+ 1435 0911 FD02     		.sleb128 381
+ 1436 0913 08       		.uleb128 0x8
+ 1437 0914 82150000 		.4byte	.LASF286
+ 1438 0918 FE02     		.sleb128 382
+ 1439 091a 08       		.uleb128 0x8
+ 1440 091b 9F2C0000 		.4byte	.LASF287
+ 1441 091f FF02     		.sleb128 383
+ 1442 0921 08       		.uleb128 0x8
+ 1443 0922 57240000 		.4byte	.LASF288
+ 1444 0926 8003     		.sleb128 384
+ 1445 0928 08       		.uleb128 0x8
+ 1446 0929 121B0000 		.4byte	.LASF289
+ 1447 092d 8103     		.sleb128 385
+ 1448 092f 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 30
+
+
+ 1449 0930 AC1C0000 		.4byte	.LASF290
+ 1450 0934 8203     		.sleb128 386
+ 1451 0936 08       		.uleb128 0x8
+ 1452 0937 EC280000 		.4byte	.LASF291
+ 1453 093b 8303     		.sleb128 387
+ 1454 093d 08       		.uleb128 0x8
+ 1455 093e DF120000 		.4byte	.LASF292
+ 1456 0942 8403     		.sleb128 388
+ 1457 0944 08       		.uleb128 0x8
+ 1458 0945 AB0F0000 		.4byte	.LASF293
+ 1459 0949 8503     		.sleb128 389
+ 1460 094b 08       		.uleb128 0x8
+ 1461 094c 62170000 		.4byte	.LASF294
+ 1462 0950 8603     		.sleb128 390
+ 1463 0952 08       		.uleb128 0x8
+ 1464 0953 EB010000 		.4byte	.LASF295
+ 1465 0957 8703     		.sleb128 391
+ 1466 0959 08       		.uleb128 0x8
+ 1467 095a 46210000 		.4byte	.LASF296
+ 1468 095e 8803     		.sleb128 392
+ 1469 0960 08       		.uleb128 0x8
+ 1470 0961 9F020000 		.4byte	.LASF297
+ 1471 0965 8903     		.sleb128 393
+ 1472 0967 08       		.uleb128 0x8
+ 1473 0968 B31E0000 		.4byte	.LASF298
+ 1474 096c 8A03     		.sleb128 394
+ 1475 096e 08       		.uleb128 0x8
+ 1476 096f 40070000 		.4byte	.LASF299
+ 1477 0973 8B03     		.sleb128 395
+ 1478 0975 08       		.uleb128 0x8
+ 1479 0976 1A150000 		.4byte	.LASF300
+ 1480 097a 8C03     		.sleb128 396
+ 1481 097c 08       		.uleb128 0x8
+ 1482 097d 51230000 		.4byte	.LASF301
+ 1483 0981 8D03     		.sleb128 397
+ 1484 0983 08       		.uleb128 0x8
+ 1485 0984 17050000 		.4byte	.LASF302
+ 1486 0988 8E03     		.sleb128 398
+ 1487 098a 08       		.uleb128 0x8
+ 1488 098b 8D200000 		.4byte	.LASF303
+ 1489 098f 8F03     		.sleb128 399
+ 1490 0991 08       		.uleb128 0x8
+ 1491 0992 FB1E0000 		.4byte	.LASF304
+ 1492 0996 9003     		.sleb128 400
+ 1493 0998 08       		.uleb128 0x8
+ 1494 0999 AD100000 		.4byte	.LASF305
+ 1495 099d 9103     		.sleb128 401
+ 1496 099f 08       		.uleb128 0x8
+ 1497 09a0 202A0000 		.4byte	.LASF306
+ 1498 09a4 9203     		.sleb128 402
+ 1499 09a6 08       		.uleb128 0x8
+ 1500 09a7 3E170000 		.4byte	.LASF307
+ 1501 09ab 9303     		.sleb128 403
+ 1502 09ad 08       		.uleb128 0x8
+ 1503 09ae ED000000 		.4byte	.LASF308
+ 1504 09b2 9403     		.sleb128 404
+ 1505 09b4 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 31
+
+
+ 1506 09b5 FD120000 		.4byte	.LASF309
+ 1507 09b9 9503     		.sleb128 405
+ 1508 09bb 08       		.uleb128 0x8
+ 1509 09bc 61220000 		.4byte	.LASF310
+ 1510 09c0 9603     		.sleb128 406
+ 1511 09c2 08       		.uleb128 0x8
+ 1512 09c3 D5130000 		.4byte	.LASF311
+ 1513 09c7 9703     		.sleb128 407
+ 1514 09c9 08       		.uleb128 0x8
+ 1515 09ca 22130000 		.4byte	.LASF312
+ 1516 09ce 9803     		.sleb128 408
+ 1517 09d0 08       		.uleb128 0x8
+ 1518 09d1 31050000 		.4byte	.LASF313
+ 1519 09d5 9903     		.sleb128 409
+ 1520 09d7 08       		.uleb128 0x8
+ 1521 09d8 D3070000 		.4byte	.LASF314
+ 1522 09dc 9A03     		.sleb128 410
+ 1523 09de 08       		.uleb128 0x8
+ 1524 09df C6110000 		.4byte	.LASF315
+ 1525 09e3 9B03     		.sleb128 411
+ 1526 09e5 08       		.uleb128 0x8
+ 1527 09e6 79240000 		.4byte	.LASF316
+ 1528 09ea 9C03     		.sleb128 412
+ 1529 09ec 08       		.uleb128 0x8
+ 1530 09ed 552C0000 		.4byte	.LASF317
+ 1531 09f1 9D03     		.sleb128 413
+ 1532 09f3 08       		.uleb128 0x8
+ 1533 09f4 83120000 		.4byte	.LASF318
+ 1534 09f8 9E03     		.sleb128 414
+ 1535 09fa 08       		.uleb128 0x8
+ 1536 09fb 830A0000 		.4byte	.LASF319
+ 1537 09ff 9F03     		.sleb128 415
+ 1538 0a01 08       		.uleb128 0x8
+ 1539 0a02 540F0000 		.4byte	.LASF320
+ 1540 0a06 A003     		.sleb128 416
+ 1541 0a08 08       		.uleb128 0x8
+ 1542 0a09 601D0000 		.4byte	.LASF321
+ 1543 0a0d A103     		.sleb128 417
+ 1544 0a0f 08       		.uleb128 0x8
+ 1545 0a10 0C030000 		.4byte	.LASF322
+ 1546 0a14 A203     		.sleb128 418
+ 1547 0a16 08       		.uleb128 0x8
+ 1548 0a17 B6230000 		.4byte	.LASF323
+ 1549 0a1b A303     		.sleb128 419
+ 1550 0a1d 08       		.uleb128 0x8
+ 1551 0a1e 1B0B0000 		.4byte	.LASF324
+ 1552 0a22 A403     		.sleb128 420
+ 1553 0a24 08       		.uleb128 0x8
+ 1554 0a25 73080000 		.4byte	.LASF325
+ 1555 0a29 A503     		.sleb128 421
+ 1556 0a2b 08       		.uleb128 0x8
+ 1557 0a2c C20E0000 		.4byte	.LASF326
+ 1558 0a30 A603     		.sleb128 422
+ 1559 0a32 08       		.uleb128 0x8
+ 1560 0a33 95280000 		.4byte	.LASF327
+ 1561 0a37 A703     		.sleb128 423
+ 1562 0a39 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 32
+
+
+ 1563 0a3a 7A020000 		.4byte	.LASF328
+ 1564 0a3e A803     		.sleb128 424
+ 1565 0a40 08       		.uleb128 0x8
+ 1566 0a41 A8000000 		.4byte	.LASF329
+ 1567 0a45 A903     		.sleb128 425
+ 1568 0a47 08       		.uleb128 0x8
+ 1569 0a48 2E0D0000 		.4byte	.LASF330
+ 1570 0a4c AA03     		.sleb128 426
+ 1571 0a4e 08       		.uleb128 0x8
+ 1572 0a4f 7E0B0000 		.4byte	.LASF331
+ 1573 0a53 AB03     		.sleb128 427
+ 1574 0a55 08       		.uleb128 0x8
+ 1575 0a56 B2190000 		.4byte	.LASF332
+ 1576 0a5a AC03     		.sleb128 428
+ 1577 0a5c 08       		.uleb128 0x8
+ 1578 0a5d 26270000 		.4byte	.LASF333
+ 1579 0a61 AD03     		.sleb128 429
+ 1580 0a63 08       		.uleb128 0x8
+ 1581 0a64 01180000 		.4byte	.LASF334
+ 1582 0a68 AE03     		.sleb128 430
+ 1583 0a6a 08       		.uleb128 0x8
+ 1584 0a6b 09230000 		.4byte	.LASF335
+ 1585 0a6f AF03     		.sleb128 431
+ 1586 0a71 08       		.uleb128 0x8
+ 1587 0a72 EB0B0000 		.4byte	.LASF336
+ 1588 0a76 B003     		.sleb128 432
+ 1589 0a78 08       		.uleb128 0x8
+ 1590 0a79 6E2A0000 		.4byte	.LASF337
+ 1591 0a7d B103     		.sleb128 433
+ 1592 0a7f 08       		.uleb128 0x8
+ 1593 0a80 E4220000 		.4byte	.LASF338
+ 1594 0a84 B203     		.sleb128 434
+ 1595 0a86 08       		.uleb128 0x8
+ 1596 0a87 150C0000 		.4byte	.LASF339
+ 1597 0a8b B303     		.sleb128 435
+ 1598 0a8d 08       		.uleb128 0x8
+ 1599 0a8e AC150000 		.4byte	.LASF340
+ 1600 0a92 B403     		.sleb128 436
+ 1601 0a94 08       		.uleb128 0x8
+ 1602 0a95 E1210000 		.4byte	.LASF341
+ 1603 0a99 B503     		.sleb128 437
+ 1604 0a9b 08       		.uleb128 0x8
+ 1605 0a9c E60E0000 		.4byte	.LASF342
+ 1606 0aa0 B603     		.sleb128 438
+ 1607 0aa2 08       		.uleb128 0x8
+ 1608 0aa3 43260000 		.4byte	.LASF343
+ 1609 0aa7 B703     		.sleb128 439
+ 1610 0aa9 08       		.uleb128 0x8
+ 1611 0aaa EC0D0000 		.4byte	.LASF344
+ 1612 0aae B803     		.sleb128 440
+ 1613 0ab0 08       		.uleb128 0x8
+ 1614 0ab1 F7070000 		.4byte	.LASF345
+ 1615 0ab5 B903     		.sleb128 441
+ 1616 0ab7 08       		.uleb128 0x8
+ 1617 0ab8 8F1E0000 		.4byte	.LASF346
+ 1618 0abc BA03     		.sleb128 442
+ 1619 0abe 08       		.uleb128 0x8
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 33
+
+
+ 1620 0abf 19110000 		.4byte	.LASF347
+ 1621 0ac3 BB03     		.sleb128 443
+ 1622 0ac5 08       		.uleb128 0x8
+ 1623 0ac6 3E110000 		.4byte	.LASF348
+ 1624 0aca BC03     		.sleb128 444
+ 1625 0acc 08       		.uleb128 0x8
+ 1626 0acd 50000000 		.4byte	.LASF349
+ 1627 0ad1 BD03     		.sleb128 445
+ 1628 0ad3 08       		.uleb128 0x8
+ 1629 0ad4 CC180000 		.4byte	.LASF350
+ 1630 0ad8 BE03     		.sleb128 446
+ 1631 0ada 08       		.uleb128 0x8
+ 1632 0adb 00000000 		.4byte	.LASF351
+ 1633 0adf BF03     		.sleb128 447
+ 1634 0ae1 08       		.uleb128 0x8
+ 1635 0ae2 A01B0000 		.4byte	.LASF352
+ 1636 0ae6 C003     		.sleb128 448
+ 1637 0ae8 08       		.uleb128 0x8
+ 1638 0ae9 9C260000 		.4byte	.LASF353
+ 1639 0aed C103     		.sleb128 449
+ 1640 0aef 08       		.uleb128 0x8
+ 1641 0af0 27030000 		.4byte	.LASF354
+ 1642 0af4 C203     		.sleb128 450
+ 1643 0af6 08       		.uleb128 0x8
+ 1644 0af7 CF1C0000 		.4byte	.LASF355
+ 1645 0afb 80C003   		.sleb128 57344
+ 1646 0afe 00       		.byte	0
+ 1647 0aff 09       		.uleb128 0x9
+ 1648 0b00 01       		.byte	0x1
+ 1649 0b01 09       		.byte	0x9
+ 1650 0b02 9505     		.2byte	0x595
+ 1651 0b04 270B0000 		.4byte	0xb27
+ 1652 0b08 08       		.uleb128 0x8
+ 1653 0b09 6F0A0000 		.4byte	.LASF356
+ 1654 0b0d 00       		.sleb128 0
+ 1655 0b0e 08       		.uleb128 0x8
+ 1656 0b0f 5F140000 		.4byte	.LASF357
+ 1657 0b13 01       		.sleb128 1
+ 1658 0b14 08       		.uleb128 0x8
+ 1659 0b15 432A0000 		.4byte	.LASF358
+ 1660 0b19 02       		.sleb128 2
+ 1661 0b1a 08       		.uleb128 0x8
+ 1662 0b1b 92060000 		.4byte	.LASF359
+ 1663 0b1f 03       		.sleb128 3
+ 1664 0b20 08       		.uleb128 0x8
+ 1665 0b21 85230000 		.4byte	.LASF360
+ 1666 0b25 04       		.sleb128 4
+ 1667 0b26 00       		.byte	0
+ 1668 0b27 0A       		.uleb128 0xa
+ 1669 0b28 58250000 		.4byte	.LASF361
+ 1670 0b2c 09       		.byte	0x9
+ 1671 0b2d A305     		.2byte	0x5a3
+ 1672 0b2f FF0A0000 		.4byte	0xaff
+ 1673 0b33 15       		.uleb128 0x15
+ 1674 0b34 591E0000 		.4byte	.LASF362
+ 1675 0b38 01       		.byte	0x1
+ 1676 0b39 89       		.byte	0x89
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 34
+
+
+ 1677 0b3a EB020000 		.4byte	0x2eb
+ 1678 0b3e 00000000 		.4byte	.LFB2
+ 1679 0b42 40000000 		.4byte	.LFE2-.LFB2
+ 1680 0b46 01       		.uleb128 0x1
+ 1681 0b47 9C       		.byte	0x9c
+ 1682 0b48 5B0B0000 		.4byte	0xb5b
+ 1683 0b4c 16       		.uleb128 0x16
+ 1684 0b4d CE220000 		.4byte	.LASF364
+ 1685 0b51 01       		.byte	0x1
+ 1686 0b52 8B       		.byte	0x8b
+ 1687 0b53 EB020000 		.4byte	0x2eb
+ 1688 0b57 02       		.uleb128 0x2
+ 1689 0b58 91       		.byte	0x91
+ 1690 0b59 6E       		.sleb128 -18
+ 1691 0b5a 00       		.byte	0
+ 1692 0b5b 15       		.uleb128 0x15
+ 1693 0b5c 8E0F0000 		.4byte	.LASF363
+ 1694 0b60 01       		.byte	0x1
+ 1695 0b61 AA       		.byte	0xaa
+ 1696 0b62 B8030000 		.4byte	0x3b8
+ 1697 0b66 00000000 		.4byte	.LFB3
+ 1698 0b6a A0000000 		.4byte	.LFE3-.LFB3
+ 1699 0b6e 01       		.uleb128 0x1
+ 1700 0b6f 9C       		.byte	0x9c
+ 1701 0b70 910B0000 		.4byte	0xb91
+ 1702 0b74 17       		.uleb128 0x17
+ 1703 0b75 9F010000 		.4byte	.LASF377
+ 1704 0b79 01       		.byte	0x1
+ 1705 0b7a AA       		.byte	0xaa
+ 1706 0b7b 910B0000 		.4byte	0xb91
+ 1707 0b7f 02       		.uleb128 0x2
+ 1708 0b80 91       		.byte	0x91
+ 1709 0b81 64       		.sleb128 -28
+ 1710 0b82 16       		.uleb128 0x16
+ 1711 0b83 80290000 		.4byte	.LASF365
+ 1712 0b87 01       		.byte	0x1
+ 1713 0b88 AC       		.byte	0xac
+ 1714 0b89 B8030000 		.4byte	0x3b8
+ 1715 0b8d 02       		.uleb128 0x2
+ 1716 0b8e 91       		.byte	0x91
+ 1717 0b8f 6F       		.sleb128 -17
+ 1718 0b90 00       		.byte	0
+ 1719 0b91 0B       		.uleb128 0xb
+ 1720 0b92 04       		.byte	0x4
+ 1721 0b93 8E040000 		.4byte	0x48e
+ 1722 0b97 18       		.uleb128 0x18
+ 1723 0b98 6B000000 		.4byte	0x6b
+ 1724 0b9c A70B0000 		.4byte	0xba7
+ 1725 0ba0 19       		.uleb128 0x19
+ 1726 0ba1 A6000000 		.4byte	0xa6
+ 1727 0ba5 17       		.byte	0x17
+ 1728 0ba6 00       		.byte	0
+ 1729 0ba7 16       		.uleb128 0x16
+ 1730 0ba8 BD140000 		.4byte	.LASF366
+ 1731 0bac 01       		.byte	0x1
+ 1732 0bad 23       		.byte	0x23
+ 1733 0bae 970B0000 		.4byte	0xb97
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 35
+
+
+ 1734 0bb2 05       		.uleb128 0x5
+ 1735 0bb3 03       		.byte	0x3
+ 1736 0bb4 00000000 		.4byte	cyBle_attValues
+ 1737 0bb8 1A       		.uleb128 0x1a
+ 1738 0bb9 A9200000 		.4byte	.LASF367
+ 1739 0bbd 07       		.byte	0x7
+ 1740 0bbe 6D01     		.2byte	0x16d
+ 1741 0bc0 3F050000 		.4byte	0x53f
+ 1742 0bc4 1A       		.uleb128 0x1a
+ 1743 0bc5 4E270000 		.4byte	.LASF368
+ 1744 0bc9 07       		.byte	0x7
+ 1745 0bca 6F01     		.2byte	0x16f
+ 1746 0bcc A1000000 		.4byte	0xa1
+ 1747 0bd0 1B       		.uleb128 0x1b
+ 1748 0bd1 8B180000 		.4byte	.LASF369
+ 1749 0bd5 01       		.byte	0x1
+ 1750 0bd6 1C       		.byte	0x1c
+ 1751 0bd7 E10B0000 		.4byte	0xbe1
+ 1752 0bdb 05       		.uleb128 0x5
+ 1753 0bdc 03       		.byte	0x3
+ 1754 0bdd 00000000 		.4byte	cyBle_gatts
+ 1755 0be1 1C       		.uleb128 0x1c
+ 1756 0be2 8E050000 		.4byte	0x58e
+ 1757 0be6 18       		.uleb128 0x18
+ 1758 0be7 34050000 		.4byte	0x534
+ 1759 0beb F60B0000 		.4byte	0xbf6
+ 1760 0bef 19       		.uleb128 0x19
+ 1761 0bf0 A6000000 		.4byte	0xa6
+ 1762 0bf4 0D       		.byte	0xd
+ 1763 0bf5 00       		.byte	0
+ 1764 0bf6 1B       		.uleb128 0x1b
+ 1765 0bf7 D0170000 		.4byte	.LASF370
+ 1766 0bfb 01       		.byte	0x1
+ 1767 0bfc 58       		.byte	0x58
+ 1768 0bfd 070C0000 		.4byte	0xc07
+ 1769 0c01 05       		.uleb128 0x5
+ 1770 0c02 03       		.byte	0x3
+ 1771 0c03 00000000 		.4byte	cyBle_gattDB
+ 1772 0c07 1C       		.uleb128 0x1c
+ 1773 0c08 E60B0000 		.4byte	0xbe6
+ 1774 0c0c 18       		.uleb128 0x18
+ 1775 0c0d 6B000000 		.4byte	0x6b
+ 1776 0c11 1C0C0000 		.4byte	0xc1c
+ 1777 0c15 19       		.uleb128 0x19
+ 1778 0c16 A6000000 		.4byte	0xa6
+ 1779 0c1a 01       		.byte	0x1
+ 1780 0c1b 00       		.byte	0
+ 1781 0c1c 1B       		.uleb128 0x1b
+ 1782 0c1d DA270000 		.4byte	.LASF371
+ 1783 0c21 01       		.byte	0x1
+ 1784 0c22 56       		.byte	0x56
+ 1785 0c23 0C0C0000 		.4byte	0xc0c
+ 1786 0c27 05       		.uleb128 0x5
+ 1787 0c28 03       		.byte	0x3
+ 1788 0c29 00000000 		.4byte	cyBle_attValuesCCCD
+ 1789 0c2d 18       		.uleb128 0x18
+ 1790 0c2e 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 36
+
+
+ 1791 0c32 430C0000 		.4byte	0xc43
+ 1792 0c36 19       		.uleb128 0x19
+ 1793 0c37 A6000000 		.4byte	0xa6
+ 1794 0c3b 04       		.byte	0x4
+ 1795 0c3c 19       		.uleb128 0x19
+ 1796 0c3d A6000000 		.4byte	0xa6
+ 1797 0c41 01       		.byte	0x1
+ 1798 0c42 00       		.byte	0
+ 1799 0c43 1B       		.uleb128 0x1b
+ 1800 0c44 70030000 		.4byte	.LASF372
+ 1801 0c48 01       		.byte	0x1
+ 1802 0c49 36       		.byte	0x36
+ 1803 0c4a 540C0000 		.4byte	0xc54
+ 1804 0c4e 05       		.uleb128 0x5
+ 1805 0c4f 03       		.byte	0x3
+ 1806 0c50 00000000 		.4byte	cyBle_attValuesCCCDFlashMemory
+ 1807 0c54 1C       		.uleb128 0x1c
+ 1808 0c55 2D0C0000 		.4byte	0xc2d
+ 1809 0c59 1B       		.uleb128 0x1b
+ 1810 0c5a D8220000 		.4byte	.LASF373
+ 1811 0c5e 01       		.byte	0x1
+ 1812 0c5f 17       		.byte	0x17
+ 1813 0c60 270B0000 		.4byte	0xb27
+ 1814 0c64 05       		.uleb128 0x5
+ 1815 0c65 03       		.byte	0x3
+ 1816 0c66 00000000 		.4byte	cyBle_state
+ 1817 0c6a 00       		.byte	0
+ 1818              		.section	.debug_abbrev,"",%progbits
+ 1819              	.Ldebug_abbrev0:
+ 1820 0000 01       		.uleb128 0x1
+ 1821 0001 11       		.uleb128 0x11
+ 1822 0002 01       		.byte	0x1
+ 1823 0003 25       		.uleb128 0x25
+ 1824 0004 0E       		.uleb128 0xe
+ 1825 0005 13       		.uleb128 0x13
+ 1826 0006 0B       		.uleb128 0xb
+ 1827 0007 03       		.uleb128 0x3
+ 1828 0008 0E       		.uleb128 0xe
+ 1829 0009 1B       		.uleb128 0x1b
+ 1830 000a 0E       		.uleb128 0xe
+ 1831 000b 55       		.uleb128 0x55
+ 1832 000c 17       		.uleb128 0x17
+ 1833 000d 11       		.uleb128 0x11
+ 1834 000e 01       		.uleb128 0x1
+ 1835 000f 10       		.uleb128 0x10
+ 1836 0010 17       		.uleb128 0x17
+ 1837 0011 00       		.byte	0
+ 1838 0012 00       		.byte	0
+ 1839 0013 02       		.uleb128 0x2
+ 1840 0014 24       		.uleb128 0x24
+ 1841 0015 00       		.byte	0
+ 1842 0016 0B       		.uleb128 0xb
+ 1843 0017 0B       		.uleb128 0xb
+ 1844 0018 3E       		.uleb128 0x3e
+ 1845 0019 0B       		.uleb128 0xb
+ 1846 001a 03       		.uleb128 0x3
+ 1847 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 37
+
+
+ 1848 001c 00       		.byte	0
+ 1849 001d 00       		.byte	0
+ 1850 001e 03       		.uleb128 0x3
+ 1851 001f 24       		.uleb128 0x24
+ 1852 0020 00       		.byte	0
+ 1853 0021 0B       		.uleb128 0xb
+ 1854 0022 0B       		.uleb128 0xb
+ 1855 0023 3E       		.uleb128 0x3e
+ 1856 0024 0B       		.uleb128 0xb
+ 1857 0025 03       		.uleb128 0x3
+ 1858 0026 08       		.uleb128 0x8
+ 1859 0027 00       		.byte	0
+ 1860 0028 00       		.byte	0
+ 1861 0029 04       		.uleb128 0x4
+ 1862 002a 16       		.uleb128 0x16
+ 1863 002b 00       		.byte	0
+ 1864 002c 03       		.uleb128 0x3
+ 1865 002d 0E       		.uleb128 0xe
+ 1866 002e 3A       		.uleb128 0x3a
+ 1867 002f 0B       		.uleb128 0xb
+ 1868 0030 3B       		.uleb128 0x3b
+ 1869 0031 0B       		.uleb128 0xb
+ 1870 0032 49       		.uleb128 0x49
+ 1871 0033 13       		.uleb128 0x13
+ 1872 0034 00       		.byte	0
+ 1873 0035 00       		.byte	0
+ 1874 0036 05       		.uleb128 0x5
+ 1875 0037 35       		.uleb128 0x35
+ 1876 0038 00       		.byte	0
+ 1877 0039 49       		.uleb128 0x49
+ 1878 003a 13       		.uleb128 0x13
+ 1879 003b 00       		.byte	0
+ 1880 003c 00       		.byte	0
+ 1881 003d 06       		.uleb128 0x6
+ 1882 003e 0F       		.uleb128 0xf
+ 1883 003f 00       		.byte	0
+ 1884 0040 0B       		.uleb128 0xb
+ 1885 0041 0B       		.uleb128 0xb
+ 1886 0042 00       		.byte	0
+ 1887 0043 00       		.byte	0
+ 1888 0044 07       		.uleb128 0x7
+ 1889 0045 04       		.uleb128 0x4
+ 1890 0046 01       		.byte	0x1
+ 1891 0047 0B       		.uleb128 0xb
+ 1892 0048 0B       		.uleb128 0xb
+ 1893 0049 3A       		.uleb128 0x3a
+ 1894 004a 0B       		.uleb128 0xb
+ 1895 004b 3B       		.uleb128 0x3b
+ 1896 004c 0B       		.uleb128 0xb
+ 1897 004d 01       		.uleb128 0x1
+ 1898 004e 13       		.uleb128 0x13
+ 1899 004f 00       		.byte	0
+ 1900 0050 00       		.byte	0
+ 1901 0051 08       		.uleb128 0x8
+ 1902 0052 28       		.uleb128 0x28
+ 1903 0053 00       		.byte	0
+ 1904 0054 03       		.uleb128 0x3
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 38
+
+
+ 1905 0055 0E       		.uleb128 0xe
+ 1906 0056 1C       		.uleb128 0x1c
+ 1907 0057 0D       		.uleb128 0xd
+ 1908 0058 00       		.byte	0
+ 1909 0059 00       		.byte	0
+ 1910 005a 09       		.uleb128 0x9
+ 1911 005b 04       		.uleb128 0x4
+ 1912 005c 01       		.byte	0x1
+ 1913 005d 0B       		.uleb128 0xb
+ 1914 005e 0B       		.uleb128 0xb
+ 1915 005f 3A       		.uleb128 0x3a
+ 1916 0060 0B       		.uleb128 0xb
+ 1917 0061 3B       		.uleb128 0x3b
+ 1918 0062 05       		.uleb128 0x5
+ 1919 0063 01       		.uleb128 0x1
+ 1920 0064 13       		.uleb128 0x13
+ 1921 0065 00       		.byte	0
+ 1922 0066 00       		.byte	0
+ 1923 0067 0A       		.uleb128 0xa
+ 1924 0068 16       		.uleb128 0x16
+ 1925 0069 00       		.byte	0
+ 1926 006a 03       		.uleb128 0x3
+ 1927 006b 0E       		.uleb128 0xe
+ 1928 006c 3A       		.uleb128 0x3a
+ 1929 006d 0B       		.uleb128 0xb
+ 1930 006e 3B       		.uleb128 0x3b
+ 1931 006f 05       		.uleb128 0x5
+ 1932 0070 49       		.uleb128 0x49
+ 1933 0071 13       		.uleb128 0x13
+ 1934 0072 00       		.byte	0
+ 1935 0073 00       		.byte	0
+ 1936 0074 0B       		.uleb128 0xb
+ 1937 0075 0F       		.uleb128 0xf
+ 1938 0076 00       		.byte	0
+ 1939 0077 0B       		.uleb128 0xb
+ 1940 0078 0B       		.uleb128 0xb
+ 1941 0079 49       		.uleb128 0x49
+ 1942 007a 13       		.uleb128 0x13
+ 1943 007b 00       		.byte	0
+ 1944 007c 00       		.byte	0
+ 1945 007d 0C       		.uleb128 0xc
+ 1946 007e 13       		.uleb128 0x13
+ 1947 007f 01       		.byte	0x1
+ 1948 0080 0B       		.uleb128 0xb
+ 1949 0081 0B       		.uleb128 0xb
+ 1950 0082 3A       		.uleb128 0x3a
+ 1951 0083 0B       		.uleb128 0xb
+ 1952 0084 3B       		.uleb128 0x3b
+ 1953 0085 05       		.uleb128 0x5
+ 1954 0086 01       		.uleb128 0x1
+ 1955 0087 13       		.uleb128 0x13
+ 1956 0088 00       		.byte	0
+ 1957 0089 00       		.byte	0
+ 1958 008a 0D       		.uleb128 0xd
+ 1959 008b 0D       		.uleb128 0xd
+ 1960 008c 00       		.byte	0
+ 1961 008d 03       		.uleb128 0x3
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 39
+
+
+ 1962 008e 0E       		.uleb128 0xe
+ 1963 008f 3A       		.uleb128 0x3a
+ 1964 0090 0B       		.uleb128 0xb
+ 1965 0091 3B       		.uleb128 0x3b
+ 1966 0092 05       		.uleb128 0x5
+ 1967 0093 49       		.uleb128 0x49
+ 1968 0094 13       		.uleb128 0x13
+ 1969 0095 38       		.uleb128 0x38
+ 1970 0096 0B       		.uleb128 0xb
+ 1971 0097 00       		.byte	0
+ 1972 0098 00       		.byte	0
+ 1973 0099 0E       		.uleb128 0xe
+ 1974 009a 0D       		.uleb128 0xd
+ 1975 009b 00       		.byte	0
+ 1976 009c 03       		.uleb128 0x3
+ 1977 009d 08       		.uleb128 0x8
+ 1978 009e 3A       		.uleb128 0x3a
+ 1979 009f 0B       		.uleb128 0xb
+ 1980 00a0 3B       		.uleb128 0x3b
+ 1981 00a1 05       		.uleb128 0x5
+ 1982 00a2 49       		.uleb128 0x49
+ 1983 00a3 13       		.uleb128 0x13
+ 1984 00a4 38       		.uleb128 0x38
+ 1985 00a5 0B       		.uleb128 0xb
+ 1986 00a6 00       		.byte	0
+ 1987 00a7 00       		.byte	0
+ 1988 00a8 0F       		.uleb128 0xf
+ 1989 00a9 13       		.uleb128 0x13
+ 1990 00aa 01       		.byte	0x1
+ 1991 00ab 0B       		.uleb128 0xb
+ 1992 00ac 0B       		.uleb128 0xb
+ 1993 00ad 3A       		.uleb128 0x3a
+ 1994 00ae 0B       		.uleb128 0xb
+ 1995 00af 3B       		.uleb128 0x3b
+ 1996 00b0 0B       		.uleb128 0xb
+ 1997 00b1 01       		.uleb128 0x1
+ 1998 00b2 13       		.uleb128 0x13
+ 1999 00b3 00       		.byte	0
+ 2000 00b4 00       		.byte	0
+ 2001 00b5 10       		.uleb128 0x10
+ 2002 00b6 0D       		.uleb128 0xd
+ 2003 00b7 00       		.byte	0
+ 2004 00b8 03       		.uleb128 0x3
+ 2005 00b9 0E       		.uleb128 0xe
+ 2006 00ba 3A       		.uleb128 0x3a
+ 2007 00bb 0B       		.uleb128 0xb
+ 2008 00bc 3B       		.uleb128 0x3b
+ 2009 00bd 0B       		.uleb128 0xb
+ 2010 00be 49       		.uleb128 0x49
+ 2011 00bf 13       		.uleb128 0x13
+ 2012 00c0 38       		.uleb128 0x38
+ 2013 00c1 0B       		.uleb128 0xb
+ 2014 00c2 00       		.byte	0
+ 2015 00c3 00       		.byte	0
+ 2016 00c4 11       		.uleb128 0x11
+ 2017 00c5 17       		.uleb128 0x17
+ 2018 00c6 01       		.byte	0x1
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 40
+
+
+ 2019 00c7 0B       		.uleb128 0xb
+ 2020 00c8 0B       		.uleb128 0xb
+ 2021 00c9 3A       		.uleb128 0x3a
+ 2022 00ca 0B       		.uleb128 0xb
+ 2023 00cb 3B       		.uleb128 0x3b
+ 2024 00cc 0B       		.uleb128 0xb
+ 2025 00cd 01       		.uleb128 0x1
+ 2026 00ce 13       		.uleb128 0x13
+ 2027 00cf 00       		.byte	0
+ 2028 00d0 00       		.byte	0
+ 2029 00d1 12       		.uleb128 0x12
+ 2030 00d2 0D       		.uleb128 0xd
+ 2031 00d3 00       		.byte	0
+ 2032 00d4 03       		.uleb128 0x3
+ 2033 00d5 0E       		.uleb128 0xe
+ 2034 00d6 3A       		.uleb128 0x3a
+ 2035 00d7 0B       		.uleb128 0xb
+ 2036 00d8 3B       		.uleb128 0x3b
+ 2037 00d9 0B       		.uleb128 0xb
+ 2038 00da 49       		.uleb128 0x49
+ 2039 00db 13       		.uleb128 0x13
+ 2040 00dc 00       		.byte	0
+ 2041 00dd 00       		.byte	0
+ 2042 00de 13       		.uleb128 0x13
+ 2043 00df 15       		.uleb128 0x15
+ 2044 00e0 01       		.byte	0x1
+ 2045 00e1 27       		.uleb128 0x27
+ 2046 00e2 19       		.uleb128 0x19
+ 2047 00e3 01       		.uleb128 0x1
+ 2048 00e4 13       		.uleb128 0x13
+ 2049 00e5 00       		.byte	0
+ 2050 00e6 00       		.byte	0
+ 2051 00e7 14       		.uleb128 0x14
+ 2052 00e8 05       		.uleb128 0x5
+ 2053 00e9 00       		.byte	0
+ 2054 00ea 49       		.uleb128 0x49
+ 2055 00eb 13       		.uleb128 0x13
+ 2056 00ec 00       		.byte	0
+ 2057 00ed 00       		.byte	0
+ 2058 00ee 15       		.uleb128 0x15
+ 2059 00ef 2E       		.uleb128 0x2e
+ 2060 00f0 01       		.byte	0x1
+ 2061 00f1 3F       		.uleb128 0x3f
+ 2062 00f2 19       		.uleb128 0x19
+ 2063 00f3 03       		.uleb128 0x3
+ 2064 00f4 0E       		.uleb128 0xe
+ 2065 00f5 3A       		.uleb128 0x3a
+ 2066 00f6 0B       		.uleb128 0xb
+ 2067 00f7 3B       		.uleb128 0x3b
+ 2068 00f8 0B       		.uleb128 0xb
+ 2069 00f9 27       		.uleb128 0x27
+ 2070 00fa 19       		.uleb128 0x19
+ 2071 00fb 49       		.uleb128 0x49
+ 2072 00fc 13       		.uleb128 0x13
+ 2073 00fd 11       		.uleb128 0x11
+ 2074 00fe 01       		.uleb128 0x1
+ 2075 00ff 12       		.uleb128 0x12
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 41
+
+
+ 2076 0100 06       		.uleb128 0x6
+ 2077 0101 40       		.uleb128 0x40
+ 2078 0102 18       		.uleb128 0x18
+ 2079 0103 9642     		.uleb128 0x2116
+ 2080 0105 19       		.uleb128 0x19
+ 2081 0106 01       		.uleb128 0x1
+ 2082 0107 13       		.uleb128 0x13
+ 2083 0108 00       		.byte	0
+ 2084 0109 00       		.byte	0
+ 2085 010a 16       		.uleb128 0x16
+ 2086 010b 34       		.uleb128 0x34
+ 2087 010c 00       		.byte	0
+ 2088 010d 03       		.uleb128 0x3
+ 2089 010e 0E       		.uleb128 0xe
+ 2090 010f 3A       		.uleb128 0x3a
+ 2091 0110 0B       		.uleb128 0xb
+ 2092 0111 3B       		.uleb128 0x3b
+ 2093 0112 0B       		.uleb128 0xb
+ 2094 0113 49       		.uleb128 0x49
+ 2095 0114 13       		.uleb128 0x13
+ 2096 0115 02       		.uleb128 0x2
+ 2097 0116 18       		.uleb128 0x18
+ 2098 0117 00       		.byte	0
+ 2099 0118 00       		.byte	0
+ 2100 0119 17       		.uleb128 0x17
+ 2101 011a 05       		.uleb128 0x5
+ 2102 011b 00       		.byte	0
+ 2103 011c 03       		.uleb128 0x3
+ 2104 011d 0E       		.uleb128 0xe
+ 2105 011e 3A       		.uleb128 0x3a
+ 2106 011f 0B       		.uleb128 0xb
+ 2107 0120 3B       		.uleb128 0x3b
+ 2108 0121 0B       		.uleb128 0xb
+ 2109 0122 49       		.uleb128 0x49
+ 2110 0123 13       		.uleb128 0x13
+ 2111 0124 02       		.uleb128 0x2
+ 2112 0125 18       		.uleb128 0x18
+ 2113 0126 00       		.byte	0
+ 2114 0127 00       		.byte	0
+ 2115 0128 18       		.uleb128 0x18
+ 2116 0129 01       		.uleb128 0x1
+ 2117 012a 01       		.byte	0x1
+ 2118 012b 49       		.uleb128 0x49
+ 2119 012c 13       		.uleb128 0x13
+ 2120 012d 01       		.uleb128 0x1
+ 2121 012e 13       		.uleb128 0x13
+ 2122 012f 00       		.byte	0
+ 2123 0130 00       		.byte	0
+ 2124 0131 19       		.uleb128 0x19
+ 2125 0132 21       		.uleb128 0x21
+ 2126 0133 00       		.byte	0
+ 2127 0134 49       		.uleb128 0x49
+ 2128 0135 13       		.uleb128 0x13
+ 2129 0136 2F       		.uleb128 0x2f
+ 2130 0137 0B       		.uleb128 0xb
+ 2131 0138 00       		.byte	0
+ 2132 0139 00       		.byte	0
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 42
+
+
+ 2133 013a 1A       		.uleb128 0x1a
+ 2134 013b 34       		.uleb128 0x34
+ 2135 013c 00       		.byte	0
+ 2136 013d 03       		.uleb128 0x3
+ 2137 013e 0E       		.uleb128 0xe
+ 2138 013f 3A       		.uleb128 0x3a
+ 2139 0140 0B       		.uleb128 0xb
+ 2140 0141 3B       		.uleb128 0x3b
+ 2141 0142 05       		.uleb128 0x5
+ 2142 0143 49       		.uleb128 0x49
+ 2143 0144 13       		.uleb128 0x13
+ 2144 0145 3F       		.uleb128 0x3f
+ 2145 0146 19       		.uleb128 0x19
+ 2146 0147 3C       		.uleb128 0x3c
+ 2147 0148 19       		.uleb128 0x19
+ 2148 0149 00       		.byte	0
+ 2149 014a 00       		.byte	0
+ 2150 014b 1B       		.uleb128 0x1b
+ 2151 014c 34       		.uleb128 0x34
+ 2152 014d 00       		.byte	0
+ 2153 014e 03       		.uleb128 0x3
+ 2154 014f 0E       		.uleb128 0xe
+ 2155 0150 3A       		.uleb128 0x3a
+ 2156 0151 0B       		.uleb128 0xb
+ 2157 0152 3B       		.uleb128 0x3b
+ 2158 0153 0B       		.uleb128 0xb
+ 2159 0154 49       		.uleb128 0x49
+ 2160 0155 13       		.uleb128 0x13
+ 2161 0156 3F       		.uleb128 0x3f
+ 2162 0157 19       		.uleb128 0x19
+ 2163 0158 02       		.uleb128 0x2
+ 2164 0159 18       		.uleb128 0x18
+ 2165 015a 00       		.byte	0
+ 2166 015b 00       		.byte	0
+ 2167 015c 1C       		.uleb128 0x1c
+ 2168 015d 26       		.uleb128 0x26
+ 2169 015e 00       		.byte	0
+ 2170 015f 49       		.uleb128 0x49
+ 2171 0160 13       		.uleb128 0x13
+ 2172 0161 00       		.byte	0
+ 2173 0162 00       		.byte	0
+ 2174 0163 00       		.byte	0
+ 2175              		.section	.debug_aranges,"",%progbits
+ 2176 0000 24000000 		.4byte	0x24
+ 2177 0004 0200     		.2byte	0x2
+ 2178 0006 00000000 		.4byte	.Ldebug_info0
+ 2179 000a 04       		.byte	0x4
+ 2180 000b 00       		.byte	0
+ 2181 000c 0000     		.2byte	0
+ 2182 000e 0000     		.2byte	0
+ 2183 0010 00000000 		.4byte	.LFB2
+ 2184 0014 40000000 		.4byte	.LFE2-.LFB2
+ 2185 0018 00000000 		.4byte	.LFB3
+ 2186 001c A0000000 		.4byte	.LFE3-.LFB3
+ 2187 0020 00000000 		.4byte	0
+ 2188 0024 00000000 		.4byte	0
+ 2189              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 43
+
+
+ 2190              	.Ldebug_ranges0:
+ 2191 0000 00000000 		.4byte	.LFB2
+ 2192 0004 40000000 		.4byte	.LFE2
+ 2193 0008 00000000 		.4byte	.LFB3
+ 2194 000c A0000000 		.4byte	.LFE3
+ 2195 0010 00000000 		.4byte	0
+ 2196 0014 00000000 		.4byte	0
+ 2197              		.section	.debug_line,"",%progbits
+ 2198              	.Ldebug_line0:
+ 2199 0000 09010000 		.section	.debug_str,"MS",%progbits,1
+ 2199      0200D400 
+ 2199      00000201 
+ 2199      FB0E0D00 
+ 2199      01010101 
+ 2200              	.LASF351:
+ 2201 0000 4359424C 		.ascii	"CYBLE_EVT_UDSC_READ_CHAR_RESPONSE\000"
+ 2201      455F4556 
+ 2201      545F5544 
+ 2201      53435F52 
+ 2201      4541445F 
+ 2202              	.LASF281:
+ 2203 0022 4359424C 		.ascii	"CYBLE_EVT_HTSS_NOTIFICATION_DISABLED\000"
+ 2203      455F4556 
+ 2203      545F4854 
+ 2203      53535F4E 
+ 2203      4F544946 
+ 2204              	.LASF15:
+ 2205 0047 73697A65 		.ascii	"sizetype\000"
+ 2205      74797065 
+ 2205      00
+ 2206              	.LASF349:
+ 2207 0050 4359424C 		.ascii	"CYBLE_EVT_UDSC_INDICATION\000"
+ 2207      455F4556 
+ 2207      545F5544 
+ 2207      53435F49 
+ 2207      4E444943 
+ 2208              	.LASF208:
+ 2209 006a 4359424C 		.ascii	"CYBLE_EVT_CGMSC_INDICATION\000"
+ 2209      455F4556 
+ 2209      545F4347 
+ 2209      4D53435F 
+ 2209      494E4449 
+ 2210              	.LASF226:
+ 2211 0085 4359424C 		.ascii	"CYBLE_EVT_CPSC_READ_DESCR_RESPONSE\000"
+ 2211      455F4556 
+ 2211      545F4350 
+ 2211      53435F52 
+ 2211      4541445F 
+ 2212              	.LASF329:
+ 2213 00a8 4359424C 		.ascii	"CYBLE_EVT_RTUSS_WRITE_CHAR_CMD\000"
+ 2213      455F4556 
+ 2213      545F5254 
+ 2213      5553535F 
+ 2213      57524954 
+ 2214              	.LASF167:
+ 2215 00c7 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DISCOVERY_FAILED\000"
+ 2215      455F4556 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 44
+
+
+ 2215      545F4741 
+ 2215      5454435F 
+ 2215      53525643 
+ 2216              	.LASF308:
+ 2217 00ed 4359424C 		.ascii	"CYBLE_EVT_NDCSC_READ_CHAR_RESPONSE\000"
+ 2217      455F4556 
+ 2217      545F4E44 
+ 2217      4353435F 
+ 2217      52454144 
+ 2218              	.LASF224:
+ 2219 0110 4359424C 		.ascii	"CYBLE_EVT_CPSC_READ_CHAR_RESPONSE\000"
+ 2219      455F4556 
+ 2219      545F4350 
+ 2219      53435F52 
+ 2219      4541445F 
+ 2220              	.LASF237:
+ 2221 0132 4359424C 		.ascii	"CYBLE_EVT_CSCSC_READ_CHAR_RESPONSE\000"
+ 2221      455F4556 
+ 2221      545F4353 
+ 2221      4353435F 
+ 2221      52454144 
+ 2222              	.LASF213:
+ 2223 0155 4359424C 		.ascii	"CYBLE_EVT_CGMSC_WRITE_DESCR_RESPONSE\000"
+ 2223      455F4556 
+ 2223      545F4347 
+ 2223      4D53435F 
+ 2223      57524954 
+ 2224              	.LASF252:
+ 2225 017a 4359424C 		.ascii	"CYBLE_EVT_GLSS_NOTIFICATION_DISABLED\000"
+ 2225      455F4556 
+ 2225      545F474C 
+ 2225      53535F4E 
+ 2225      4F544946 
+ 2226              	.LASF377:
+ 2227 019f 6576656E 		.ascii	"eventParam\000"
+ 2227      74506172 
+ 2227      616D00
+ 2228              	.LASF199:
+ 2229 01aa 4359424C 		.ascii	"CYBLE_EVT_BLSC_READ_CHAR_RESPONSE\000"
+ 2229      455F4556 
+ 2229      545F424C 
+ 2229      53435F52 
+ 2229      4541445F 
+ 2230              	.LASF29:
+ 2231 01cc 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 2231      455F4556 
+ 2231      545F4741 
+ 2231      505F4445 
+ 2231      56494345 
+ 2232              	.LASF295:
+ 2233 01eb 4359424C 		.ascii	"CYBLE_EVT_LLSC_WRITE_CHAR_RESPONSE\000"
+ 2233      455F4556 
+ 2233      545F4C4C 
+ 2233      53435F57 
+ 2233      52495445 
+ 2234              	.LASF36:
+ 2235 020e 4359424C 		.ascii	"CYBLE_EVT_GATT_CONNECT_IND\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 45
+
+
+ 2235      455F4556 
+ 2235      545F4741 
+ 2235      54545F43 
+ 2235      4F4E4E45 
+ 2236              	.LASF257:
+ 2237 0229 4359424C 		.ascii	"CYBLE_EVT_GLSC_WRITE_CHAR_RESPONSE\000"
+ 2237      455F4556 
+ 2237      545F474C 
+ 2237      53435F57 
+ 2237      52495445 
+ 2238              	.LASF11:
+ 2239 024c 75696E74 		.ascii	"uint32\000"
+ 2239      333200
+ 2240              	.LASF170:
+ 2241 0253 4359424C 		.ascii	"CYBLE_EVT_GATTC_DESCR_DISCOVERY_FAILED\000"
+ 2241      455F4556 
+ 2241      545F4741 
+ 2241      5454435F 
+ 2241      44455343 
+ 2242              	.LASF328:
+ 2243 027a 4359424C 		.ascii	"CYBLE_EVT_RSCSC_WRITE_DESCR_RESPONSE\000"
+ 2243      455F4556 
+ 2243      545F5253 
+ 2243      4353435F 
+ 2243      57524954 
+ 2244              	.LASF297:
+ 2245 029f 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_DISABLED\000"
+ 2245      455F4556 
+ 2245      545F4C4E 
+ 2245      53535F49 
+ 2245      4E444943 
+ 2246              	.LASF244:
+ 2247 02c2 4359424C 		.ascii	"CYBLE_EVT_CTSC_READ_CHAR_RESPONSE\000"
+ 2247      455F4556 
+ 2247      545F4354 
+ 2247      53435F52 
+ 2247      4541445F 
+ 2248              	.LASF174:
+ 2249 02e4 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DISCOVERY_COMPLETE\000"
+ 2249      455F4556 
+ 2249      545F4741 
+ 2249      5454435F 
+ 2249      53525643 
+ 2250              	.LASF322:
+ 2251 030c 4359424C 		.ascii	"CYBLE_EVT_RSCSS_CHAR_WRITE\000"
+ 2251      455F4556 
+ 2251      545F5253 
+ 2251      4353535F 
+ 2251      43484152 
+ 2252              	.LASF354:
+ 2253 0327 4359424C 		.ascii	"CYBLE_EVT_UDSC_WRITE_DESCR_RESPONSE\000"
+ 2253      455F4556 
+ 2253      545F5544 
+ 2253      53435F57 
+ 2253      52495445 
+ 2254              	.LASF271:
+ 2255 034b 4359424C 		.ascii	"CYBLE_EVT_HIDSC_WRITE_DESCR_RESPONSE\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 46
+
+
+ 2255      455F4556 
+ 2255      545F4849 
+ 2255      4453435F 
+ 2255      57524954 
+ 2256              	.LASF372:
+ 2257 0370 6379426C 		.ascii	"cyBle_attValuesCCCDFlashMemory\000"
+ 2257      655F6174 
+ 2257      7456616C 
+ 2257      75657343 
+ 2257      43434446 
+ 2258              	.LASF184:
+ 2259 038f 4359424C 		.ascii	"CYBLE_EVT_ANSC_READ_DESCR_RESPONSE\000"
+ 2259      455F4556 
+ 2259      545F414E 
+ 2259      53435F52 
+ 2259      4541445F 
+ 2260              	.LASF104:
+ 2261 03b2 4359424C 		.ascii	"CYBLE_GATT_ERR_READ_NOT_PERMITTED\000"
+ 2261      455F4741 
+ 2261      54545F45 
+ 2261      52525F52 
+ 2261      4541445F 
+ 2262              	.LASF119:
+ 2263 03d4 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_RESOURCE\000"
+ 2263      455F4741 
+ 2263      54545F45 
+ 2263      52525F49 
+ 2263      4E535546 
+ 2264              	.LASF118:
+ 2265 03f9 4359424C 		.ascii	"CYBLE_GATT_ERR_UNSUPPORTED_GROUP_TYPE\000"
+ 2265      455F4741 
+ 2265      54545F45 
+ 2265      52525F55 
+ 2265      4E535550 
+ 2266              	.LASF86:
+ 2267 041f 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CONNECTION_ENTITY_NOT_FOUND\000"
+ 2267      455F4552 
+ 2267      524F525F 
+ 2267      4C324341 
+ 2267      505F434F 
+ 2268              	.LASF92:
+ 2269 044d 4359424C 		.ascii	"CYBLE_ERROR_MIC_AUTH_FAILED\000"
+ 2269      455F4552 
+ 2269      524F525F 
+ 2269      4D49435F 
+ 2269      41555448 
+ 2270              	.LASF169:
+ 2271 0469 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DISCOVERY_FAILED\000"
+ 2271      455F4556 
+ 2271      545F4741 
+ 2271      5454435F 
+ 2271      43484152 
+ 2272              	.LASF56:
+ 2273 048f 4359424C 		.ascii	"CYBLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ 2273      455F4556 
+ 2273      545F4741 
+ 2273      5454535F 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 47
+
+
+ 2273      44415441 
+ 2274              	.LASF65:
+ 2275 04b3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 2275      455F4556 
+ 2275      545F4C32 
+ 2275      4341505F 
+ 2275      43424643 
+ 2276              	.LASF136:
+ 2277 04d6 4359424C 		.ascii	"CYBLE_GATT_VALUE_T\000"
+ 2277      455F4741 
+ 2277      54545F56 
+ 2277      414C5545 
+ 2277      5F5400
+ 2278              	.LASF231:
+ 2279 04e9 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_ENABLED\000"
+ 2279      455F4556 
+ 2279      545F4353 
+ 2279      4353535F 
+ 2279      494E4449 
+ 2280              	.LASF151:
+ 2281 050c 7065726D 		.ascii	"permission\000"
+ 2281      69737369 
+ 2281      6F6E00
+ 2282              	.LASF302:
+ 2283 0517 4359424C 		.ascii	"CYBLE_EVT_LNSC_INDICATION\000"
+ 2283      455F4556 
+ 2283      545F4C4E 
+ 2283      53435F49 
+ 2283      4E444943 
+ 2284              	.LASF313:
+ 2285 0531 4359424C 		.ascii	"CYBLE_EVT_PASSC_READ_CHAR_RESPONSE\000"
+ 2285      455F4556 
+ 2285      545F5041 
+ 2285      5353435F 
+ 2285      52454144 
+ 2286              	.LASF192:
+ 2287 0554 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_ENABLED\000"
+ 2287      455F4556 
+ 2287      545F424C 
+ 2287      53535F49 
+ 2287      4E444943 
+ 2288              	.LASF198:
+ 2289 0576 4359424C 		.ascii	"CYBLE_EVT_BLSC_NOTIFICATION\000"
+ 2289      455F4556 
+ 2289      545F424C 
+ 2289      53435F4E 
+ 2289      4F544946 
+ 2290              	.LASF155:
+ 2291 0592 4359424C 		.ascii	"CYBLE_CALLBACK_T\000"
+ 2291      455F4341 
+ 2291      4C4C4241 
+ 2291      434B5F54 
+ 2291      00
+ 2292              	.LASF236:
+ 2293 05a3 4359424C 		.ascii	"CYBLE_EVT_CSCSC_INDICATION\000"
+ 2293      455F4556 
+ 2293      545F4353 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 48
+
+
+ 2293      4353435F 
+ 2293      494E4449 
+ 2294              	.LASF53:
+ 2295 05be 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 2295      455F4556 
+ 2295      545F4741 
+ 2295      5454435F 
+ 2295      48414E44 
+ 2296              	.LASF23:
+ 2297 05df 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_REQ\000"
+ 2297      455F4556 
+ 2297      545F4741 
+ 2297      505F4155 
+ 2297      54485F52 
+ 2298              	.LASF176:
+ 2299 05f6 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DISCOVERY_COMPLETE\000"
+ 2299      455F4556 
+ 2299      545F4741 
+ 2299      5454435F 
+ 2299      43484152 
+ 2300              	.LASF134:
+ 2301 061e 4359424C 		.ascii	"CYBLE_CONN_HANDLE_T\000"
+ 2301      455F434F 
+ 2301      4E4E5F48 
+ 2301      414E444C 
+ 2301      455F5400 
+ 2302              	.LASF277:
+ 2303 0632 4359424C 		.ascii	"CYBLE_EVT_HRSC_WRITE_CHAR_RESPONSE\000"
+ 2303      455F4556 
+ 2303      545F4852 
+ 2303      53435F57 
+ 2303      52495445 
+ 2304              	.LASF81:
+ 2305 0655 4359424C 		.ascii	"CYBLE_ERROR_BT_ON_NOT_COMPLETED\000"
+ 2305      455F4552 
+ 2305      524F525F 
+ 2305      42545F4F 
+ 2305      4E5F4E4F 
+ 2306              	.LASF235:
+ 2307 0675 4359424C 		.ascii	"CYBLE_EVT_CSCSC_NOTIFICATION\000"
+ 2307      455F4556 
+ 2307      545F4353 
+ 2307      4353435F 
+ 2307      4E4F5449 
+ 2308              	.LASF359:
+ 2309 0692 4359424C 		.ascii	"CYBLE_STATE_ADVERTISING\000"
+ 2309      455F5354 
+ 2309      4154455F 
+ 2309      41445645 
+ 2309      52544953 
+ 2310              	.LASF132:
+ 2311 06aa 62644861 		.ascii	"bdHandle\000"
+ 2311      6E646C65 
+ 2311      00
+ 2312              	.LASF204:
+ 2313 06b3 4359424C 		.ascii	"CYBLE_EVT_CGMSS_INDICATION_CONFIRMED\000"
+ 2313      455F4556 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 49
+
+
+ 2313      545F4347 
+ 2313      4D53535F 
+ 2313      494E4449 
+ 2314              	.LASF200:
+ 2315 06d8 4359424C 		.ascii	"CYBLE_EVT_BLSC_READ_DESCR_RESPONSE\000"
+ 2315      455F4556 
+ 2315      545F424C 
+ 2315      53435F52 
+ 2315      4541445F 
+ 2316              	.LASF217:
+ 2317 06fb 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_DISABLED\000"
+ 2317      455F4556 
+ 2317      545F4350 
+ 2317      53535F49 
+ 2317      4E444943 
+ 2318              	.LASF216:
+ 2319 071e 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_ENABLED\000"
+ 2319      455F4556 
+ 2319      545F4350 
+ 2319      53535F49 
+ 2319      4E444943 
+ 2320              	.LASF299:
+ 2321 0740 4359424C 		.ascii	"CYBLE_EVT_LNSS_NOTIFICATION_ENABLED\000"
+ 2321      455F4556 
+ 2321      545F4C4E 
+ 2321      53535F4E 
+ 2321      4F544946 
+ 2322              	.LASF49:
+ 2323 0764 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 2323      455F4556 
+ 2323      545F4741 
+ 2323      5454535F 
+ 2323      57524954 
+ 2324              	.LASF227:
+ 2325 0782 4359424C 		.ascii	"CYBLE_EVT_CPSC_WRITE_DESCR_RESPONSE\000"
+ 2325      455F4556 
+ 2325      545F4350 
+ 2325      53435F57 
+ 2325      52495445 
+ 2326              	.LASF4:
+ 2327 07a6 6C6F6E67 		.ascii	"long int\000"
+ 2327      20696E74 
+ 2327      00
+ 2328              	.LASF232:
+ 2329 07af 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_DISABLED\000"
+ 2329      455F4556 
+ 2329      545F4353 
+ 2329      4353535F 
+ 2329      494E4449 
+ 2330              	.LASF314:
+ 2331 07d3 4359424C 		.ascii	"CYBLE_EVT_PASSC_WRITE_CHAR_RESPONSE\000"
+ 2331      455F4556 
+ 2331      545F5041 
+ 2331      5353435F 
+ 2331      57524954 
+ 2332              	.LASF345:
+ 2333 07f7 4359424C 		.ascii	"CYBLE_EVT_UDSS_INDICATION_CONFIRMED\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 50
+
+
+ 2333      455F4556 
+ 2333      545F5544 
+ 2333      53535F49 
+ 2333      4E444943 
+ 2334              	.LASF162:
+ 2335 081b 4359424C 		.ascii	"CYBLE_LONG_TERM_KEY_REQUEST_REPLY\000"
+ 2335      455F4C4F 
+ 2335      4E475F54 
+ 2335      45524D5F 
+ 2335      4B45595F 
+ 2336              	.LASF17:
+ 2337 083d 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ 2337      455F4556 
+ 2337      545F5354 
+ 2337      41434B5F 
+ 2337      4F4E00
+ 2338              	.LASF88:
+ 2339 0850 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_IN_RANGE\000"
+ 2339      455F4552 
+ 2339      524F525F 
+ 2339      4C324341 
+ 2339      505F5053 
+ 2340              	.LASF325:
+ 2341 0873 4359424C 		.ascii	"CYBLE_EVT_RSCSC_READ_CHAR_RESPONSE\000"
+ 2341      455F4556 
+ 2341      545F5253 
+ 2341      4353435F 
+ 2341      52454144 
+ 2342              	.LASF156:
+ 2343 0896 73657276 		.ascii	"serviceHandle\000"
+ 2343      69636548 
+ 2343      616E646C 
+ 2343      6500
+ 2344              	.LASF280:
+ 2345 08a4 4359424C 		.ascii	"CYBLE_EVT_HTSS_NOTIFICATION_ENABLED\000"
+ 2345      455F4556 
+ 2345      545F4854 
+ 2345      53535F4E 
+ 2345      4F544946 
+ 2346              	.LASF106:
+ 2347 08c8 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_PDU\000"
+ 2347      455F4741 
+ 2347      54545F45 
+ 2347      52525F49 
+ 2347      4E56414C 
+ 2348              	.LASF99:
+ 2349 08e3 4359424C 		.ascii	"CYBLE_ERROR_CHAR_IS_NOT_DISCOVERED\000"
+ 2349      455F4552 
+ 2349      524F525F 
+ 2349      43484152 
+ 2349      5F49535F 
+ 2350              	.LASF139:
+ 2351 0906 4359424C 		.ascii	"CYBLE_GATT_HANDLE_VALUE_PAIR_T\000"
+ 2351      455F4741 
+ 2351      54545F48 
+ 2351      414E444C 
+ 2351      455F5641 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 51
+
+
+ 2352              	.LASF150:
+ 2353 0925 61747454 		.ascii	"attType\000"
+ 2353      79706500 
+ 2354              	.LASF375:
+ 2355 092d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\BLE_1_gatt.c\000"
+ 2355      6E657261 
+ 2355      7465645F 
+ 2355      536F7572 
+ 2355      63655C50 
+ 2356              	.LASF267:
+ 2357 0953 4359424C 		.ascii	"CYBLE_EVT_HIDSC_NOTIFICATION\000"
+ 2357      455F4556 
+ 2357      545F4849 
+ 2357      4453435F 
+ 2357      4E4F5449 
+ 2358              	.LASF59:
+ 2359 0970 4359424C 		.ascii	"CYBLE_EVT_L2CAP_COMMAND_REJ\000"
+ 2359      455F4556 
+ 2359      545F4C32 
+ 2359      4341505F 
+ 2359      434F4D4D 
+ 2360              	.LASF115:
+ 2361 098c 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_ATTRIBUTE_LEN\000"
+ 2361      455F4741 
+ 2361      54545F45 
+ 2361      52525F49 
+ 2361      4E56414C 
+ 2362              	.LASF264:
+ 2363 09b1 4359424C 		.ascii	"CYBLE_EVT_HIDSS_SUSPEND\000"
+ 2363      455F4556 
+ 2363      545F4849 
+ 2363      4453535F 
+ 2363      53555350 
+ 2364              	.LASF89:
+ 2365 09c9 4359424C 		.ascii	"CYBLE_ERROR_GATT_DB_INVALID_ATTR_HANDLE\000"
+ 2365      455F4552 
+ 2365      524F525F 
+ 2365      47415454 
+ 2365      5F44425F 
+ 2366              	.LASF0:
+ 2367 09f1 7369676E 		.ascii	"signed char\000"
+ 2367      65642063 
+ 2367      68617200 
+ 2368              	.LASF190:
+ 2369 09fd 4359424C 		.ascii	"CYBLE_EVT_BASC_READ_DESCR_RESPONSE\000"
+ 2369      455F4556 
+ 2369      545F4241 
+ 2369      53435F52 
+ 2369      4541445F 
+ 2370              	.LASF19:
+ 2371 0a20 4359424C 		.ascii	"CYBLE_EVT_HARDWARE_ERROR\000"
+ 2371      455F4556 
+ 2371      545F4841 
+ 2371      52445741 
+ 2371      52455F45 
+ 2372              	.LASF70:
+ 2373 0a39 4359424C 		.ascii	"CYBLE_ERROR_OK\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 52
+
+
+ 2373      455F4552 
+ 2373      524F525F 
+ 2373      4F4B00
+ 2374              	.LASF40:
+ 2375 0a48 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 2375      455F4556 
+ 2375      545F4741 
+ 2375      5454435F 
+ 2375      52454144 
+ 2376              	.LASF356:
+ 2377 0a6f 4359424C 		.ascii	"CYBLE_STATE_STOPPED\000"
+ 2377      455F5354 
+ 2377      4154455F 
+ 2377      53544F50 
+ 2377      50454400 
+ 2378              	.LASF319:
+ 2379 0a83 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_ENABLED\000"
+ 2379      455F4556 
+ 2379      545F5253 
+ 2379      4353535F 
+ 2379      494E4449 
+ 2380              	.LASF1:
+ 2381 0aa6 756E7369 		.ascii	"unsigned char\000"
+ 2381      676E6564 
+ 2381      20636861 
+ 2381      7200
+ 2382              	.LASF39:
+ 2383 0ab4 4359424C 		.ascii	"CYBLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 2383      455F4556 
+ 2383      545F4741 
+ 2383      5454435F 
+ 2383      5843484E 
+ 2384              	.LASF218:
+ 2385 0ad2 4359424C 		.ascii	"CYBLE_EVT_CPSS_INDICATION_CONFIRMED\000"
+ 2385      455F4556 
+ 2385      545F4350 
+ 2385      53535F49 
+ 2385      4E444943 
+ 2386              	.LASF215:
+ 2387 0af6 4359424C 		.ascii	"CYBLE_EVT_CPSS_NOTIFICATION_DISABLED\000"
+ 2387      455F4556 
+ 2387      545F4350 
+ 2387      53535F4E 
+ 2387      4F544946 
+ 2388              	.LASF324:
+ 2389 0b1b 4359424C 		.ascii	"CYBLE_EVT_RSCSC_INDICATION\000"
+ 2389      455F4556 
+ 2389      545F5253 
+ 2389      4353435F 
+ 2389      494E4449 
+ 2390              	.LASF66:
+ 2391 0b36 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 2391      455F4556 
+ 2391      545F4C32 
+ 2391      4341505F 
+ 2391      43424643 
+ 2392              	.LASF149:
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 53
+
+
+ 2393 0b59 61747448 		.ascii	"attHandle\000"
+ 2393      616E646C 
+ 2393      6500
+ 2394              	.LASF166:
+ 2395 0b63 4359424C 		.ascii	"CYBLE_EVT_GATTC_INDICATION\000"
+ 2395      455F4556 
+ 2395      545F4741 
+ 2395      5454435F 
+ 2395      494E4449 
+ 2396              	.LASF331:
+ 2397 0b7e 4359424C 		.ascii	"CYBLE_EVT_SCPSS_NOTIFICATION_ENABLED\000"
+ 2397      455F4556 
+ 2397      545F5343 
+ 2397      5053535F 
+ 2397      4E4F5449 
+ 2398              	.LASF63:
+ 2399 0ba3 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 2399      455F4556 
+ 2399      545F4C32 
+ 2399      4341505F 
+ 2399      43424643 
+ 2400              	.LASF43:
+ 2401 0bc4 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 2401      455F4556 
+ 2401      545F4741 
+ 2401      5454435F 
+ 2401      46494E44 
+ 2402              	.LASF336:
+ 2403 0beb 4359424C 		.ascii	"CYBLE_EVT_SCPSC_WRITE_DESCR_RESPONSE\000"
+ 2403      455F4556 
+ 2403      545F5343 
+ 2403      5053435F 
+ 2403      57524954 
+ 2404              	.LASF14:
+ 2405 0c10 63686172 		.ascii	"char\000"
+ 2405      00
+ 2406              	.LASF339:
+ 2407 0c15 4359424C 		.ascii	"CYBLE_EVT_TPSC_NOTIFICATION\000"
+ 2407      455F4556 
+ 2407      545F5450 
+ 2407      53435F4E 
+ 2407      4F544946 
+ 2408              	.LASF175:
+ 2409 0c31 4359424C 		.ascii	"CYBLE_EVT_GATTC_INCL_DISCOVERY_COMPLETE\000"
+ 2409      455F4556 
+ 2409      545F4741 
+ 2409      5454435F 
+ 2409      494E434C 
+ 2410              	.LASF46:
+ 2411 0c59 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 2411      455F4556 
+ 2411      545F4741 
+ 2411      5454435F 
+ 2411      52454144 
+ 2412              	.LASF16:
+ 2413 0c78 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
+ 2413      455F4556 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 54
+
+
+ 2413      545F484F 
+ 2413      53545F49 
+ 2413      4E56414C 
+ 2414              	.LASF116:
+ 2415 0c8f 4359424C 		.ascii	"CYBLE_GATT_ERR_UNLIKELY_ERROR\000"
+ 2415      455F4741 
+ 2415      54545F45 
+ 2415      52525F55 
+ 2415      4E4C494B 
+ 2416              	.LASF258:
+ 2417 0cad 4359424C 		.ascii	"CYBLE_EVT_GLSC_READ_DESCR_RESPONSE\000"
+ 2417      455F4556 
+ 2417      545F474C 
+ 2417      53435F52 
+ 2417      4541445F 
+ 2418              	.LASF77:
+ 2419 0cd0 4359424C 		.ascii	"CYBLE_ERROR_NO_DEVICE_ENTITY\000"
+ 2419      455F4552 
+ 2419      524F525F 
+ 2419      4E4F5F44 
+ 2419      45564943 
+ 2420              	.LASF45:
+ 2421 0ced 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 2421      455F4556 
+ 2421      545F4741 
+ 2421      5454435F 
+ 2421      52454144 
+ 2422              	.LASF283:
+ 2423 0d0b 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_DISABLED\000"
+ 2423      455F4556 
+ 2423      545F4854 
+ 2423      53535F49 
+ 2423      4E444943 
+ 2424              	.LASF330:
+ 2425 0d2e 4359424C 		.ascii	"CYBLE_EVT_RTUSC_READ_CHAR_RESPONSE\000"
+ 2425      455F4556 
+ 2425      545F5254 
+ 2425      5553435F 
+ 2425      52454144 
+ 2426              	.LASF52:
+ 2427 0d51 4359424C 		.ascii	"CYBLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 2427      455F4556 
+ 2427      545F4741 
+ 2427      5454435F 
+ 2427      45584543 
+ 2428              	.LASF120:
+ 2429 0d70 4359424C 		.ascii	"CYBLE_GATT_ERR_HEART_RATE_CONTROL_POINT_NOT_SUPPORT"
+ 2429      455F4741 
+ 2429      54545F45 
+ 2429      52525F48 
+ 2429      45415254 
+ 2430 0da3 454400   		.ascii	"ED\000"
+ 2431              	.LASF113:
+ 2432 0da6 4359424C 		.ascii	"CYBLE_GATT_ERR_ATTRIBUTE_NOT_LONG\000"
+ 2432      455F4741 
+ 2432      54545F45 
+ 2432      52525F41 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 55
+
+
+ 2432      54545249 
+ 2433              	.LASF246:
+ 2434 0dc8 4359424C 		.ascii	"CYBLE_EVT_CTSC_WRITE_DESCR_RESPONSE\000"
+ 2434      455F4556 
+ 2434      545F4354 
+ 2434      53435F57 
+ 2434      52495445 
+ 2435              	.LASF344:
+ 2436 0dec 4359424C 		.ascii	"CYBLE_EVT_UDSS_INDICATION_DISABLED\000"
+ 2436      455F4556 
+ 2436      545F5544 
+ 2436      53535F49 
+ 2436      4E444943 
+ 2437              	.LASF221:
+ 2438 0e0f 4359424C 		.ascii	"CYBLE_EVT_CPSS_CHAR_WRITE\000"
+ 2438      455F4556 
+ 2438      545F4350 
+ 2438      53535F43 
+ 2438      4841525F 
+ 2439              	.LASF272:
+ 2440 0e29 4359424C 		.ascii	"CYBLE_EVT_HRSS_ENERGY_EXPENDED_RESET\000"
+ 2440      455F4556 
+ 2440      545F4852 
+ 2440      53535F45 
+ 2440      4E455247 
+ 2441              	.LASF154:
+ 2442 0e4e 4359424C 		.ascii	"CYBLE_GATTS_DB_T\000"
+ 2442      455F4741 
+ 2442      5454535F 
+ 2442      44425F54 
+ 2442      00
+ 2443              	.LASF195:
+ 2444 0e5f 4359424C 		.ascii	"CYBLE_EVT_BLSS_NOTIFICATION_ENABLED\000"
+ 2444      455F4556 
+ 2444      545F424C 
+ 2444      53535F4E 
+ 2444      4F544946 
+ 2445              	.LASF171:
+ 2446 0e83 4359424C 		.ascii	"CYBLE_EVT_GATTC_SRVC_DUPLICATION\000"
+ 2446      455F4556 
+ 2446      545F4741 
+ 2446      5454435F 
+ 2446      53525643 
+ 2447              	.LASF71:
+ 2448 0ea4 4359424C 		.ascii	"CYBLE_ERROR_INVALID_PARAMETER\000"
+ 2448      455F4552 
+ 2448      524F525F 
+ 2448      494E5641 
+ 2448      4C49445F 
+ 2449              	.LASF326:
+ 2450 0ec2 4359424C 		.ascii	"CYBLE_EVT_RSCSC_WRITE_CHAR_RESPONSE\000"
+ 2450      455F4556 
+ 2450      545F5253 
+ 2450      4353435F 
+ 2450      57524954 
+ 2451              	.LASF342:
+ 2452 0ee6 4359424C 		.ascii	"CYBLE_EVT_TPSC_WRITE_DESCR_RESPONSE\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 56
+
+
+ 2452      455F4556 
+ 2452      545F5450 
+ 2452      53435F57 
+ 2452      52495445 
+ 2453              	.LASF230:
+ 2454 0f0a 4359424C 		.ascii	"CYBLE_EVT_CSCSS_NOTIFICATION_DISABLED\000"
+ 2454      455F4556 
+ 2454      545F4353 
+ 2454      4353535F 
+ 2454      4E4F5449 
+ 2455              	.LASF241:
+ 2456 0f30 4359424C 		.ascii	"CYBLE_EVT_CTSS_NOTIFICATION_ENABLED\000"
+ 2456      455F4556 
+ 2456      545F4354 
+ 2456      53535F4E 
+ 2456      4F544946 
+ 2457              	.LASF320:
+ 2458 0f54 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_DISABLED\000"
+ 2458      455F4556 
+ 2458      545F5253 
+ 2458      4353535F 
+ 2458      494E4449 
+ 2459              	.LASF96:
+ 2460 0f78 4359424C 		.ascii	"CYBLE_DESCR_DISC_DONE\000"
+ 2460      455F4445 
+ 2460      5343525F 
+ 2460      44495343 
+ 2460      5F444F4E 
+ 2461              	.LASF363:
+ 2462 0f8e 4379426C 		.ascii	"CyBle_GattsWriteEventHandler\000"
+ 2462      655F4761 
+ 2462      74747357 
+ 2462      72697465 
+ 2462      4576656E 
+ 2463              	.LASF293:
+ 2464 0fab 4359424C 		.ascii	"CYBLE_EVT_LLSS_WRITE_CHAR_REQ\000"
+ 2464      455F4556 
+ 2464      545F4C4C 
+ 2464      53535F57 
+ 2464      52495445 
+ 2465              	.LASF73:
+ 2466 0fc9 4359424C 		.ascii	"CYBLE_ERROR_MEMORY_ALLOCATION_FAILED\000"
+ 2466      455F4552 
+ 2466      524F525F 
+ 2466      4D454D4F 
+ 2466      52595F41 
+ 2467              	.LASF278:
+ 2468 0fee 4359424C 		.ascii	"CYBLE_EVT_HRSC_READ_DESCR_RESPONSE\000"
+ 2468      455F4556 
+ 2468      545F4852 
+ 2468      53435F52 
+ 2468      4541445F 
+ 2469              	.LASF229:
+ 2470 1011 4359424C 		.ascii	"CYBLE_EVT_CSCSS_NOTIFICATION_ENABLED\000"
+ 2470      455F4556 
+ 2470      545F4353 
+ 2470      4353535F 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 57
+
+
+ 2470      4E4F5449 
+ 2471              	.LASF197:
+ 2472 1036 4359424C 		.ascii	"CYBLE_EVT_BLSC_INDICATION\000"
+ 2472      455F4556 
+ 2472      545F424C 
+ 2472      53435F49 
+ 2472      4E444943 
+ 2473              	.LASF266:
+ 2474 1050 4359424C 		.ascii	"CYBLE_EVT_HIDSS_REPORT_CHAR_WRITE\000"
+ 2474      455F4556 
+ 2474      545F4849 
+ 2474      4453535F 
+ 2474      5245504F 
+ 2475              	.LASF125:
+ 2476 1072 4359424C 		.ascii	"CYBLE_GATTS_ERR_CCCD_IMPROPERLY_CONFIGURED\000"
+ 2476      455F4741 
+ 2476      5454535F 
+ 2476      4552525F 
+ 2476      43434344 
+ 2477              	.LASF93:
+ 2478 109d 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
+ 2478      455F4552 
+ 2478      524F525F 
+ 2478      4D415800 
+ 2479              	.LASF305:
+ 2480 10ad 4359424C 		.ascii	"CYBLE_EVT_LNSC_WRITE_CHAR_RESPONSE\000"
+ 2480      455F4556 
+ 2480      545F4C4E 
+ 2480      53435F57 
+ 2480      52495445 
+ 2481              	.LASF58:
+ 2482 10d0 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 2482      455F4556 
+ 2482      545F4C32 
+ 2482      4341505F 
+ 2482      434F4E4E 
+ 2483              	.LASF183:
+ 2484 10f6 4359424C 		.ascii	"CYBLE_EVT_ANSC_WRITE_CHAR_RESPONSE\000"
+ 2484      455F4556 
+ 2484      545F414E 
+ 2484      53435F57 
+ 2484      52495445 
+ 2485              	.LASF347:
+ 2486 1119 4359424C 		.ascii	"CYBLE_EVT_UDSS_NOTIFICATION_DISABLED\000"
+ 2486      455F4556 
+ 2486      545F5544 
+ 2486      53535F4E 
+ 2486      4F544946 
+ 2487              	.LASF348:
+ 2488 113e 4359424C 		.ascii	"CYBLE_EVT_UDSS_WRITE_CHAR\000"
+ 2488      455F4556 
+ 2488      545F5544 
+ 2488      53535F57 
+ 2488      52495445 
+ 2489              	.LASF273:
+ 2490 1158 4359424C 		.ascii	"CYBLE_EVT_HRSS_NOTIFICATION_ENABLED\000"
+ 2490      455F4556 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 58
+
+
+ 2490      545F4852 
+ 2490      53535F4E 
+ 2490      4F544946 
+ 2491              	.LASF121:
+ 2492 117c 4359424C 		.ascii	"CYBLE_GATT_ERR_USER_DATA_ACCESS_NOT_PERMITTED\000"
+ 2492      455F4741 
+ 2492      54545F45 
+ 2492      52525F55 
+ 2492      5345525F 
+ 2493              	.LASF26:
+ 2494 11aa 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
+ 2494      455F4556 
+ 2494      545F4741 
+ 2494      505F4155 
+ 2494      54485F43 
+ 2495              	.LASF315:
+ 2496 11c6 4359424C 		.ascii	"CYBLE_EVT_PASSC_READ_DESCR_RESPONSE\000"
+ 2496      455F4556 
+ 2496      545F5041 
+ 2496      5353435F 
+ 2496      52454144 
+ 2497              	.LASF27:
+ 2498 11ea 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_FAILED\000"
+ 2498      455F4556 
+ 2498      545F4741 
+ 2498      505F4155 
+ 2498      54485F46 
+ 2499              	.LASF265:
+ 2500 1204 4359424C 		.ascii	"CYBLE_EVT_HIDSS_EXIT_SUSPEND\000"
+ 2500      455F4556 
+ 2500      545F4849 
+ 2500      4453535F 
+ 2500      45584954 
+ 2501              	.LASF94:
+ 2502 1221 4359424C 		.ascii	"CYBLE_INCL_DISC_DONE\000"
+ 2502      455F494E 
+ 2502      434C5F44 
+ 2502      4953435F 
+ 2502      444F4E45 
+ 2503              	.LASF127:
+ 2504 1236 4359424C 		.ascii	"CYBLE_GATT_ERR_CCCD_IMPROPERLY_CONFIGURED\000"
+ 2504      455F4741 
+ 2504      54545F45 
+ 2504      52525F43 
+ 2504      4343445F 
+ 2505              	.LASF74:
+ 2506 1260 4359424C 		.ascii	"CYBLE_ERROR_INSUFFICIENT_RESOURCES\000"
+ 2506      455F4552 
+ 2506      524F525F 
+ 2506      494E5355 
+ 2506      46464943 
+ 2507              	.LASF318:
+ 2508 1283 4359424C 		.ascii	"CYBLE_EVT_RSCSS_NOTIFICATION_DISABLED\000"
+ 2508      455F4556 
+ 2508      545F5253 
+ 2508      4353535F 
+ 2508      4E4F5449 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 59
+
+
+ 2509              	.LASF269:
+ 2510 12a9 4359424C 		.ascii	"CYBLE_EVT_HIDSC_WRITE_CHAR_RESPONSE\000"
+ 2510      455F4556 
+ 2510      545F4849 
+ 2510      4453435F 
+ 2510      57524954 
+ 2511              	.LASF5:
+ 2512 12cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2512      20756E73 
+ 2512      69676E65 
+ 2512      6420696E 
+ 2512      7400
+ 2513              	.LASF292:
+ 2514 12df 4359424C 		.ascii	"CYBLE_EVT_IASS_WRITE_CHAR_CMD\000"
+ 2514      455F4556 
+ 2514      545F4941 
+ 2514      53535F57 
+ 2514      52495445 
+ 2515              	.LASF309:
+ 2516 12fd 4359424C 		.ascii	"CYBLE_EVT_PASSS_NOTIFICATION_ENABLED\000"
+ 2516      455F4556 
+ 2516      545F5041 
+ 2516      5353535F 
+ 2516      4E4F5449 
+ 2517              	.LASF312:
+ 2518 1322 4359424C 		.ascii	"CYBLE_EVT_PASSC_NOTIFICATION\000"
+ 2518      455F4556 
+ 2518      545F5041 
+ 2518      5353435F 
+ 2518      4E4F5449 
+ 2519              	.LASF182:
+ 2520 133f 4359424C 		.ascii	"CYBLE_EVT_ANSC_READ_CHAR_RESPONSE\000"
+ 2520      455F4556 
+ 2520      545F414E 
+ 2520      53435F52 
+ 2520      4541445F 
+ 2521              	.LASF84:
+ 2522 1361 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_ALREADY_REGISTERED\000"
+ 2522      455F4552 
+ 2522      524F525F 
+ 2522      4C324341 
+ 2522      505F5053 
+ 2523              	.LASF285:
+ 2524 138a 4359424C 		.ascii	"CYBLE_EVT_HTSS_CHAR_WRITE\000"
+ 2524      455F4556 
+ 2524      545F4854 
+ 2524      53535F43 
+ 2524      4841525F 
+ 2525              	.LASF147:
+ 2526 13a4 61747456 		.ascii	"attValueUuid\000"
+ 2526      616C7565 
+ 2526      55756964 
+ 2526      00
+ 2527              	.LASF186:
+ 2528 13b1 4359424C 		.ascii	"CYBLE_EVT_BASS_NOTIFICATION_ENABLED\000"
+ 2528      455F4556 
+ 2528      545F4241 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 60
+
+
+ 2528      53535F4E 
+ 2528      4F544946 
+ 2529              	.LASF311:
+ 2530 13d5 4359424C 		.ascii	"CYBLE_EVT_PASSS_WRITE_CHAR\000"
+ 2530      455F4556 
+ 2530      545F5041 
+ 2530      5353535F 
+ 2530      57524954 
+ 2531              	.LASF225:
+ 2532 13f0 4359424C 		.ascii	"CYBLE_EVT_CPSC_WRITE_CHAR_RESPONSE\000"
+ 2532      455F4556 
+ 2532      545F4350 
+ 2532      53435F57 
+ 2532      52495445 
+ 2533              	.LASF32:
+ 2534 1413 4359424C 		.ascii	"CYBLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 2534      455F4556 
+ 2534      545F4741 
+ 2534      505F434F 
+ 2534      4E4E4543 
+ 2535              	.LASF210:
+ 2536 143c 4359424C 		.ascii	"CYBLE_EVT_CGMSC_READ_CHAR_RESPONSE\000"
+ 2536      455F4556 
+ 2536      545F4347 
+ 2536      4D53435F 
+ 2536      52454144 
+ 2537              	.LASF357:
+ 2538 145f 4359424C 		.ascii	"CYBLE_STATE_INITIALIZING\000"
+ 2538      455F5354 
+ 2538      4154455F 
+ 2538      494E4954 
+ 2538      49414C49 
+ 2539              	.LASF238:
+ 2540 1478 4359424C 		.ascii	"CYBLE_EVT_CSCSC_WRITE_CHAR_RESPONSE\000"
+ 2540      455F4556 
+ 2540      545F4353 
+ 2540      4353435F 
+ 2540      57524954 
+ 2541              	.LASF62:
+ 2542 149c 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 2542      455F4556 
+ 2542      545F4C32 
+ 2542      4341505F 
+ 2542      43424643 
+ 2543              	.LASF366:
+ 2544 14bd 6379426C 		.ascii	"cyBle_attValues\000"
+ 2544      655F6174 
+ 2544      7456616C 
+ 2544      75657300 
+ 2545              	.LASF234:
+ 2546 14cd 4359424C 		.ascii	"CYBLE_EVT_CSCSS_CHAR_WRITE\000"
+ 2546      455F4556 
+ 2546      545F4353 
+ 2546      4353535F 
+ 2546      43484152 
+ 2547              	.LASF159:
+ 2548 14e8 4359424C 		.ascii	"CYBLE_GATTS_T\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 61
+
+
+ 2548      455F4741 
+ 2548      5454535F 
+ 2548      5400
+ 2549              	.LASF24:
+ 2550 14f6 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 2550      455F4556 
+ 2550      545F4741 
+ 2550      505F5041 
+ 2550      53534B45 
+ 2551              	.LASF300:
+ 2552 151a 4359424C 		.ascii	"CYBLE_EVT_LNSS_NOTIFICATION_DISABLED\000"
+ 2552      455F4556 
+ 2552      545F4C4E 
+ 2552      53535F4E 
+ 2552      4F544946 
+ 2553              	.LASF219:
+ 2554 153f 4359424C 		.ascii	"CYBLE_EVT_CPSS_BROADCAST_ENABLED\000"
+ 2554      455F4556 
+ 2554      545F4350 
+ 2554      53535F42 
+ 2554      524F4144 
+ 2555              	.LASF256:
+ 2556 1560 4359424C 		.ascii	"CYBLE_EVT_GLSC_READ_CHAR_RESPONSE\000"
+ 2556      455F4556 
+ 2556      545F474C 
+ 2556      53435F52 
+ 2556      4541445F 
+ 2557              	.LASF286:
+ 2558 1582 4359424C 		.ascii	"CYBLE_EVT_HTSC_NOTIFICATION\000"
+ 2558      455F4556 
+ 2558      545F4854 
+ 2558      53435F4E 
+ 2558      4F544946 
+ 2559              	.LASF6:
+ 2560 159e 6C6F6E67 		.ascii	"long long int\000"
+ 2560      206C6F6E 
+ 2560      6720696E 
+ 2560      7400
+ 2561              	.LASF340:
+ 2562 15ac 4359424C 		.ascii	"CYBLE_EVT_TPSC_READ_CHAR_RESPONSE\000"
+ 2562      455F4556 
+ 2562      545F5450 
+ 2562      53435F52 
+ 2562      4541445F 
+ 2563              	.LASF172:
+ 2564 15ce 4359424C 		.ascii	"CYBLE_EVT_GATTC_CHAR_DUPLICATION\000"
+ 2564      455F4556 
+ 2564      545F4741 
+ 2564      5454435F 
+ 2564      43484152 
+ 2565              	.LASF251:
+ 2566 15ef 4359424C 		.ascii	"CYBLE_EVT_GLSS_NOTIFICATION_ENABLED\000"
+ 2566      455F4556 
+ 2566      545F474C 
+ 2566      53535F4E 
+ 2566      4F544946 
+ 2567              	.LASF111:
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 62
+
+
+ 2568 1613 4359424C 		.ascii	"CYBLE_GATT_ERR_PREPARE_WRITE_QUEUE_FULL\000"
+ 2568      455F4741 
+ 2568      54545F45 
+ 2568      52525F50 
+ 2568      52455041 
+ 2569              	.LASF85:
+ 2570 163b 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_NOT_REGISTERED\000"
+ 2570      455F4552 
+ 2570      524F525F 
+ 2570      4C324341 
+ 2570      505F5053 
+ 2571              	.LASF75:
+ 2572 1660 4359424C 		.ascii	"CYBLE_ERROR_OOB_NOT_AVAILABLE\000"
+ 2572      455F4552 
+ 2572      524F525F 
+ 2572      4F4F425F 
+ 2572      4E4F545F 
+ 2573              	.LASF202:
+ 2574 167e 4359424C 		.ascii	"CYBLE_EVT_CGMSS_INDICATION_ENABLED\000"
+ 2574      455F4556 
+ 2574      545F4347 
+ 2574      4D53535F 
+ 2574      494E4449 
+ 2575              	.LASF13:
+ 2576 16a1 646F7562 		.ascii	"double\000"
+ 2576      6C6500
+ 2577              	.LASF90:
+ 2578 16a8 4359424C 		.ascii	"CYBLE_ERROR_DEVICE_ALREADY_EXISTS\000"
+ 2578      455F4552 
+ 2578      524F525F 
+ 2578      44455649 
+ 2578      43455F41 
+ 2579              	.LASF68:
+ 2580 16ca 4359424C 		.ascii	"CYBLE_EVT_PENDING_FLASH_WRITE\000"
+ 2580      455F4556 
+ 2580      545F5045 
+ 2580      4E44494E 
+ 2580      475F464C 
+ 2581              	.LASF114:
+ 2582 16e8 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_ENC_KEY_SIZE\000"
+ 2582      455F4741 
+ 2582      54545F45 
+ 2582      52525F49 
+ 2582      4E535546 
+ 2583              	.LASF128:
+ 2584 1711 4359424C 		.ascii	"CYBLE_GATT_ERR_PROCEDURE_ALREADY_IN_PROGRESS\000"
+ 2584      455F4741 
+ 2584      54545F45 
+ 2584      52525F50 
+ 2584      524F4345 
+ 2585              	.LASF307:
+ 2586 173e 4359424C 		.ascii	"CYBLE_EVT_LNSC_WRITE_DESCR_RESPONSE\000"
+ 2586      455F4556 
+ 2586      545F4C4E 
+ 2586      53435F57 
+ 2586      52495445 
+ 2587              	.LASF294:
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 63
+
+
+ 2588 1762 4359424C 		.ascii	"CYBLE_EVT_LLSC_READ_CHAR_RESPONSE\000"
+ 2588      455F4556 
+ 2588      545F4C4C 
+ 2588      53435F52 
+ 2588      4541445F 
+ 2589              	.LASF233:
+ 2590 1784 4359424C 		.ascii	"CYBLE_EVT_CSCSS_INDICATION_CONFIRMATION\000"
+ 2590      455F4556 
+ 2590      545F4353 
+ 2590      4353535F 
+ 2590      494E4449 
+ 2591              	.LASF87:
+ 2592 17ac 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_CHANNEL_NOT_FOUND\000"
+ 2592      455F4552 
+ 2592      524F525F 
+ 2592      4C324341 
+ 2592      505F4348 
+ 2593              	.LASF370:
+ 2594 17d0 6379426C 		.ascii	"cyBle_gattDB\000"
+ 2594      655F6761 
+ 2594      74744442 
+ 2594      00
+ 2595              	.LASF78:
+ 2596 17dd 4359424C 		.ascii	"CYBLE_ERROR_REPEATED_ATTEMPTS\000"
+ 2596      455F4552 
+ 2596      524F525F 
+ 2596      52455045 
+ 2596      41544544 
+ 2597              	.LASF12:
+ 2598 17fb 666C6F61 		.ascii	"float\000"
+ 2598      7400
+ 2599              	.LASF334:
+ 2600 1801 4359424C 		.ascii	"CYBLE_EVT_SCPSC_NOTIFICATION\000"
+ 2600      455F4556 
+ 2600      545F5343 
+ 2600      5053435F 
+ 2600      4E4F5449 
+ 2601              	.LASF263:
+ 2602 181e 4359424C 		.ascii	"CYBLE_EVT_HIDSS_REPORT_MODE_ENTER\000"
+ 2602      455F4556 
+ 2602      545F4849 
+ 2602      4453535F 
+ 2602      5245504F 
+ 2603              	.LASF91:
+ 2604 1840 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE_NOT_PERMITED\000"
+ 2604      455F4552 
+ 2604      524F525F 
+ 2604      464C4153 
+ 2604      485F5752 
+ 2605              	.LASF261:
+ 2606 1865 4359424C 		.ascii	"CYBLE_EVT_HIDSS_NOTIFICATION_DISABLED\000"
+ 2606      455F4556 
+ 2606      545F4849 
+ 2606      4453535F 
+ 2606      4E4F5449 
+ 2607              	.LASF369:
+ 2608 188b 6379426C 		.ascii	"cyBle_gatts\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 64
+
+
+ 2608      655F6761 
+ 2608      74747300 
+ 2609              	.LASF110:
+ 2610 1897 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_AUTHORIZATION\000"
+ 2610      455F4741 
+ 2610      54545F45 
+ 2610      52525F49 
+ 2610      4E535546 
+ 2611              	.LASF138:
+ 2612 18c1 61747472 		.ascii	"attrHandle\000"
+ 2612      48616E64 
+ 2612      6C6500
+ 2613              	.LASF350:
+ 2614 18cc 4359424C 		.ascii	"CYBLE_EVT_UDSC_NOTIFICATION\000"
+ 2614      455F4556 
+ 2614      545F5544 
+ 2614      53435F4E 
+ 2614      4F544946 
+ 2615              	.LASF142:
+ 2616 18e8 4359424C 		.ascii	"CYBLE_GATTS_WRITE_REQ_PARAM_T\000"
+ 2616      455F4741 
+ 2616      5454535F 
+ 2616      57524954 
+ 2616      455F5245 
+ 2617              	.LASF8:
+ 2618 1906 756E7369 		.ascii	"unsigned int\000"
+ 2618      676E6564 
+ 2618      20696E74 
+ 2618      00
+ 2619              	.LASF50:
+ 2620 1913 4359424C 		.ascii	"CYBLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 2620      455F4556 
+ 2620      545F4741 
+ 2620      5454535F 
+ 2620      50524550 
+ 2621              	.LASF152:
+ 2622 1932 61747445 		.ascii	"attEndHandle\000"
+ 2622      6E644861 
+ 2622      6E646C65 
+ 2622      00
+ 2623              	.LASF107:
+ 2624 193f 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_AUTHENTICATION\000"
+ 2624      455F4741 
+ 2624      54545F45 
+ 2624      52525F49 
+ 2624      4E535546 
+ 2625              	.LASF242:
+ 2626 196a 4359424C 		.ascii	"CYBLE_EVT_CTSS_NOTIFICATION_DISABLED\000"
+ 2626      455F4556 
+ 2626      545F4354 
+ 2626      53535F4E 
+ 2626      4F544946 
+ 2627              	.LASF193:
+ 2628 198f 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_DISABLED\000"
+ 2628      455F4556 
+ 2628      545F424C 
+ 2628      53535F49 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 65
+
+
+ 2628      4E444943 
+ 2629              	.LASF332:
+ 2630 19b2 4359424C 		.ascii	"CYBLE_EVT_SCPSS_NOTIFICATION_DISABLED\000"
+ 2630      455F4556 
+ 2630      545F5343 
+ 2630      5053535F 
+ 2630      4E4F5449 
+ 2631              	.LASF374:
+ 2632 19d8 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2632      4320342E 
+ 2632      382E3420 
+ 2632      32303134 
+ 2632      30353236 
+ 2633 1a0b 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 2633      20726576 
+ 2633      6973696F 
+ 2633      6E203231 
+ 2633      31333538 
+ 2634 1a3e 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 2634      66756E63 
+ 2634      74696F6E 
+ 2634      2D736563 
+ 2634      74696F6E 
+ 2635              	.LASF124:
+ 2636 1a54 4359424C 		.ascii	"CYBLE_GATTS_ERR_PROCEDURE_ALREADY_IN_PROGRESS\000"
+ 2636      455F4741 
+ 2636      5454535F 
+ 2636      4552525F 
+ 2636      50524F43 
+ 2637              	.LASF160:
+ 2638 1a82 4359424C 		.ascii	"CYBLE_AUTHENTICATION_REQUEST_REPLY\000"
+ 2638      455F4155 
+ 2638      5448454E 
+ 2638      54494341 
+ 2638      54494F4E 
+ 2639              	.LASF83:
+ 2640 1aa5 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_WRONG_ENCODING\000"
+ 2640      455F4552 
+ 2640      524F525F 
+ 2640      4C324341 
+ 2640      505F5053 
+ 2641              	.LASF196:
+ 2642 1aca 4359424C 		.ascii	"CYBLE_EVT_BLSS_NOTIFICATION_DISABLED\000"
+ 2642      455F4556 
+ 2642      545F424C 
+ 2642      53535F4E 
+ 2642      4F544946 
+ 2643              	.LASF112:
+ 2644 1aef 4359424C 		.ascii	"CYBLE_GATT_ERR_ATTRIBUTE_NOT_FOUND\000"
+ 2644      455F4741 
+ 2644      54545F45 
+ 2644      52525F41 
+ 2644      54545249 
+ 2645              	.LASF289:
+ 2646 1b12 4359424C 		.ascii	"CYBLE_EVT_HTSC_WRITE_CHAR_RESPONSE\000"
+ 2646      455F4556 
+ 2646      545F4854 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 66
+
+
+ 2646      53435F57 
+ 2646      52495445 
+ 2647              	.LASF69:
+ 2648 1b35 4359424C 		.ascii	"CYBLE_EVT_MAX\000"
+ 2648      455F4556 
+ 2648      545F4D41 
+ 2648      5800
+ 2649              	.LASF33:
+ 2650 1b43 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
+ 2650      455F4556 
+ 2650      545F4741 
+ 2650      50435F53 
+ 2650      43414E5F 
+ 2651              	.LASF178:
+ 2652 1b62 4359424C 		.ascii	"CYBLE_EVT_ANSS_NOTIFICATION_ENABLED\000"
+ 2652      455F4556 
+ 2652      545F414E 
+ 2652      53535F4E 
+ 2652      4F544946 
+ 2653              	.LASF47:
+ 2654 1b86 4359424C 		.ascii	"CYBLE_EVT_GATTS_WRITE_REQ\000"
+ 2654      455F4556 
+ 2654      545F4741 
+ 2654      5454535F 
+ 2654      57524954 
+ 2655              	.LASF352:
+ 2656 1ba0 4359424C 		.ascii	"CYBLE_EVT_UDSC_WRITE_CHAR_RESPONSE\000"
+ 2656      455F4556 
+ 2656      545F5544 
+ 2656      53435F57 
+ 2656      52495445 
+ 2657              	.LASF25:
+ 2658 1bc3 4359424C 		.ascii	"CYBLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 2658      455F4556 
+ 2658      545F4741 
+ 2658      505F5041 
+ 2658      53534B45 
+ 2659              	.LASF98:
+ 2660 1be9 4359424C 		.ascii	"CYBLE_ERROR_IND_DISABLED\000"
+ 2660      455F4552 
+ 2660      524F525F 
+ 2660      494E445F 
+ 2660      44495341 
+ 2661              	.LASF97:
+ 2662 1c02 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
+ 2662      455F4552 
+ 2662      524F525F 
+ 2662      4E54465F 
+ 2662      44495341 
+ 2663              	.LASF44:
+ 2664 1c1b 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_RSP\000"
+ 2664      455F4556 
+ 2664      545F4741 
+ 2664      5454435F 
+ 2664      52454144 
+ 2665              	.LASF223:
+ 2666 1c34 4359424C 		.ascii	"CYBLE_EVT_CPSC_INDICATION\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 67
+
+
+ 2666      455F4556 
+ 2666      545F4350 
+ 2666      53435F49 
+ 2666      4E444943 
+ 2667              	.LASF109:
+ 2668 1c4e 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_OFFSET\000"
+ 2668      455F4741 
+ 2668      54545F45 
+ 2668      52525F49 
+ 2668      4E56414C 
+ 2669              	.LASF247:
+ 2670 1c6c 4359424C 		.ascii	"CYBLE_EVT_DISC_READ_CHAR_RESPONSE\000"
+ 2670      455F4556 
+ 2670      545F4449 
+ 2670      53435F52 
+ 2670      4541445F 
+ 2671              	.LASF61:
+ 2672 1c8e 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 2672      455F4556 
+ 2672      545F4C32 
+ 2672      4341505F 
+ 2672      43424643 
+ 2673              	.LASF290:
+ 2674 1cac 4359424C 		.ascii	"CYBLE_EVT_HTSC_READ_DESCR_RESPONSE\000"
+ 2674      455F4556 
+ 2674      545F4854 
+ 2674      53435F52 
+ 2674      4541445F 
+ 2675              	.LASF355:
+ 2676 1ccf 4359424C 		.ascii	"CYBLE_DEBUG_EVT_BLESS_INT\000"
+ 2676      455F4445 
+ 2676      4255475F 
+ 2676      4556545F 
+ 2676      424C4553 
+ 2677              	.LASF129:
+ 2678 1ce9 4359424C 		.ascii	"CYBLE_GATT_ERR_OUT_OF_RANGE\000"
+ 2678      455F4741 
+ 2678      54545F45 
+ 2678      52525F4F 
+ 2678      55545F4F 
+ 2679              	.LASF253:
+ 2680 1d05 4359424C 		.ascii	"CYBLE_EVT_GLSS_WRITE_CHAR\000"
+ 2680      455F4556 
+ 2680      545F474C 
+ 2680      53535F57 
+ 2680      52495445 
+ 2681              	.LASF205:
+ 2682 1d1f 4359424C 		.ascii	"CYBLE_EVT_CGMSS_NOTIFICATION_ENABLED\000"
+ 2682      455F4556 
+ 2682      545F4347 
+ 2682      4D53535F 
+ 2682      4E4F5449 
+ 2683              	.LASF275:
+ 2684 1d44 4359424C 		.ascii	"CYBLE_EVT_HRSC_NOTIFICATION\000"
+ 2684      455F4556 
+ 2684      545F4852 
+ 2684      53435F4E 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 68
+
+
+ 2684      4F544946 
+ 2685              	.LASF321:
+ 2686 1d60 4359424C 		.ascii	"CYBLE_EVT_RSCSS_INDICATION_CONFIRMATION\000"
+ 2686      455F4556 
+ 2686      545F5253 
+ 2686      4353535F 
+ 2686      494E4449 
+ 2687              	.LASF270:
+ 2688 1d88 4359424C 		.ascii	"CYBLE_EVT_HIDSC_READ_DESCR_RESPONSE\000"
+ 2688      455F4556 
+ 2688      545F4849 
+ 2688      4453435F 
+ 2688      52454144 
+ 2689              	.LASF276:
+ 2690 1dac 4359424C 		.ascii	"CYBLE_EVT_HRSC_READ_CHAR_RESPONSE\000"
+ 2690      455F4556 
+ 2690      545F4852 
+ 2690      53435F52 
+ 2690      4541445F 
+ 2691              	.LASF31:
+ 2692 1dce 4359424C 		.ascii	"CYBLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 2692      455F4556 
+ 2692      545F4741 
+ 2692      505F454E 
+ 2692      43525950 
+ 2693              	.LASF376:
+ 2694 1deb 433A5C55 		.ascii	"C:\\Users\\Kervins\\Documents\\PSoC Creator\\lab 1\\"
+ 2694      73657273 
+ 2694      5C4B6572 
+ 2694      76696E73 
+ 2694      5C446F63 
+ 2695 1e19 44657369 		.ascii	"Design01.cydsn\\Design01.cydsn\000"
+ 2695      676E3031 
+ 2695      2E637964 
+ 2695      736E5C44 
+ 2695      65736967 
+ 2696              	.LASF173:
+ 2697 1e37 4359424C 		.ascii	"CYBLE_EVT_GATTC_DESCR_DUPLICATION\000"
+ 2697      455F4556 
+ 2697      545F4741 
+ 2697      5454435F 
+ 2697      44455343 
+ 2698              	.LASF362:
+ 2699 1e59 4379426C 		.ascii	"CyBle_GattsReInitGattDb\000"
+ 2699      655F4761 
+ 2699      74747352 
+ 2699      65496E69 
+ 2699      74476174 
+ 2700              	.LASF38:
+ 2701 1e71 4359424C 		.ascii	"CYBLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 2701      455F4556 
+ 2701      545F4741 
+ 2701      5454535F 
+ 2701      58434E48 
+ 2702              	.LASF346:
+ 2703 1e8f 4359424C 		.ascii	"CYBLE_EVT_UDSS_NOTIFICATION_ENABLED\000"
+ 2703      455F4556 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 69
+
+
+ 2703      545F5544 
+ 2703      53535F4E 
+ 2703      4F544946 
+ 2704              	.LASF298:
+ 2705 1eb3 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_CONFIRMED\000"
+ 2705      455F4556 
+ 2705      545F4C4E 
+ 2705      53535F49 
+ 2705      4E444943 
+ 2706              	.LASF185:
+ 2707 1ed7 4359424C 		.ascii	"CYBLE_EVT_ANSC_WRITE_DESCR_RESPONSE\000"
+ 2707      455F4556 
+ 2707      545F414E 
+ 2707      53435F57 
+ 2707      52495445 
+ 2708              	.LASF304:
+ 2709 1efb 4359424C 		.ascii	"CYBLE_EVT_LNSC_READ_CHAR_RESPONSE\000"
+ 2709      455F4556 
+ 2709      545F4C4E 
+ 2709      53435F52 
+ 2709      4541445F 
+ 2710              	.LASF250:
+ 2711 1f1d 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_CONFIRMED\000"
+ 2711      455F4556 
+ 2711      545F474C 
+ 2711      53535F49 
+ 2711      4E444943 
+ 2712              	.LASF164:
+ 2713 1f41 4359424C 		.ascii	"CYBLE_EVT_GATTS_INDICATION_ENABLED\000"
+ 2713      455F4556 
+ 2713      545F4741 
+ 2713      5454535F 
+ 2713      494E4449 
+ 2714              	.LASF7:
+ 2715 1f64 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2715      206C6F6E 
+ 2715      6720756E 
+ 2715      7369676E 
+ 2715      65642069 
+ 2716              	.LASF103:
+ 2717 1f7b 4359424C 		.ascii	"CYBLE_GATT_ERR_INVALID_HANDLE\000"
+ 2717      455F4741 
+ 2717      54545F45 
+ 2717      52525F49 
+ 2717      4E56414C 
+ 2718              	.LASF18:
+ 2719 1f99 4359424C 		.ascii	"CYBLE_EVT_TIMEOUT\000"
+ 2719      455F4556 
+ 2719      545F5449 
+ 2719      4D454F55 
+ 2719      5400
+ 2720              	.LASF245:
+ 2721 1fab 4359424C 		.ascii	"CYBLE_EVT_CTSC_READ_DESCR_RESPONSE\000"
+ 2721      455F4556 
+ 2721      545F4354 
+ 2721      53435F52 
+ 2721      4541445F 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 70
+
+
+ 2722              	.LASF143:
+ 2723 1fce 6C656E67 		.ascii	"length\000"
+ 2723      746800
+ 2724              	.LASF100:
+ 2725 1fd5 4359424C 		.ascii	"CYBLE_ERROR_INVALID_STATE\000"
+ 2725      455F4552 
+ 2725      524F525F 
+ 2725      494E5641 
+ 2725      4C49445F 
+ 2726              	.LASF131:
+ 2727 1fef 4359424C 		.ascii	"CYBLE_GATT_DB_ATTR_HANDLE_T\000"
+ 2727      455F4741 
+ 2727      54545F44 
+ 2727      425F4154 
+ 2727      54525F48 
+ 2728              	.LASF64:
+ 2729 200b 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 2729      455F4556 
+ 2729      545F4C32 
+ 2729      4341505F 
+ 2729      43424643 
+ 2730              	.LASF102:
+ 2731 202a 4359424C 		.ascii	"CYBLE_GATT_ERR_NONE\000"
+ 2731      455F4741 
+ 2731      54545F45 
+ 2731      52525F4E 
+ 2731      4F4E4500 
+ 2732              	.LASF137:
+ 2733 203e 76616C75 		.ascii	"value\000"
+ 2733      6500
+ 2734              	.LASF222:
+ 2735 2044 4359424C 		.ascii	"CYBLE_EVT_CPSC_NOTIFICATION\000"
+ 2735      455F4556 
+ 2735      545F4350 
+ 2735      53435F4E 
+ 2735      4F544946 
+ 2736              	.LASF201:
+ 2737 2060 4359424C 		.ascii	"CYBLE_EVT_BLSC_WRITE_DESCR_RESPONSE\000"
+ 2737      455F4556 
+ 2737      545F424C 
+ 2737      53435F57 
+ 2737      52495445 
+ 2738              	.LASF153:
+ 2739 2084 61747456 		.ascii	"attValue\000"
+ 2739      616C7565 
+ 2739      00
+ 2740              	.LASF303:
+ 2741 208d 4359424C 		.ascii	"CYBLE_EVT_LNSC_NOTIFICATION\000"
+ 2741      455F4556 
+ 2741      545F4C4E 
+ 2741      53435F4E 
+ 2741      4F544946 
+ 2742              	.LASF367:
+ 2743 20a9 4379426C 		.ascii	"CyBle_ApplCallback\000"
+ 2743      655F4170 
+ 2743      706C4361 
+ 2743      6C6C6261 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 71
+
+
+ 2743      636B00
+ 2744              	.LASF243:
+ 2745 20bc 4359424C 		.ascii	"CYBLE_EVT_CTSC_NOTIFICATION\000"
+ 2745      455F4556 
+ 2745      545F4354 
+ 2745      53435F4E 
+ 2745      4F544946 
+ 2746              	.LASF130:
+ 2747 20d8 4359424C 		.ascii	"CYBLE_GATT_ERR_CODE_T\000"
+ 2747      455F4741 
+ 2747      54545F45 
+ 2747      52525F43 
+ 2747      4F44455F 
+ 2748              	.LASF249:
+ 2749 20ee 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_DISABLED\000"
+ 2749      455F4556 
+ 2749      545F474C 
+ 2749      53535F49 
+ 2749      4E444943 
+ 2750              	.LASF123:
+ 2751 2111 4359424C 		.ascii	"CYBLE_GATT_ERR_HTS_OUT_OF_RANGE\000"
+ 2751      455F4741 
+ 2751      54545F45 
+ 2751      52525F48 
+ 2751      54535F4F 
+ 2752              	.LASF157:
+ 2753 2131 73657276 		.ascii	"serviceChangedHandle\000"
+ 2753      69636543 
+ 2753      68616E67 
+ 2753      65644861 
+ 2753      6E646C65 
+ 2754              	.LASF296:
+ 2755 2146 4359424C 		.ascii	"CYBLE_EVT_LNSS_INDICATION_ENABLED\000"
+ 2755      455F4556 
+ 2755      545F4C4E 
+ 2755      53535F49 
+ 2755      4E444943 
+ 2756              	.LASF240:
+ 2757 2168 4359424C 		.ascii	"CYBLE_EVT_CSCSC_WRITE_DESCR_RESPONSE\000"
+ 2757      455F4556 
+ 2757      545F4353 
+ 2757      4353435F 
+ 2757      57524954 
+ 2758              	.LASF140:
+ 2759 218d 636F6E6E 		.ascii	"connHandle\000"
+ 2759      48616E64 
+ 2759      6C6500
+ 2760              	.LASF187:
+ 2761 2198 4359424C 		.ascii	"CYBLE_EVT_BASS_NOTIFICATION_DISABLED\000"
+ 2761      455F4556 
+ 2761      545F4241 
+ 2761      53535F4E 
+ 2761      4F544946 
+ 2762              	.LASF214:
+ 2763 21bd 4359424C 		.ascii	"CYBLE_EVT_CPSS_NOTIFICATION_ENABLED\000"
+ 2763      455F4556 
+ 2763      545F4350 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 72
+
+
+ 2763      53535F4E 
+ 2763      4F544946 
+ 2764              	.LASF341:
+ 2765 21e1 4359424C 		.ascii	"CYBLE_EVT_TPSC_READ_DESCR_RESPONSE\000"
+ 2765      455F4556 
+ 2765      545F5450 
+ 2765      53435F52 
+ 2765      4541445F 
+ 2766              	.LASF145:
+ 2767 2204 4359424C 		.ascii	"CYBLE_GATTS_ATT_GENERIC_VAL_T\000"
+ 2767      455F4741 
+ 2767      5454535F 
+ 2767      4154545F 
+ 2767      47454E45 
+ 2768              	.LASF42:
+ 2769 2222 4359424C 		.ascii	"CYBLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 2769      455F4556 
+ 2769      545F4741 
+ 2769      5454435F 
+ 2769      46494E44 
+ 2770              	.LASF41:
+ 2771 2240 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 2771      455F4556 
+ 2771      545F4741 
+ 2771      5454435F 
+ 2771      52454144 
+ 2772              	.LASF310:
+ 2773 2261 4359424C 		.ascii	"CYBLE_EVT_PASSS_NOTIFICATION_DISABLED\000"
+ 2773      455F4556 
+ 2773      545F5041 
+ 2773      5353535F 
+ 2773      4E4F5449 
+ 2774              	.LASF212:
+ 2775 2287 4359424C 		.ascii	"CYBLE_EVT_CGMSC_READ_DESCR_RESPONSE\000"
+ 2775      455F4556 
+ 2775      545F4347 
+ 2775      4D53435F 
+ 2775      52454144 
+ 2776              	.LASF268:
+ 2777 22ab 4359424C 		.ascii	"CYBLE_EVT_HIDSC_READ_CHAR_RESPONSE\000"
+ 2777      455F4556 
+ 2777      545F4849 
+ 2777      4453435F 
+ 2777      52454144 
+ 2778              	.LASF364:
+ 2779 22ce 61706952 		.ascii	"apiResult\000"
+ 2779      6573756C 
+ 2779      7400
+ 2780              	.LASF373:
+ 2781 22d8 6379426C 		.ascii	"cyBle_state\000"
+ 2781      655F7374 
+ 2781      61746500 
+ 2782              	.LASF338:
+ 2783 22e4 4359424C 		.ascii	"CYBLE_EVT_TPSS_NOTIFICATION_DISABLED\000"
+ 2783      455F4556 
+ 2783      545F5450 
+ 2783      53535F4E 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 73
+
+
+ 2783      4F544946 
+ 2784              	.LASF335:
+ 2785 2309 4359424C 		.ascii	"CYBLE_EVT_SCPSC_READ_DESCR_RESPONSE\000"
+ 2785      455F4556 
+ 2785      545F5343 
+ 2785      5053435F 
+ 2785      52454144 
+ 2786              	.LASF279:
+ 2787 232d 4359424C 		.ascii	"CYBLE_EVT_HRSC_WRITE_DESCR_RESPONSE\000"
+ 2787      455F4556 
+ 2787      545F4852 
+ 2787      53435F57 
+ 2787      52495445 
+ 2788              	.LASF301:
+ 2789 2351 4359424C 		.ascii	"CYBLE_EVT_LNSS_WRITE_CHAR\000"
+ 2789      455F4556 
+ 2789      545F4C4E 
+ 2789      53535F57 
+ 2789      52495445 
+ 2790              	.LASF48:
+ 2791 236b 4359424C 		.ascii	"CYBLE_EVT_GATTC_WRITE_RSP\000"
+ 2791      455F4556 
+ 2791      545F4741 
+ 2791      5454435F 
+ 2791      57524954 
+ 2792              	.LASF360:
+ 2793 2385 4359424C 		.ascii	"CYBLE_STATE_DISCONNECTED\000"
+ 2793      455F5354 
+ 2793      4154455F 
+ 2793      44495343 
+ 2793      4F4E4E45 
+ 2794              	.LASF148:
+ 2795 239e 4359424C 		.ascii	"CYBLE_GATTS_ATT_VALUE_T\000"
+ 2795      455F4741 
+ 2795      5454535F 
+ 2795      4154545F 
+ 2795      56414C55 
+ 2796              	.LASF323:
+ 2797 23b6 4359424C 		.ascii	"CYBLE_EVT_RSCSC_NOTIFICATION\000"
+ 2797      455F4556 
+ 2797      545F5253 
+ 2797      4353435F 
+ 2797      4E4F5449 
+ 2798              	.LASF28:
+ 2799 23d3 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 2799      455F4556 
+ 2799      545F4741 
+ 2799      50505F41 
+ 2799      44564552 
+ 2800              	.LASF194:
+ 2801 23fb 4359424C 		.ascii	"CYBLE_EVT_BLSS_INDICATION_CONFIRMED\000"
+ 2801      455F4556 
+ 2801      545F424C 
+ 2801      53535F49 
+ 2801      4E444943 
+ 2802              	.LASF144:
+ 2803 241f 61747447 		.ascii	"attGenericVal\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 74
+
+
+ 2803      656E6572 
+ 2803      69635661 
+ 2803      6C00
+ 2804              	.LASF211:
+ 2805 242d 4359424C 		.ascii	"CYBLE_EVT_CGMSC_WRITE_CHAR_RESPONSE\000"
+ 2805      455F4556 
+ 2805      545F4347 
+ 2805      4D53435F 
+ 2805      57524954 
+ 2806              	.LASF9:
+ 2807 2451 75696E74 		.ascii	"uint8\000"
+ 2807      3800
+ 2808              	.LASF288:
+ 2809 2457 4359424C 		.ascii	"CYBLE_EVT_HTSC_READ_CHAR_RESPONSE\000"
+ 2809      455F4556 
+ 2809      545F4854 
+ 2809      53435F52 
+ 2809      4541445F 
+ 2810              	.LASF316:
+ 2811 2479 4359424C 		.ascii	"CYBLE_EVT_PASSC_WRITE_DESCR_RESPONSE\000"
+ 2811      455F4556 
+ 2811      545F5041 
+ 2811      5353435F 
+ 2811      57524954 
+ 2812              	.LASF2:
+ 2813 249e 73686F72 		.ascii	"short int\000"
+ 2813      7420696E 
+ 2813      7400
+ 2814              	.LASF141:
+ 2815 24a8 68616E64 		.ascii	"handleValPair\000"
+ 2815      6C655661 
+ 2815      6C506169 
+ 2815      7200
+ 2816              	.LASF146:
+ 2817 24b6 61747446 		.ascii	"attFormatValue\000"
+ 2817      6F726D61 
+ 2817      7456616C 
+ 2817      756500
+ 2818              	.LASF122:
+ 2819 24c5 4359424C 		.ascii	"CYBLE_GATT_ERR_CPS_INAPPROPRIATE_CONNECTION_PARAMET"
+ 2819      455F4741 
+ 2819      54545F45 
+ 2819      52525F43 
+ 2819      50535F49 
+ 2820 24f8 45525300 		.ascii	"ERS\000"
+ 2821              	.LASF209:
+ 2822 24fc 4359424C 		.ascii	"CYBLE_EVT_CGMSC_NOTIFICATION\000"
+ 2822      455F4556 
+ 2822      545F4347 
+ 2822      4D53435F 
+ 2822      4E4F5449 
+ 2823              	.LASF108:
+ 2824 2519 4359424C 		.ascii	"CYBLE_GATT_ERR_REQUEST_NOT_SUPPORTED\000"
+ 2824      455F4741 
+ 2824      54545F45 
+ 2824      52525F52 
+ 2824      45515545 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 75
+
+
+ 2825              	.LASF35:
+ 2826 253e 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
+ 2826      455F4556 
+ 2826      545F4741 
+ 2826      5454435F 
+ 2826      4552524F 
+ 2827              	.LASF361:
+ 2828 2558 4359424C 		.ascii	"CYBLE_STATE_T\000"
+ 2828      455F5354 
+ 2828      4154455F 
+ 2828      5400
+ 2829              	.LASF188:
+ 2830 2566 4359424C 		.ascii	"CYBLE_EVT_BASC_NOTIFICATION\000"
+ 2830      455F4556 
+ 2830      545F4241 
+ 2830      53435F4E 
+ 2830      4F544946 
+ 2831              	.LASF191:
+ 2832 2582 4359424C 		.ascii	"CYBLE_EVT_BASC_WRITE_DESCR_RESPONSE\000"
+ 2832      455F4556 
+ 2832      545F4241 
+ 2832      53435F57 
+ 2832      52495445 
+ 2833              	.LASF248:
+ 2834 25a6 4359424C 		.ascii	"CYBLE_EVT_GLSS_INDICATION_ENABLED\000"
+ 2834      455F4556 
+ 2834      545F474C 
+ 2834      53535F49 
+ 2834      4E444943 
+ 2835              	.LASF180:
+ 2836 25c8 4359424C 		.ascii	"CYBLE_EVT_ANSS_CHAR_WRITE\000"
+ 2836      455F4556 
+ 2836      545F414E 
+ 2836      53535F43 
+ 2836      4841525F 
+ 2837              	.LASF60:
+ 2838 25e2 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 2838      455F4556 
+ 2838      545F4C32 
+ 2838      4341505F 
+ 2838      43424643 
+ 2839              	.LASF51:
+ 2840 2600 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 2840      455F4556 
+ 2840      545F4741 
+ 2840      5454535F 
+ 2840      45584543 
+ 2841              	.LASF22:
+ 2842 261f 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 2842      455F4556 
+ 2842      545F4741 
+ 2842      50435F53 
+ 2842      43414E5F 
+ 2843              	.LASF343:
+ 2844 2643 4359424C 		.ascii	"CYBLE_EVT_UDSS_INDICATION_ENABLED\000"
+ 2844      455F4556 
+ 2844      545F5544 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 76
+
+
+ 2844      53535F49 
+ 2844      4E444943 
+ 2845              	.LASF79:
+ 2846 2665 4359424C 		.ascii	"CYBLE_ERROR_GAP_ROLE\000"
+ 2846      455F4552 
+ 2846      524F525F 
+ 2846      4741505F 
+ 2846      524F4C45 
+ 2847              	.LASF282:
+ 2848 267a 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_ENABLED\000"
+ 2848      455F4556 
+ 2848      545F4854 
+ 2848      53535F49 
+ 2848      4E444943 
+ 2849              	.LASF353:
+ 2850 269c 4359424C 		.ascii	"CYBLE_EVT_UDSC_READ_DESCR_RESPONSE\000"
+ 2850      455F4556 
+ 2850      545F5544 
+ 2850      53435F52 
+ 2850      4541445F 
+ 2851              	.LASF189:
+ 2852 26bf 4359424C 		.ascii	"CYBLE_EVT_BASC_READ_CHAR_RESPONSE\000"
+ 2852      455F4556 
+ 2852      545F4241 
+ 2852      53435F52 
+ 2852      4541445F 
+ 2853              	.LASF255:
+ 2854 26e1 4359424C 		.ascii	"CYBLE_EVT_GLSC_NOTIFICATION\000"
+ 2854      455F4556 
+ 2854      545F474C 
+ 2854      53435F4E 
+ 2854      4F544946 
+ 2855              	.LASF126:
+ 2856 26fd 4359424C 		.ascii	"CYBLE_GATT_ERR_ANS_COMMAND_NOT_SUPPORTED\000"
+ 2856      455F4741 
+ 2856      54545F45 
+ 2856      52525F41 
+ 2856      4E535F43 
+ 2857              	.LASF333:
+ 2858 2726 4359424C 		.ascii	"CYBLE_EVT_SCPSS_SCAN_INT_WIN_CHAR_WRITE\000"
+ 2858      455F4556 
+ 2858      545F5343 
+ 2858      5053535F 
+ 2858      5343414E 
+ 2859              	.LASF368:
+ 2860 274e 6379426C 		.ascii	"cyBle_eventHandlerFlag\000"
+ 2860      655F6576 
+ 2860      656E7448 
+ 2860      616E646C 
+ 2860      6572466C 
+ 2861              	.LASF165:
+ 2862 2765 4359424C 		.ascii	"CYBLE_EVT_GATTS_INDICATION_DISABLED\000"
+ 2862      455F4556 
+ 2862      545F4741 
+ 2862      5454535F 
+ 2862      494E4449 
+ 2863              	.LASF76:
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 77
+
+
+ 2864 2789 4359424C 		.ascii	"CYBLE_ERROR_NO_CONNECTION\000"
+ 2864      455F4552 
+ 2864      524F525F 
+ 2864      4E4F5F43 
+ 2864      4F4E4E45 
+ 2865              	.LASF101:
+ 2866 27a3 4359424C 		.ascii	"CYBLE_API_RESULT_T\000"
+ 2866      455F4150 
+ 2866      495F5245 
+ 2866      53554C54 
+ 2866      5F5400
+ 2867              	.LASF203:
+ 2868 27b6 4359424C 		.ascii	"CYBLE_EVT_CGMSS_INDICATION_DISABLED\000"
+ 2868      455F4556 
+ 2868      545F4347 
+ 2868      4D53535F 
+ 2868      494E4449 
+ 2869              	.LASF371:
+ 2870 27da 6379426C 		.ascii	"cyBle_attValuesCCCD\000"
+ 2870      655F6174 
+ 2870      7456616C 
+ 2870      75657343 
+ 2870      43434400 
+ 2871              	.LASF177:
+ 2872 27ee 4359424C 		.ascii	"CYBLE_EVT_GATTC_DISCOVERY_COMPLETE\000"
+ 2872      455F4556 
+ 2872      545F4741 
+ 2872      5454435F 
+ 2872      44495343 
+ 2873              	.LASF207:
+ 2874 2811 4359424C 		.ascii	"CYBLE_EVT_CGMSS_WRITE_CHAR\000"
+ 2874      455F4556 
+ 2874      545F4347 
+ 2874      4D53535F 
+ 2874      57524954 
+ 2875              	.LASF259:
+ 2876 282c 4359424C 		.ascii	"CYBLE_EVT_GLSC_WRITE_DESCR_RESPONSE\000"
+ 2876      455F4556 
+ 2876      545F474C 
+ 2876      53435F57 
+ 2876      52495445 
+ 2877              	.LASF54:
+ 2878 2850 4359424C 		.ascii	"CYBLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 2878      455F4556 
+ 2878      545F4741 
+ 2878      5454435F 
+ 2878      48414E44 
+ 2879              	.LASF228:
+ 2880 2871 4359424C 		.ascii	"CYBLE_EVT_CPSC_SCAN_PROGRESS_RESULT\000"
+ 2880      455F4556 
+ 2880      545F4350 
+ 2880      53435F53 
+ 2880      43414E5F 
+ 2881              	.LASF327:
+ 2882 2895 4359424C 		.ascii	"CYBLE_EVT_RSCSC_READ_DESCR_RESPONSE\000"
+ 2882      455F4556 
+ 2882      545F5253 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 78
+
+
+ 2882      4353435F 
+ 2882      52454144 
+ 2883              	.LASF82:
+ 2884 28b9 4359424C 		.ascii	"CYBLE_ERROR_SEC_FAILED\000"
+ 2884      455F4552 
+ 2884      524F525F 
+ 2884      5345435F 
+ 2884      4641494C 
+ 2885              	.LASF21:
+ 2886 28d0 4359424C 		.ascii	"CYBLE_EVT_STACK_BUSY_STATUS\000"
+ 2886      455F4556 
+ 2886      545F5354 
+ 2886      41434B5F 
+ 2886      42555359 
+ 2887              	.LASF291:
+ 2888 28ec 4359424C 		.ascii	"CYBLE_EVT_HTSC_WRITE_DESCR_RESPONSE\000"
+ 2888      455F4556 
+ 2888      545F4854 
+ 2888      53435F57 
+ 2888      52495445 
+ 2889              	.LASF34:
+ 2890 2910 4359424C 		.ascii	"CYBLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 2890      455F4556 
+ 2890      545F4741 
+ 2890      505F4B45 
+ 2890      59494E46 
+ 2891              	.LASF57:
+ 2892 2934 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 2892      455F4556 
+ 2892      545F4C32 
+ 2892      4341505F 
+ 2892      434F4E4E 
+ 2893              	.LASF206:
+ 2894 295a 4359424C 		.ascii	"CYBLE_EVT_CGMSS_NOTIFICATION_DISABLED\000"
+ 2894      455F4556 
+ 2894      545F4347 
+ 2894      4D53535F 
+ 2894      4E4F5449 
+ 2895              	.LASF365:
+ 2896 2980 67617474 		.ascii	"gattErr\000"
+ 2896      45727200 
+ 2897              	.LASF95:
+ 2898 2988 4359424C 		.ascii	"CYBLE_CHAR_DISC_DONE\000"
+ 2898      455F4348 
+ 2898      41525F44 
+ 2898      4953435F 
+ 2898      444F4E45 
+ 2899              	.LASF168:
+ 2900 299d 4359424C 		.ascii	"CYBLE_EVT_GATTC_INCL_DISCOVERY_FAILED\000"
+ 2900      455F4556 
+ 2900      545F4741 
+ 2900      5454435F 
+ 2900      494E434C 
+ 2901              	.LASF105:
+ 2902 29c3 4359424C 		.ascii	"CYBLE_GATT_ERR_WRITE_NOT_PERMITTED\000"
+ 2902      455F4741 
+ 2902      54545F45 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 79
+
+
+ 2902      52525F57 
+ 2902      52495445 
+ 2903              	.LASF3:
+ 2904 29e6 73686F72 		.ascii	"short unsigned int\000"
+ 2904      7420756E 
+ 2904      7369676E 
+ 2904      65642069 
+ 2904      6E7400
+ 2905              	.LASF117:
+ 2906 29f9 4359424C 		.ascii	"CYBLE_GATT_ERR_INSUFFICIENT_ENCRYPTION\000"
+ 2906      455F4741 
+ 2906      54545F45 
+ 2906      52525F49 
+ 2906      4E535546 
+ 2907              	.LASF306:
+ 2908 2a20 4359424C 		.ascii	"CYBLE_EVT_LNSC_READ_DESCR_RESPONSE\000"
+ 2908      455F4556 
+ 2908      545F4C4E 
+ 2908      53435F52 
+ 2908      4541445F 
+ 2909              	.LASF358:
+ 2910 2a43 4359424C 		.ascii	"CYBLE_STATE_CONNECTED\000"
+ 2910      455F5354 
+ 2910      4154455F 
+ 2910      434F4E4E 
+ 2910      45435445 
+ 2911              	.LASF135:
+ 2912 2a59 61637475 		.ascii	"actualLen\000"
+ 2912      616C4C65 
+ 2912      6E00
+ 2913              	.LASF158:
+ 2914 2a63 63636364 		.ascii	"cccdHandle\000"
+ 2914      48616E64 
+ 2914      6C6500
+ 2915              	.LASF337:
+ 2916 2a6e 4359424C 		.ascii	"CYBLE_EVT_TPSS_NOTIFICATION_ENABLED\000"
+ 2916      455F4556 
+ 2916      545F5450 
+ 2916      53535F4E 
+ 2916      4F544946 
+ 2917              	.LASF254:
+ 2918 2a92 4359424C 		.ascii	"CYBLE_EVT_GLSC_INDICATION\000"
+ 2918      455F4556 
+ 2918      545F474C 
+ 2918      53435F49 
+ 2918      4E444943 
+ 2919              	.LASF220:
+ 2920 2aac 4359424C 		.ascii	"CYBLE_EVT_CPSS_BROADCAST_DISABLED\000"
+ 2920      455F4556 
+ 2920      545F4350 
+ 2920      53535F42 
+ 2920      524F4144 
+ 2921              	.LASF133:
+ 2922 2ace 61747449 		.ascii	"attId\000"
+ 2922      6400
+ 2923              	.LASF72:
+ 2924 2ad4 4359424C 		.ascii	"CYBLE_ERROR_INVALID_OPERATION\000"
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 80
+
+
+ 2924      455F4552 
+ 2924      524F525F 
+ 2924      494E5641 
+ 2924      4C49445F 
+ 2925              	.LASF20:
+ 2926 2af2 4359424C 		.ascii	"CYBLE_EVT_HCI_STATUS\000"
+ 2926      455F4556 
+ 2926      545F4843 
+ 2926      495F5354 
+ 2926      41545553 
+ 2927              	.LASF37:
+ 2928 2b07 4359424C 		.ascii	"CYBLE_EVT_GATT_DISCONNECT_IND\000"
+ 2928      455F4556 
+ 2928      545F4741 
+ 2928      54545F44 
+ 2928      4953434F 
+ 2929              	.LASF163:
+ 2930 2b25 4359424C 		.ascii	"CYBLE_KEY_EXCHANGE_INFO_REQUEST_REPLY\000"
+ 2930      455F4B45 
+ 2930      595F4558 
+ 2930      4348414E 
+ 2930      47455F49 
+ 2931              	.LASF67:
+ 2932 2b4b 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ 2932      455F4556 
+ 2932      545F4C32 
+ 2932      4341505F 
+ 2932      43424643 
+ 2933              	.LASF161:
+ 2934 2b6f 4359424C 		.ascii	"CYBLE_PASSKEY_ENTRY_REQUEST_REPLY\000"
+ 2934      455F5041 
+ 2934      53534B45 
+ 2934      595F454E 
+ 2934      5452595F 
+ 2935              	.LASF181:
+ 2936 2b91 4359424C 		.ascii	"CYBLE_EVT_ANSC_NOTIFICATION\000"
+ 2936      455F4556 
+ 2936      545F414E 
+ 2936      53435F4E 
+ 2936      4F544946 
+ 2937              	.LASF30:
+ 2938 2bad 4359424C 		.ascii	"CYBLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 2938      455F4556 
+ 2938      545F4741 
+ 2938      505F4445 
+ 2938      56494345 
+ 2939              	.LASF262:
+ 2940 2bcf 4359424C 		.ascii	"CYBLE_EVT_HIDSS_BOOT_MODE_ENTER\000"
+ 2940      455F4556 
+ 2940      545F4849 
+ 2940      4453535F 
+ 2940      424F4F54 
+ 2941              	.LASF55:
+ 2942 2bef 4359424C 		.ascii	"CYBLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 2942      455F4556 
+ 2942      545F4741 
+ 2942      5454535F 
+ARM GAS  C:\Users\Kervins\AppData\Local\Temp\ccSxRR9x.s 			page 81
+
+
+ 2942      48414E44 
+ 2943              	.LASF239:
+ 2944 2c10 4359424C 		.ascii	"CYBLE_EVT_CSCSC_READ_DESCR_RESPONSE\000"
+ 2944      455F4556 
+ 2944      545F4353 
+ 2944      4353435F 
+ 2944      52454144 
+ 2945              	.LASF10:
+ 2946 2c34 75696E74 		.ascii	"uint16\000"
+ 2946      313600
+ 2947              	.LASF80:
+ 2948 2c3b 4359424C 		.ascii	"CYBLE_ERROR_TX_POWER_READ\000"
+ 2948      455F4552 
+ 2948      524F525F 
+ 2948      54585F50 
+ 2948      4F574552 
+ 2949              	.LASF317:
+ 2950 2c55 4359424C 		.ascii	"CYBLE_EVT_RSCSS_NOTIFICATION_ENABLED\000"
+ 2950      455F4556 
+ 2950      545F5253 
+ 2950      4353535F 
+ 2950      4E4F5449 
+ 2951              	.LASF179:
+ 2952 2c7a 4359424C 		.ascii	"CYBLE_EVT_ANSS_NOTIFICATION_DISABLED\000"
+ 2952      455F4556 
+ 2952      545F414E 
+ 2952      53535F4E 
+ 2952      4F544946 
+ 2953              	.LASF287:
+ 2954 2c9f 4359424C 		.ascii	"CYBLE_EVT_HTSC_INDICATION\000"
+ 2954      455F4556 
+ 2954      545F4854 
+ 2954      53435F49 
+ 2954      4E444943 
+ 2955              	.LASF260:
+ 2956 2cb9 4359424C 		.ascii	"CYBLE_EVT_HIDSS_NOTIFICATION_ENABLED\000"
+ 2956      455F4556 
+ 2956      545F4849 
+ 2956      4453535F 
+ 2956      4E4F5449 
+ 2957              	.LASF284:
+ 2958 2cde 4359424C 		.ascii	"CYBLE_EVT_HTSS_INDICATION_CONFIRMED\000"
+ 2958      455F4556 
+ 2958      545F4854 
+ 2958      53535F49 
+ 2958      4E444943 
+ 2959              	.LASF274:
+ 2960 2d02 4359424C 		.ascii	"CYBLE_EVT_HRSS_NOTIFICATION_DISABLED\000"
+ 2960      455F4556 
+ 2960      545F4852 
+ 2960      53535F4E 
+ 2960      4F544946 
+ 2961              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
